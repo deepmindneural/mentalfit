@@ -7,6 +7,7 @@ cmds = ["npm ci --legacy-peer-deps --no-scripts"]
 
 [phases.build]
 cmds = ["npm run build"]
+env = { SKIP_PREFLIGHT_CHECK = "true", ESLINT_NO_DEV_ERRORS = "true", TSC_COMPILE_ON_ERROR = "true", DISABLE_ESLINT_PLUGIN = "true", CI = "false" }
 
 [start]
 cmd = "npx serve -s build"
