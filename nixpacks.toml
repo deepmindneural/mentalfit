@@ -2,7 +2,8 @@
 aptPkgs = ["nodejs", "npm"]
 
 [phases.install]
-cmds = ["npm ci --legacy-peer-deps"]
+commandOverrides = {install = "npm ci --legacy-peer-deps --no-scripts"}
+cmds = ["npm ci --legacy-peer-deps --no-scripts"]
 
 [phases.build]
 cmds = ["npm run build"]

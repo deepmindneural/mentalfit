@@ -37,7 +37,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "install": "npm install --legacy-peer-deps"
+    "postinstall": "echo \"Instalaciu00f3n completada con --legacy-peer-deps\""
   },
   "eslintConfig": {
     "extends": [
