@@ -36,7 +36,14 @@
       "Bash(pnpm --filter @mentalfit/web build:*)",
       "Bash(for file in \"/Volumes/StarkT7/Proyectos/CLIENETS/proyectos/ESCUCHODROMO/Mentalfit 2/mentalfit/apps/web/src/app/auth\"/**/page.tsx)",
       "Bash(do)",
-      "Bash(done)"
+      "Bash(done)",
+      "Bash(brew install:*)",
+      "Bash(PGPASSWORD=\"4nBShUbrGUSAr4\" psql:*)",
+      "Bash(chmod:*)",
+      "Bash(\"/Volumes/StarkT7/Proyectos/CLIENETS/proyectos/ESCUCHODROMO/Mentalfit 2/mentalfit/ejecutar-schema.sh\")",
+      "Bash(ping:*)",
+      "Bash(python3:*)",
+      "Bash(git reset:*)"
     ],
     "deny": []
   }

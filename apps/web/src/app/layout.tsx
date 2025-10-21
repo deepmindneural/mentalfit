@@ -1,5 +1,7 @@
 import type { Metadata } from 'next';
 import { Inter, Poppins } from 'next/font/google';
+import { NextIntlClientProvider } from 'next-intl';
+import { getMessages } from 'next-intl/server';
 import '@/styles/globals.css';
 
 const inter = Inter({ 
@@ -35,28 +37,35 @@ export const metadata: Metadata = {
   },
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
+  params: { locale }
 }: {
   children: React.ReactNode;
+  params: { locale: string };
 }) {
+  // Get messages for the current locale
+  const messages = await getMessages();
+
   return (
-    <html lang="en" className={`${inter.variable} ${poppins.variable}`}>
+    <html lang={locale || 'es'} className={`${inter.variable} ${poppins.variable}`}>
       <head>
         <link rel="icon" href="/favicon.ico" />
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
         <meta name="theme-color" content="#22c55e" />
       </head>
       <body className="font-sans antialiased bg-gray-50">
-        <div id="root">
-          {children}
-        </div>
-        
-        {/* Toast notifications container */}
-        <div id="toast-container" className="fixed top-4 right-4 z-50 space-y-2" />
-        
-        {/* Modal container */}
-        <div id="modal-container" />
+        <NextIntlClientProvider messages={messages}>
+          <div id="root">
+            {children}
+          </div>
+
+          {/* Toast notifications container */}
+          <div id="toast-container" className="fixed top-4 right-4 z-50 space-y-2" />
+
+          {/* Modal container */}
+          <div id="modal-container" />
+        </NextIntlClientProvider>
       </body>
     </html>
   );
