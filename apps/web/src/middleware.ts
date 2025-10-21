@@ -28,6 +28,15 @@ export async function middleware(request: NextRequest) {
     });
   }
 
+  // Forzar redirección a español si detecta /en/
+  const pathname = request.nextUrl.pathname;
+  if (pathname.startsWith('/en/') || pathname === '/en') {
+    const pathSinLocale = pathname.replace(/^\/en/, '') || '/';
+    const nuevaUrl = new URL(pathSinLocale, request.url);
+    console.log(`🔀 Redirigiendo de ${pathname} a ${pathSinLocale} (forzar español)`);
+    return NextResponse.redirect(nuevaUrl);
+  }
+
   // Primero ejecutar middleware de i18n
   const intlResponse = intlMiddleware(request);
   if (intlResponse) {
