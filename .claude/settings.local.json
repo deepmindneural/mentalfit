@@ -26,7 +26,12 @@
       "Bash(git init:*)",
       "Bash(git remote add:*)",
       "Bash(git branch:*)",
-      "Bash(git add:*)"
+      "Bash(git add:*)",
+      "Bash(git commit -m \"$(cat <<''EOF''\nfeat: implementar módulo completo de autenticación y usuarios\n\n- Configuración de internacionalización (i18n) con next-intl ES/EN\n- 10 componentes de autenticación en español con UI bilingüe\n- Formularios con validación completa (React Hook Form + Zod)\n- Autenticación de dos factores (2FA) con QR codes\n- Sistema de gestión de sesión con expiración automática\n- Indicador de fortaleza de contraseña en tiempo real\n- Wizard de registro multi-step (3 pasos)\n- Integración completa con Supabase Auth + MFA\n- Hooks personalizados: useAutenticacion, useTiempoExpiracionSesion\n- Más de 100 claves de traducción ES/EN\n\nComponentes creados:\n- IndicadorFortalezaContrasena\n- RecordarmeCheckbox\n- ModalSesionExpirada\n- FormularioLogin\n- FormularioRegistro (wizard)\n- FormularioOlvideContrasena\n- FormularioRestablecerContrasena\n- ComponenteVerificarEmail\n- ConfiguracionAutenticacionDosFactor\n- VerificacionAutenticacionDosFactor\n\nDependencias instaladas:\n- zod: validación de schemas\n- next-intl: internacionalización\n- @hookform/resolvers: integración React Hook Form\n- qrcode.react: generación de códigos QR\n\n🤖 Generated with [Claude Code](https://claude.com/claude-code)\n\nCo-Authored-By: Claude <noreply@anthropic.com>\nEOF\n)\")",
+      "Bash(git push:*)",
+      "Bash(git fetch:*)",
+      "Bash(git pull:*)",
+      "Bash(git commit:*)"
     ],
     "deny": []
   }
