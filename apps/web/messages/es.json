@@ -1,0 +1,202 @@
+{
+  "auth": {
+    "login": {
+      "title": "Bienvenido de vuelta",
+      "subtitle": "Inicia sesión en tu cuenta",
+      "email": "Correo electrónico",
+      "emailPlaceholder": "Ingresa tu correo",
+      "password": "Contraseña",
+      "passwordPlaceholder": "Ingresa tu contraseña",
+      "rememberMe": "Recordarme",
+      "forgotPassword": "¿Olvidaste tu contraseña?",
+      "submit": "Iniciar sesión",
+      "loading": "Iniciando sesión...",
+      "noAccount": "¿No tienes una cuenta?",
+      "signUp": "Contacta a ventas para acceso empresarial"
+    },
+    "register": {
+      "title": "Crear cuenta empresarial",
+      "subtitle": "Únete a MentalFit para el bienestar de tu equipo",
+      "step1": {
+        "title": "Información personal",
+        "description": "Cuéntanos sobre ti",
+        "firstName": "Nombre",
+        "firstNamePlaceholder": "Tu nombre",
+        "lastName": "Apellido",
+        "lastNamePlaceholder": "Tu apellido",
+        "email": "Correo electrónico",
+        "emailPlaceholder": "tu@empresa.com"
+      },
+      "step2": {
+        "title": "Información de la empresa",
+        "description": "Detalles de tu organización",
+        "companyName": "Nombre de la empresa",
+        "companyNamePlaceholder": "Nombre de tu empresa",
+        "companySize": "Tamaño de la empresa",
+        "companySizePlaceholder": "Selecciona un rango",
+        "companySizes": {
+          "1-10": "1-10 empleados",
+          "11-50": "11-50 empleados",
+          "51-200": "51-200 empleados",
+          "201-500": "201-500 empleados",
+          "501-1000": "501-1000 empleados",
+          "1000+": "Más de 1000 empleados"
+        },
+        "jobTitle": "Cargo",
+        "jobTitlePlaceholder": "Ej: Director de RRHH",
+        "role": "Rol en la plataforma",
+        "rolePlaceholder": "Selecciona tu rol",
+        "roles": {
+          "company_admin": "Administrador de empresa",
+          "hr_manager": "Gerente de RRHH",
+          "team_lead": "Líder de equipo"
+        }
+      },
+      "step3": {
+        "title": "Seguridad",
+        "description": "Crea una contraseña segura",
+        "password": "Contraseña",
+        "passwordPlaceholder": "Crea una contraseña segura",
+        "confirmPassword": "Confirmar contraseña",
+        "confirmPasswordPlaceholder": "Repite tu contraseña"
+      },
+      "navigation": {
+        "next": "Siguiente",
+        "back": "Atrás",
+        "submit": "Crear cuenta",
+        "loading": "Creando cuenta..."
+      },
+      "progress": "Paso {current} de {total}",
+      "hasAccount": "¿Ya tienes una cuenta?",
+      "signIn": "Iniciar sesión"
+    },
+    "forgotPassword": {
+      "title": "¿Olvidaste tu contraseña?",
+      "subtitle": "Te enviaremos un enlace para restablecerla",
+      "email": "Correo electrónico",
+      "emailPlaceholder": "tu@empresa.com",
+      "submit": "Enviar enlace",
+      "loading": "Enviando...",
+      "backToLogin": "Volver al inicio de sesión",
+      "success": {
+        "title": "Correo enviado",
+        "message": "Revisa tu bandeja de entrada y sigue las instrucciones para restablecer tu contraseña.",
+        "note": "Si no ves el correo, revisa tu carpeta de spam."
+      }
+    },
+    "resetPassword": {
+      "title": "Restablecer contraseña",
+      "subtitle": "Ingresa tu nueva contraseña",
+      "password": "Nueva contraseña",
+      "passwordPlaceholder": "Crea una contraseña segura",
+      "confirmPassword": "Confirmar contraseña",
+      "confirmPasswordPlaceholder": "Repite tu contraseña",
+      "submit": "Restablecer contraseña",
+      "loading": "Restableciendo...",
+      "success": "Contraseña restablecida exitosamente",
+      "invalidToken": "El enlace de restablecimiento es inválido o ha expirado"
+    },
+    "verifyEmail": {
+      "title": "Verifica tu correo electrónico",
+      "message": "Hemos enviado un enlace de verificación a tu correo electrónico.",
+      "instructions": "Por favor, revisa tu bandeja de entrada y haz clic en el enlace para verificar tu cuenta.",
+      "notReceived": "¿No recibiste el correo?",
+      "resend": "Reenviar correo de verificación",
+      "resendSuccess": "Correo de verificación reenviado",
+      "resendCooldown": "Espera {seconds}s para volver a enviar",
+      "backToLogin": "Volver al inicio de sesión"
+    },
+    "twoFactor": {
+      "setup": {
+        "title": "Configurar autenticación de dos factores",
+        "subtitle": "Agrega una capa extra de seguridad a tu cuenta",
+        "step1": {
+          "title": "Escanea el código QR",
+          "description": "Usa una aplicación de autenticación como Google Authenticator o Authy para escanear este código QR."
+        },
+        "step2": {
+          "title": "Ingresa el código de verificación",
+          "description": "Ingresa el código de 6 dígitos que aparece en tu aplicación de autenticación."
+        },
+        "code": "Código de verificación",
+        "codePlaceholder": "000000",
+        "verify": "Verificar y activar",
+        "verifying": "Verificando...",
+        "success": "Autenticación de dos factores activada",
+        "cancel": "Cancelar"
+      },
+      "verify": {
+        "title": "Verificación de dos factores",
+        "subtitle": "Ingresa el código de tu aplicación de autenticación",
+        "code": "Código de verificación",
+        "codePlaceholder": "000000",
+        "submit": "Verificar",
+        "loading": "Verificando...",
+        "useBackupCode": "Usar código de respaldo",
+        "backToLogin": "Volver al inicio de sesión"
+      },
+      "disable": {
+        "title": "Desactivar autenticación de dos factores",
+        "confirm": "¿Estás seguro de que deseas desactivar la autenticación de dos factores?",
+        "warning": "Esto hará que tu cuenta sea menos segura.",
+        "cancel": "Cancelar",
+        "disable": "Desactivar",
+        "success": "Autenticación de dos factores desactivada"
+      }
+    },
+    "sessionExpired": {
+      "title": "Sesión expirada",
+      "message": "Tu sesión ha expirado por inactividad. Por favor, inicia sesión nuevamente.",
+      "submit": "Iniciar sesión"
+    },
+    "passwordStrength": {
+      "label": "Fortaleza de la contraseña",
+      "weak": "Débil",
+      "medium": "Media",
+      "strong": "Fuerte",
+      "requirements": {
+        "length": "Al menos 8 caracteres",
+        "uppercase": "Una letra mayúscula",
+        "lowercase": "Una letra minúscula",
+        "number": "Un número",
+        "special": "Un carácter especial"
+      }
+    },
+    "errors": {
+      "required": "Este campo es requerido",
+      "invalidEmail": "Correo electrónico inválido",
+      "emailRequired": "El correo electrónico es requerido",
+      "passwordRequired": "La contraseña es requerida",
+      "passwordTooShort": "La contraseña debe tener al menos 8 caracteres",
+      "passwordNoUppercase": "La contraseña debe contener al menos una mayúscula",
+      "passwordNoLowercase": "La contraseña debe contener al menos una minúscula",
+      "passwordNoNumber": "La contraseña debe contener al menos un número",
+      "passwordNoSpecial": "La contraseña debe contener al menos un carácter especial",
+      "passwordsNoMatch": "Las contraseñas no coinciden",
+      "invalidCredentials": "Credenciales inválidas",
+      "userNotFound": "Usuario no encontrado",
+      "emailAlreadyExists": "Este correo electrónico ya está registrado",
+      "tooManyRequests": "Demasiados intentos. Por favor, intenta más tarde",
+      "networkError": "Error de conexión. Por favor, verifica tu internet",
+      "unknownError": "Ocurrió un error inesperado",
+      "invalidToken": "Token inválido o expirado",
+      "invalid2FACode": "Código de verificación inválido",
+      "firstNameRequired": "El nombre es requerido",
+      "lastNameRequired": "El apellido es requerido",
+      "companyNameRequired": "El nombre de la empresa es requerido",
+      "companySizeRequired": "El tamaño de la empresa es requerido",
+      "jobTitleRequired": "El cargo es requerido",
+      "roleRequired": "El rol es requerido"
+    },
+    "success": {
+      "loginSuccess": "Inicio de sesión exitoso",
+      "registerSuccess": "Cuenta creada exitosamente",
+      "passwordResetEmailSent": "Correo de restablecimiento enviado",
+      "passwordResetSuccess": "Contraseña restablecida exitosamente",
+      "emailVerificationSent": "Correo de verificación enviado",
+      "2FAEnabled": "Autenticación de dos factores activada",
+      "2FADisabled": "Autenticación de dos factores desactivada",
+      "2FAVerified": "Código verificado exitosamente"
+    }
+  }
+}

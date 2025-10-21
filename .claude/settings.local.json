@@ -1,0 +1,33 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(mkdir:*)",
+      "Bash(rm:*)",
+      "Bash(sed:*)",
+      "Bash(find:*)",
+      "Bash(npm run build:*)",
+      "Bash(ls:*)",
+      "Bash(npx prisma:*)",
+      "Bash(npm run:*)",
+      "Bash(npm install:*)",
+      "Bash(pnpm add:*)",
+      "Bash(npx tsx:*)",
+      "Bash(cd:*)",
+      "Read(//Volumes/StarkT7/Proyectos/CLIENETS/proyectos/ESCUCHODROMO/Mentalfit/**)",
+      "Bash(cat:*)",
+      "Bash(tree:*)",
+      "Bash(awk:*)",
+      "Bash(pnpm remove:*)",
+      "Bash(pnpm --filter @mentalfit/web remove:*)",
+      "Bash(pnpm --filter @mentalfit/web add:*)",
+      "WebSearch",
+      "Bash(cd /Volumes/StarkT7/Proyectos/CLIENETS/proyectos/ESCUCHODROMO/Mentalfit\\ 2/mentalfit/apps/web:*)",
+      "WebFetch(domain:mentalfitia.com)",
+      "Bash(git init:*)",
+      "Bash(git remote add:*)",
+      "Bash(git branch:*)",
+      "Bash(git add:*)"
+    ],
+    "deny": []
+  }
+}

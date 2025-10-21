@@ -1,0 +1,202 @@
+{
+  "auth": {
+    "login": {
+      "title": "Welcome back",
+      "subtitle": "Sign in to your account",
+      "email": "Email",
+      "emailPlaceholder": "Enter your email",
+      "password": "Password",
+      "passwordPlaceholder": "Enter your password",
+      "rememberMe": "Remember me",
+      "forgotPassword": "Forgot password?",
+      "submit": "Sign in",
+      "loading": "Signing in...",
+      "noAccount": "Don't have an account?",
+      "signUp": "Contact sales for enterprise access"
+    },
+    "register": {
+      "title": "Create enterprise account",
+      "subtitle": "Join MentalFit for your team's well-being",
+      "step1": {
+        "title": "Personal information",
+        "description": "Tell us about yourself",
+        "firstName": "First name",
+        "firstNamePlaceholder": "Your first name",
+        "lastName": "Last name",
+        "lastNamePlaceholder": "Your last name",
+        "email": "Email",
+        "emailPlaceholder": "you@company.com"
+      },
+      "step2": {
+        "title": "Company information",
+        "description": "Your organization details",
+        "companyName": "Company name",
+        "companyNamePlaceholder": "Your company name",
+        "companySize": "Company size",
+        "companySizePlaceholder": "Select a range",
+        "companySizes": {
+          "1-10": "1-10 employees",
+          "11-50": "11-50 employees",
+          "51-200": "51-200 employees",
+          "201-500": "201-500 employees",
+          "501-1000": "501-1000 employees",
+          "1000+": "1000+ employees"
+        },
+        "jobTitle": "Job title",
+        "jobTitlePlaceholder": "E.g: HR Director",
+        "role": "Platform role",
+        "rolePlaceholder": "Select your role",
+        "roles": {
+          "company_admin": "Company administrator",
+          "hr_manager": "HR manager",
+          "team_lead": "Team lead"
+        }
+      },
+      "step3": {
+        "title": "Security",
+        "description": "Create a secure password",
+        "password": "Password",
+        "passwordPlaceholder": "Create a secure password",
+        "confirmPassword": "Confirm password",
+        "confirmPasswordPlaceholder": "Repeat your password"
+      },
+      "navigation": {
+        "next": "Next",
+        "back": "Back",
+        "submit": "Create account",
+        "loading": "Creating account..."
+      },
+      "progress": "Step {current} of {total}",
+      "hasAccount": "Already have an account?",
+      "signIn": "Sign in"
+    },
+    "forgotPassword": {
+      "title": "Forgot your password?",
+      "subtitle": "We'll send you a reset link",
+      "email": "Email",
+      "emailPlaceholder": "you@company.com",
+      "submit": "Send link",
+      "loading": "Sending...",
+      "backToLogin": "Back to sign in",
+      "success": {
+        "title": "Email sent",
+        "message": "Check your inbox and follow the instructions to reset your password.",
+        "note": "If you don't see the email, check your spam folder."
+      }
+    },
+    "resetPassword": {
+      "title": "Reset password",
+      "subtitle": "Enter your new password",
+      "password": "New password",
+      "passwordPlaceholder": "Create a secure password",
+      "confirmPassword": "Confirm password",
+      "confirmPasswordPlaceholder": "Repeat your password",
+      "submit": "Reset password",
+      "loading": "Resetting...",
+      "success": "Password reset successfully",
+      "invalidToken": "The reset link is invalid or has expired"
+    },
+    "verifyEmail": {
+      "title": "Verify your email",
+      "message": "We've sent a verification link to your email address.",
+      "instructions": "Please check your inbox and click the link to verify your account.",
+      "notReceived": "Didn't receive the email?",
+      "resend": "Resend verification email",
+      "resendSuccess": "Verification email resent",
+      "resendCooldown": "Wait {seconds}s to resend",
+      "backToLogin": "Back to sign in"
+    },
+    "twoFactor": {
+      "setup": {
+        "title": "Set up two-factor authentication",
+        "subtitle": "Add an extra layer of security to your account",
+        "step1": {
+          "title": "Scan the QR code",
+          "description": "Use an authenticator app like Google Authenticator or Authy to scan this QR code."
+        },
+        "step2": {
+          "title": "Enter the verification code",
+          "description": "Enter the 6-digit code that appears in your authenticator app."
+        },
+        "code": "Verification code",
+        "codePlaceholder": "000000",
+        "verify": "Verify and activate",
+        "verifying": "Verifying...",
+        "success": "Two-factor authentication enabled",
+        "cancel": "Cancel"
+      },
+      "verify": {
+        "title": "Two-factor verification",
+        "subtitle": "Enter the code from your authenticator app",
+        "code": "Verification code",
+        "codePlaceholder": "000000",
+        "submit": "Verify",
+        "loading": "Verifying...",
+        "useBackupCode": "Use backup code",
+        "backToLogin": "Back to sign in"
+      },
+      "disable": {
+        "title": "Disable two-factor authentication",
+        "confirm": "Are you sure you want to disable two-factor authentication?",
+        "warning": "This will make your account less secure.",
+        "cancel": "Cancel",
+        "disable": "Disable",
+        "success": "Two-factor authentication disabled"
+      }
+    },
+    "sessionExpired": {
+      "title": "Session expired",
+      "message": "Your session has expired due to inactivity. Please sign in again.",
+      "submit": "Sign in"
+    },
+    "passwordStrength": {
+      "label": "Password strength",
+      "weak": "Weak",
+      "medium": "Medium",
+      "strong": "Strong",
+      "requirements": {
+        "length": "At least 8 characters",
+        "uppercase": "One uppercase letter",
+        "lowercase": "One lowercase letter",
+        "number": "One number",
+        "special": "One special character"
+      }
+    },
+    "errors": {
+      "required": "This field is required",
+      "invalidEmail": "Invalid email address",
+      "emailRequired": "Email is required",
+      "passwordRequired": "Password is required",
+      "passwordTooShort": "Password must be at least 8 characters",
+      "passwordNoUppercase": "Password must contain at least one uppercase letter",
+      "passwordNoLowercase": "Password must contain at least one lowercase letter",
+      "passwordNoNumber": "Password must contain at least one number",
+      "passwordNoSpecial": "Password must contain at least one special character",
+      "passwordsNoMatch": "Passwords do not match",
+      "invalidCredentials": "Invalid credentials",
+      "userNotFound": "User not found",
+      "emailAlreadyExists": "This email is already registered",
+      "tooManyRequests": "Too many attempts. Please try again later",
+      "networkError": "Connection error. Please check your internet",
+      "unknownError": "An unexpected error occurred",
+      "invalidToken": "Invalid or expired token",
+      "invalid2FACode": "Invalid verification code",
+      "firstNameRequired": "First name is required",
+      "lastNameRequired": "Last name is required",
+      "companyNameRequired": "Company name is required",
+      "companySizeRequired": "Company size is required",
+      "jobTitleRequired": "Job title is required",
+      "roleRequired": "Role is required"
+    },
+    "success": {
+      "loginSuccess": "Login successful",
+      "registerSuccess": "Account created successfully",
+      "passwordResetEmailSent": "Password reset email sent",
+      "passwordResetSuccess": "Password reset successfully",
+      "emailVerificationSent": "Verification email sent",
+      "2FAEnabled": "Two-factor authentication enabled",
+      "2FADisabled": "Two-factor authentication disabled",
+      "2FAVerified": "Code verified successfully"
+    }
+  }
+}

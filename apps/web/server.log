@@ -1,0 +1,57 @@
+
+> @mentalfit/web@1.0.0 dev
+> next dev --port 3000
+
+  ▲ Next.js 14.2.31
+  - Local:        http://localhost:3000
+  - Experiments (use with caution):
+    · turbo
+
+ ✓ Starting...
+ ✓ Ready in 1686ms
+ ○ Compiling / ...
+ ✓ Compiled / in 1715ms (556 modules)
+ ⚠ Unsupported metadata viewport is configured in metadata export in /. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ HEAD / 200 in 1802ms
+ ✓ Compiled in 112ms (278 modules)
+ ⚠ Unsupported metadata viewport is configured in metadata export in /. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ HEAD / 200 in 21ms
+ ✓ Compiled /about in 181ms (540 modules)
+ ⚠ Unsupported metadata viewport is configured in metadata export in /about. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ HEAD /about 200 in 221ms
+ ✓ Compiled /pricing in 97ms (550 modules)
+ ⚠ Unsupported metadata viewport is configured in metadata export in /pricing. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ HEAD /pricing 200 in 119ms
+ ✓ Compiled /demo in 104ms (564 modules)
+ ⚠ Unsupported metadata viewport is configured in metadata export in /demo. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ HEAD /demo 200 in 136ms
+ ✓ Compiled /contact in 117ms (588 modules)
+ ⚠ Unsupported metadata viewport is configured in metadata export in /contact. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ HEAD /contact 200 in 138ms
+ ⚠ Unsupported metadata viewport is configured in metadata export in /about. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ GET /about 200 in 14ms
+ ⚠ Unsupported metadata viewport is configured in metadata export in /pricing. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ GET /pricing 200 in 18ms
+ ⚠ Unsupported metadata viewport is configured in metadata export in /. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ GET / 200 in 19ms
+ ⚠ Unsupported metadata viewport is configured in metadata export in /pricing. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ GET /pricing 200 in 17ms
+ ⚠ Unsupported metadata viewport is configured in metadata export in /pricing. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ GET /pricing 200 in 14ms
+ ⚠ Unsupported metadata viewport is configured in metadata export in /. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ GET / 200 in 55ms
+ ⚠ Unsupported metadata viewport is configured in metadata export in /. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ GET / 200 in 40ms
