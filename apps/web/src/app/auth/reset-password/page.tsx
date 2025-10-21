@@ -1,5 +1,6 @@
 'use client';
 
+
 import { useTranslations } from 'next-intl';
 import Logo from '@/components/ui/Logo';
 import FormularioRestablecerContrasena from '@/components/autenticacion/FormularioRestablecerContrasena';

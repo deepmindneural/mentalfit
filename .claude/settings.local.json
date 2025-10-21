@@ -33,7 +33,10 @@
       "Bash(git pull:*)",
       "Bash(git commit:*)",
       "Bash(pnpm build:*)",
-      "Bash(pnpm --filter @mentalfit/web build:*)"
+      "Bash(pnpm --filter @mentalfit/web build:*)",
+      "Bash(for file in \"/Volumes/StarkT7/Proyectos/CLIENETS/proyectos/ESCUCHODROMO/Mentalfit 2/mentalfit/apps/web/src/app/auth\"/**/page.tsx)",
+      "Bash(do)",
+      "Bash(done)"
     ],
     "deny": []
   }

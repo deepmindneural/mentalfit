@@ -95,6 +95,59 @@ Este archivo registra el trabajo realizado por cada agente para evitar duplicaci
 
 ---
 
+#### 🤖 backend-database-specialist
+**Hora:** 15:00 - 16:00
+**Tarea:** Crear script de migración segura (inglés → español)
+**Archivos Creados:**
+- `/apps/web/scripts/migracion-ingles-a-espanol.sql` (800+ líneas)
+
+**Trabajo Realizado:**
+- ✅ Script de migración completo con 7 fases
+- ✅ FASE 0: Pre-validaciones y logging
+- ✅ FASE 1: Backup completo a schema backup_ingles
+- ✅ FASE 2: Creación de nuevo schema español
+- ✅ FASE 3: Migración de datos de 12 tablas
+- ✅ FASE 4: Validación post-migración automática
+- ✅ FASE 5: Renombrado de tablas antiguas (opcional)
+- ✅ FASE 6: Eliminación de tablas antiguas (comentado - peligroso)
+- ✅ FASE 7: Reporte final con estadísticas
+
+**Mapeos de Tablas:**
+- companies → empresas
+- profiles → usuarios (con mapeo de roles)
+- professionals → profesionales
+- sessions → sesiones_terapia (con mapeo de estados)
+- assessments → evaluaciones (con mapeo de tipos)
+- chat_conversations → conversaciones
+- chat_messages → mensajes
+- notifications → notificaciones
+- payments → pagos
+- availability → disponibilidad_profesional
+- reviews → resenas
+- resources → recursos
+
+**Decisiones Tomadas:**
+- Backup automático en schema separado antes de migrar
+- Sistema de logging con tabla logs_migracion
+- Validación automática de counts post-migración
+- Mapeo inteligente de enums (EN → ES)
+- Migración preserva todos los IDs (UUID)
+- Fases peligrosas (eliminación) comentadas por seguridad
+- Instrucciones detalladas post-migración incluidas
+
+**Características de Seguridad:**
+- Rollback manual disponible desde backup
+- ON CONFLICT DO NOTHING para evitar duplicados
+- Validación de tablas existentes pre-migración
+- Reporte detallado de warnings y errores
+- Preservación de relaciones FK
+
+**Archivos Modificados:** Ninguno
+**Conflictos:** Ninguno
+**Próximo Paso:** Crear tipos TypeScript automáticamente desde schema español
+
+---
+
 ## 🔄 EN PROGRESO
 
 *No hay tareas en progreso actualmente*
@@ -108,6 +161,7 @@ Este archivo registra el trabajo realizado por cada agente para evitar duplicaci
    - Agente sugerido: backend-database-specialist
    - Archivo destino: `/apps/web/src/types/database.ts`
    - Dependencia: Schema SQL completo ✅
+   - Dependencia: Migración ejecutada en Supabase
 
 2. **Configurar i18n (next-intl)**
    - Agente sugerido: general-purpose
@@ -119,10 +173,9 @@ Este archivo registra el trabajo realizado por cada agente para evitar duplicaci
    - Archivos: `/lib/auth.ts`, `/middleware.ts`
    - Dependencia: Schema SQL ejecutado en Supabase
 
-4. **Script de migración** (inglés → español)
-   - Agente sugerido: backend-database-specialist
-   - Archivo: `/scripts/migrate-to-spanish.sql`
-   - Dependencia: Backup de BD actual
+4. ~~**Script de migración** (inglés → español)~~ ✅ **COMPLETADO**
+   - Archivo: `/apps/web/scripts/migracion-ingles-a-espanol.sql`
+   - Próximo: Ejecutar en Supabase (staging primero)
 
 ### Media Prioridad
 5. **Configurar Zustand stores**
@@ -142,11 +195,11 @@ Este archivo registra el trabajo realizado por cada agente para evitar duplicaci
 | Métrica | Valor |
 |---------|-------|
 | **Agentes activos** | 2 |
-| **Tareas completadas** | 3 |
-| **Archivos creados** | 5 |
-| **Archivos modificados** | 0 |
+| **Tareas completadas** | 4 |
+| **Archivos creados** | 6 |
+| **Archivos modificados** | 1 |
 | **Conflictos** | 0 |
-| **Líneas de código** | 3,425+ (SQL) |
+| **Líneas de código** | 4,225+ (SQL) |
 
 ---
 
@@ -159,20 +212,21 @@ Schema SQL Completo (✅)
 │       ↓
 │   └─→ Tests Unitarios (pendiente)
 │
-├─→ Tipos TypeScript (pendiente)
-│       ↓
-│   ├─→ Zustand Stores (pendiente)
-│   └─→ API Routes (pendiente)
-│           ↓
-│       └─→ Llamar Funciones SQL (pendiente)
-│
-├─→ Migration Script (pendiente)
+├─→ Migration Script (✅)
 │       ↓
 │   └─→ Ejecutar en Supabase (pendiente)
 │           ↓
-│       ├─→ Schema (pendiente)
-│       ├─→ Funciones (pendiente)
-│       └─→ Supabase Auth (pendiente)
+│       ├─→ Schema Español (pendiente)
+│       ├─→ Funciones Negocio (pendiente)
+│       ├─→ Validar Migración (pendiente)
+│       └─→ Generar Tipos TypeScript (pendiente)
+│               ↓
+│           ├─→ Zustand Stores (pendiente)
+│           └─→ API Routes (pendiente)
+│                   ↓
+│               └─→ Llamar Funciones SQL (pendiente)
+│
+├─→ Supabase Auth (pendiente)
 │
 └─→ i18n Setup (pendiente)
         ↓
@@ -184,10 +238,17 @@ Schema SQL Completo (✅)
 ## 📝 NOTAS PARA PRÓXIMOS AGENTES
 
 ### Para backend-database-specialist:
-- El schema SQL está en español y listo
-- Siguiente tarea: Generar tipos TypeScript automáticamente
-- Ubicación: `/apps/web/src/types/database.ts`
-- Herramienta sugerida: supabase gen types
+- ✅ Schema SQL en español listo (26 tablas)
+- ✅ 20 funciones de negocio creadas
+- ✅ Script de migración completo
+- **Siguiente tarea CRÍTICA:** Ejecutar migración en Supabase
+  1. Primero en staging/dev
+  2. Ejecutar `/apps/web/scripts/migracion-ingles-a-espanol.sql`
+  3. Validar todos los counts
+  4. Luego ejecutar en producción
+- **Después:** Generar tipos TypeScript automáticamente
+  - Comando: `supabase gen types typescript --project-id [id] > src/types/database.ts`
+  - Ubicación: `/apps/web/src/types/database.ts`
 
 ### Para general-purpose:
 - UI está lista pero en inglés
@@ -222,4 +283,4 @@ Schema SQL Completo (✅)
 
 ---
 
-**Última actualización:** 2025-01-21 14:30 por backend-database-specialist
+**Última actualización:** 2025-01-21 16:00 por backend-database-specialist
