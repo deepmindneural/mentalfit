@@ -198,5 +198,202 @@
       "2FADisabled": "Two-factor authentication disabled",
       "2FAVerified": "Code verified successfully"
     }
+  },
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "pricing": "Pricing",
+    "demo": "Demo",
+    "contact": "Contact",
+    "signIn": "Sign In",
+    "getStarted": "Get Started"
+  },
+  "home": {
+    "hero": {
+      "title": "Mental Health",
+      "titleHighlight": " Solutions for Modern Workplaces",
+      "subtitle": "Empower your team with professional mental health support, wellness resources, and tools to thrive in today's demanding work environment.",
+      "cta": {
+        "trial": "Start Free Trial",
+        "learnMore": "Learn More"
+      },
+      "badges": {
+        "noSetupFees": "No Setup Fees",
+        "trial": "30-Day Trial",
+        "compliant": "HIPAA Compliant"
+      }
+    },
+    "features": {
+      "title": "Why Choose MentalFit?",
+      "subtitle": "Our comprehensive platform combines cutting-edge technology with human expertise to deliver exceptional mental health support for your organization.",
+      "hipaa": {
+        "title": "HIPAA Compliant",
+        "description": "Enterprise-grade security and privacy protection for all sessions and data."
+      },
+      "professionals": {
+        "title": "Licensed Professionals",
+        "description": "Access to verified, licensed therapists and mental health specialists."
+      },
+      "support": {
+        "title": "24/7 Support",
+        "description": "Round-the-clock crisis support and emergency mental health resources."
+      },
+      "evidence": {
+        "title": "Evidence-Based",
+        "description": "Proven therapeutic approaches backed by research and clinical evidence."
+      }
+    },
+    "benefits": {
+      "title": "Transform Your Workplace Culture",
+      "subtitle": "Investing in employee mental health isn't just the right thing to do—it's smart business. See the measurable impact on your organization.",
+      "list": {
+        "burnout": "Reduce employee burnout by up to 40%",
+        "productivity": "Increase productivity and engagement",
+        "costs": "Lower healthcare costs and absenteeism",
+        "retention": "Improve employee retention rates",
+        "culture": "Create a supportive workplace culture",
+        "resources": "Access to comprehensive wellness resources"
+      },
+      "cta": "Start Your Journey",
+      "card": {
+        "title": "Ready to Get Started?",
+        "subtitle": "Join hundreds of companies already transforming their workplace culture.",
+        "pricing": "Starting at",
+        "perEmployee": "/employee/month"
+      }
+    },
+    "stats": {
+      "professionalSupport": "Professional Support",
+      "licensedTherapists": "Licensed therapists available",
+      "teamWellness": "Team Wellness Score",
+      "activeSessions": "Active Sessions",
+      "satisfaction": "Employee Satisfaction"
+    },
+    "footer": {
+      "tagline": "Empowering workplaces with professional mental health support.",
+      "copyright": "© 2024 MentalFit. All rights reserved."
+    }
+  },
+  "about": {
+    "hero": {
+      "title": "About MentalFit",
+      "subtitle": "Leaders in corporate mental health solutions"
+    }
+  },
+  "pricing": {
+    "hero": {
+      "title": "Plans & Pricing",
+      "subtitle": "Choose the perfect plan for your organization"
+    }
+  },
+  "contact": {
+    "hero": {
+      "title": "Contact Us",
+      "subtitle": "We're here to help"
+    },
+    "form": {
+      "name": "Name",
+      "email": "Email",
+      "workEmail": "Work Email *",
+      "emailAddress": "Email Address *",
+      "message": "Message",
+      "submit": "Submit",
+      "sending": "Sending..."
+    }
+  },
+  "demo": {
+    "hero": {
+      "title": "Request a Demo",
+      "subtitle": "Discover how MentalFit can transform your organization"
+    }
+  },
+  "terms": {
+    "title": "Terms & Conditions",
+    "lastUpdated": "Last updated",
+    "contact": "Email: legal@mentalfit.com"
+  },
+  "privacy": {
+    "title": "Privacy Policy",
+    "lastUpdated": "Last updated",
+    "contact": "Email: privacy@mentalfit.com"
+  },
+  "dashboard": {
+    "title": "Dashboard",
+    "welcome": "Welcome back",
+    "overview": "Overview",
+    "analytics": {
+      "title": "Analytics",
+      "subtitle": "Your organization's metrics and reports"
+    },
+    "sessions": {
+      "title": "Sessions",
+      "subtitle": "Manage your therapy sessions"
+    },
+    "professionals": {
+      "title": "Professionals",
+      "subtitle": "Find the right therapist"
+    },
+    "chat": {
+      "title": "Chat",
+      "subtitle": "Messages and conversations"
+    },
+    "team": {
+      "title": "Team",
+      "subtitle": "Manage your employees"
+    },
+    "billing": {
+      "title": "Billing",
+      "subtitle": "Subscriptions and payments"
+    },
+    "resources": {
+      "title": "Resources",
+      "subtitle": "Wellness content library"
+    },
+    "profile": {
+      "title": "Profile",
+      "subtitle": "Your personal information"
+    },
+    "settings": {
+      "title": "Settings",
+      "subtitle": "Account preferences",
+      "emailAddress": "Email Address",
+      "changePassword": "Change Password",
+      "currentPassword": "Current Password",
+      "newPassword": "New Password",
+      "confirmPassword": "Confirm New Password",
+      "marketingEmails": "Promotional content and product updates"
+    }
+  },
+  "common": {
+    "loading": "Loading...",
+    "save": "Save",
+    "cancel": "Cancel",
+    "delete": "Delete",
+    "edit": "Edit",
+    "submit": "Submit",
+    "close": "Close",
+    "back": "Back",
+    "next": "Next",
+    "previous": "Previous",
+    "search": "Search",
+    "filter": "Filter",
+    "sort": "Sort",
+    "actions": "Actions",
+    "status": "Status",
+    "date": "Date",
+    "time": "Time",
+    "name": "Name",
+    "email": "Email",
+    "phone": "Phone",
+    "address": "Address",
+    "description": "Description",
+    "yes": "Yes",
+    "no": "No",
+    "ok": "OK",
+    "confirm": "Confirm",
+    "error": "Error",
+    "success": "Success",
+    "warning": "Warning",
+    "info": "Information"
   }
 }

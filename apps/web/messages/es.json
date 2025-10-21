@@ -198,5 +198,202 @@
       "2FADisabled": "Autenticación de dos factores desactivada",
       "2FAVerified": "Código verificado exitosamente"
     }
+  },
+  "nav": {
+    "home": "Inicio",
+    "about": "Nosotros",
+    "pricing": "Precios",
+    "demo": "Demo",
+    "contact": "Contacto",
+    "signIn": "Iniciar sesión",
+    "getStarted": "Comenzar"
+  },
+  "home": {
+    "hero": {
+      "title": "Soluciones de Salud Mental",
+      "titleHighlight": " para Espacios de Trabajo Modernos",
+      "subtitle": "Empodera a tu equipo con apoyo profesional en salud mental, recursos de bienestar y herramientas para prosperar en el exigente entorno laboral actual.",
+      "cta": {
+        "trial": "Comenzar Prueba Gratuita",
+        "learnMore": "Conocer Más"
+      },
+      "badges": {
+        "noSetupFees": "Sin Cargos de Instalación",
+        "trial": "Prueba de 30 Días",
+        "compliant": "Cumple con HIPAA"
+      }
+    },
+    "features": {
+      "title": "¿Por Qué Elegir MentalFit?",
+      "subtitle": "Nuestra plataforma integral combina tecnología de vanguardia con experiencia humana para brindar un apoyo excepcional en salud mental para tu organización.",
+      "hipaa": {
+        "title": "Cumple con HIPAA",
+        "description": "Seguridad y protección de privacidad de nivel empresarial para todas las sesiones y datos."
+      },
+      "professionals": {
+        "title": "Profesionales Certificados",
+        "description": "Acceso a terapeutas verificados y certificados y especialistas en salud mental."
+      },
+      "support": {
+        "title": "Soporte 24/7",
+        "description": "Apoyo de crisis las 24 horas y recursos de salud mental de emergencia."
+      },
+      "evidence": {
+        "title": "Basado en Evidencia",
+        "description": "Enfoques terapéuticos comprobados respaldados por investigación y evidencia clínica."
+      }
+    },
+    "benefits": {
+      "title": "Transforma Tu Cultura Organizacional",
+      "subtitle": "Invertir en la salud mental de los empleados no solo es lo correcto—es un negocio inteligente. Ve el impacto medible en tu organización.",
+      "list": {
+        "burnout": "Reduce el agotamiento laboral hasta en un 40%",
+        "productivity": "Aumenta la productividad y el compromiso",
+        "costs": "Reduce costos de atención médica y ausentismo",
+        "retention": "Mejora las tasas de retención de empleados",
+        "culture": "Crea una cultura organizacional de apoyo",
+        "resources": "Acceso a recursos integrales de bienestar"
+      },
+      "cta": "Comienza Tu Viaje",
+      "card": {
+        "title": "¿Listo para Comenzar?",
+        "subtitle": "Únete a cientos de empresas que ya están transformando su cultura organizacional.",
+        "pricing": "Desde",
+        "perEmployee": "/empleado/mes"
+      }
+    },
+    "stats": {
+      "professionalSupport": "Apoyo Profesional",
+      "licensedTherapists": "Terapeutas certificados disponibles",
+      "teamWellness": "Puntuación de Bienestar del Equipo",
+      "activeSessions": "Sesiones Activas",
+      "satisfaction": "Satisfacción del Empleado"
+    },
+    "footer": {
+      "tagline": "Empoderando espacios de trabajo con apoyo profesional en salud mental.",
+      "copyright": "© 2024 MentalFit. Todos los derechos reservados."
+    }
+  },
+  "about": {
+    "hero": {
+      "title": "Sobre MentalFit",
+      "subtitle": "Líderes en soluciones de salud mental corporativa"
+    }
+  },
+  "pricing": {
+    "hero": {
+      "title": "Planes y Precios",
+      "subtitle": "Elige el plan perfecto para tu organización"
+    }
+  },
+  "contact": {
+    "hero": {
+      "title": "Contáctanos",
+      "subtitle": "Estamos aquí para ayudarte"
+    },
+    "form": {
+      "name": "Nombre",
+      "email": "Correo Electrónico",
+      "workEmail": "Correo Corporativo *",
+      "emailAddress": "Dirección de Correo *",
+      "message": "Mensaje",
+      "submit": "Enviar",
+      "sending": "Enviando..."
+    }
+  },
+  "demo": {
+    "hero": {
+      "title": "Solicitar Demo",
+      "subtitle": "Descubre cómo MentalFit puede transformar tu organización"
+    }
+  },
+  "terms": {
+    "title": "Términos y Condiciones",
+    "lastUpdated": "Última actualización",
+    "contact": "Correo: legal@mentalfit.com"
+  },
+  "privacy": {
+    "title": "Política de Privacidad",
+    "lastUpdated": "Última actualización",
+    "contact": "Correo: privacy@mentalfit.com"
+  },
+  "dashboard": {
+    "title": "Panel de Control",
+    "welcome": "Bienvenido de vuelta",
+    "overview": "Resumen",
+    "analytics": {
+      "title": "Análisis",
+      "subtitle": "Métricas y reportes de tu organización"
+    },
+    "sessions": {
+      "title": "Sesiones",
+      "subtitle": "Gestiona tus sesiones de terapia"
+    },
+    "professionals": {
+      "title": "Profesionales",
+      "subtitle": "Encuentra el terapeuta adecuado"
+    },
+    "chat": {
+      "title": "Chat",
+      "subtitle": "Mensajes y conversaciones"
+    },
+    "team": {
+      "title": "Equipo",
+      "subtitle": "Gestiona a tus empleados"
+    },
+    "billing": {
+      "title": "Facturación",
+      "subtitle": "Suscripciones y pagos"
+    },
+    "resources": {
+      "title": "Recursos",
+      "subtitle": "Biblioteca de contenido de bienestar"
+    },
+    "profile": {
+      "title": "Perfil",
+      "subtitle": "Tu información personal"
+    },
+    "settings": {
+      "title": "Configuración",
+      "subtitle": "Preferencias de la cuenta",
+      "emailAddress": "Correo Electrónico",
+      "changePassword": "Cambiar Contraseña",
+      "currentPassword": "Contraseña Actual",
+      "newPassword": "Nueva Contraseña",
+      "confirmPassword": "Confirmar Nueva Contraseña",
+      "marketingEmails": "Contenido promocional y actualizaciones de productos"
+    }
+  },
+  "common": {
+    "loading": "Cargando...",
+    "save": "Guardar",
+    "cancel": "Cancelar",
+    "delete": "Eliminar",
+    "edit": "Editar",
+    "submit": "Enviar",
+    "close": "Cerrar",
+    "back": "Volver",
+    "next": "Siguiente",
+    "previous": "Anterior",
+    "search": "Buscar",
+    "filter": "Filtrar",
+    "sort": "Ordenar",
+    "actions": "Acciones",
+    "status": "Estado",
+    "date": "Fecha",
+    "time": "Hora",
+    "name": "Nombre",
+    "email": "Correo",
+    "phone": "Teléfono",
+    "address": "Dirección",
+    "description": "Descripción",
+    "yes": "Sí",
+    "no": "No",
+    "ok": "OK",
+    "confirm": "Confirmar",
+    "error": "Error",
+    "success": "Éxito",
+    "warning": "Advertencia",
+    "info": "Información"
   }
 }

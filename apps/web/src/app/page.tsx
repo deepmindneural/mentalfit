@@ -3,11 +3,12 @@
 import { useEffect } from 'react';
 import { redirect } from 'next/navigation';
 import Link from 'next/link';
-import { 
-  ArrowRight, 
-  Shield, 
-  Users, 
-  Clock, 
+import { useTranslations } from 'next-intl';
+import {
+  ArrowRight,
+  Shield,
+  Users,
+  Clock,
   Award,
   Brain,
   Heart,
@@ -21,36 +22,38 @@ export default function HomePage() {
   //   redirect('/dashboard');
   // }, []);
 
+  const t = useTranslations();
+
   const features = [
     {
       icon: Shield,
-      title: 'HIPAA Compliant',
-      description: 'Enterprise-grade security and privacy protection for all sessions and data.',
+      title: t('home.features.hipaa.title'),
+      description: t('home.features.hipaa.description'),
     },
     {
       icon: Users,
-      title: 'Licensed Professionals',
-      description: 'Access to verified, licensed therapists and mental health specialists.',
+      title: t('home.features.professionals.title'),
+      description: t('home.features.professionals.description'),
     },
     {
       icon: Clock,
-      title: '24/7 Support',
-      description: 'Round-the-clock crisis support and emergency mental health resources.',
+      title: t('home.features.support.title'),
+      description: t('home.features.support.description'),
     },
     {
       icon: Award,
-      title: 'Evidence-Based',
-      description: 'Proven therapeutic approaches backed by research and clinical evidence.',
+      title: t('home.features.evidence.title'),
+      description: t('home.features.evidence.description'),
     },
   ];
 
   const benefits = [
-    'Reduce employee burnout by up to 40%',
-    'Increase productivity and engagement',
-    'Lower healthcare costs and absenteeism',
-    'Improve employee retention rates',
-    'Create a supportive workplace culture',
-    'Access to comprehensive wellness resources',
+    t('home.benefits.list.burnout'),
+    t('home.benefits.list.productivity'),
+    t('home.benefits.list.costs'),
+    t('home.benefits.list.retention'),
+    t('home.benefits.list.culture'),
+    t('home.benefits.list.resources'),
   ];
 
   return (
@@ -64,34 +67,34 @@ export default function HomePage() {
             {/* Navigation Menu */}
             <nav className="hidden md:flex items-center space-x-8">
               <Link href="/" className="text-primary-600 font-medium">
-                Home
+                {t('nav.home')}
               </Link>
               <Link href="/about" className="text-gray-600 hover:text-gray-900 font-medium transition-colors">
-                About
+                {t('nav.about')}
               </Link>
               <Link href="/pricing" className="text-gray-600 hover:text-gray-900 font-medium transition-colors">
-                Pricing
+                {t('nav.pricing')}
               </Link>
               <Link href="/demo" className="text-gray-600 hover:text-gray-900 font-medium transition-colors">
-                Demo
+                {t('nav.demo')}
               </Link>
               <Link href="/contact" className="text-gray-600 hover:text-gray-900 font-medium transition-colors">
-                Contact
+                {t('nav.contact')}
               </Link>
             </nav>
-            
+
             <div className="flex items-center space-x-4">
               <Link
                 href="/auth/login"
                 className="text-gray-600 hover:text-gray-900 font-medium transition-colors"
               >
-                Sign In
+                {t('nav.signIn')}
               </Link>
               <Link
                 href="/dashboard"
                 className="btn-primary"
               >
-                Get Started
+                {t('nav.getStarted')}
               </Link>
             </div>
           </div>
@@ -105,14 +108,12 @@ export default function HomePage() {
             <div className="space-y-8">
               <div className="space-y-4">
                 <h1 className="text-4xl lg:text-6xl font-bold font-display text-gray-900 leading-tight">
-                  Mental Health
-                  <span className="text-primary-600"> Solutions</span>
+                  {t('home.hero.title')}
+                  <span className="text-primary-600">{t('home.hero.titleHighlight')}</span>
                   <br />
-                  for Modern Workplaces
                 </h1>
                 <p className="text-xl text-gray-600 leading-relaxed">
-                  Empower your team with professional mental health support, wellness resources, 
-                  and tools to thrive in today's demanding work environment.
+                  {t('home.hero.subtitle')}
                 </p>
               </div>
 
@@ -121,29 +122,29 @@ export default function HomePage() {
                   href="/dashboard"
                   className="btn-primary text-lg px-8 py-3 flex items-center justify-center"
                 >
-                  Start Free Trial
+                  {t('home.hero.cta.trial')}
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Link>
                 <Link
                   href="#features"
                   className="btn-secondary text-lg px-8 py-3 flex items-center justify-center"
                 >
-                  Learn More
+                  {t('home.hero.cta.learnMore')}
                 </Link>
               </div>
 
               <div className="flex items-center space-x-8 text-sm text-gray-600">
                 <div className="flex items-center">
                   <CheckCircle className="h-5 w-5 text-primary-500 mr-2" />
-                  No Setup Fees
+                  {t('home.hero.badges.noSetupFees')}
                 </div>
                 <div className="flex items-center">
                   <CheckCircle className="h-5 w-5 text-primary-500 mr-2" />
-                  30-Day Trial
+                  {t('home.hero.badges.trial')}
                 </div>
                 <div className="flex items-center">
                   <CheckCircle className="h-5 w-5 text-primary-500 mr-2" />
-                  HIPAA Compliant
+                  {t('home.hero.badges.compliant')}
                 </div>
               </div>
             </div>
@@ -156,22 +157,22 @@ export default function HomePage() {
                       <Brain className="h-6 w-6 text-primary-600" />
                     </div>
                     <div>
-                      <h3 className="font-semibold text-gray-900">Professional Support</h3>
-                      <p className="text-gray-600">Licensed therapists available</p>
+                      <h3 className="font-semibold text-gray-900">{t('home.stats.professionalSupport')}</h3>
+                      <p className="text-gray-600">{t('home.stats.licensedTherapists')}</p>
                     </div>
                   </div>
-                  
+
                   <div className="space-y-3">
                     <div className="flex justify-between items-center p-3 bg-gray-50 rounded-lg">
-                      <span className="text-sm font-medium">Team Wellness Score</span>
+                      <span className="text-sm font-medium">{t('home.stats.teamWellness')}</span>
                       <span className="text-primary-600 font-bold">87%</span>
                     </div>
                     <div className="flex justify-between items-center p-3 bg-gray-50 rounded-lg">
-                      <span className="text-sm font-medium">Active Sessions</span>
+                      <span className="text-sm font-medium">{t('home.stats.activeSessions')}</span>
                       <span className="text-primary-600 font-bold">24</span>
                     </div>
                     <div className="flex justify-between items-center p-3 bg-gray-50 rounded-lg">
-                      <span className="text-sm font-medium">Employee Satisfaction</span>
+                      <span className="text-sm font-medium">{t('home.stats.satisfaction')}</span>
                       <span className="text-primary-600 font-bold">9.2/10</span>
                     </div>
                   </div>
@@ -187,11 +188,10 @@ export default function HomePage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center space-y-4 mb-16">
             <h2 className="text-3xl lg:text-4xl font-bold font-display text-gray-900">
-              Why Choose MentalFit?
+              {t('home.features.title')}
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Our comprehensive platform combines cutting-edge technology with human expertise 
-              to deliver exceptional mental health support for your organization.
+              {t('home.features.subtitle')}
             </p>
           </div>
 
@@ -223,11 +223,10 @@ export default function HomePage() {
             <div className="space-y-8">
               <div className="space-y-4">
                 <h2 className="text-3xl lg:text-4xl font-bold font-display text-gray-900">
-                  Transform Your Workplace Culture
+                  {t('home.benefits.title')}
                 </h2>
                 <p className="text-lg text-gray-600">
-                  Investing in employee mental health isn't just the right thing to do—it's smart business. 
-                  See the measurable impact on your organization.
+                  {t('home.benefits.subtitle')}
                 </p>
               </div>
 
@@ -244,7 +243,7 @@ export default function HomePage() {
                 href="/dashboard"
                 className="btn-primary inline-flex items-center"
               >
-                Start Your Journey
+                {t('home.benefits.cta')}
                 <ArrowRight className="ml-2 h-4 w-4" />
               </Link>
             </div>
@@ -255,19 +254,19 @@ export default function HomePage() {
                   <div className="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mx-auto">
                     <Heart className="h-8 w-8 text-primary-600" />
                   </div>
-                  
+
                   <div className="space-y-4">
                     <h3 className="text-xl font-semibold text-gray-900">
-                      Ready to Get Started?
+                      {t('home.benefits.card.title')}
                     </h3>
                     <p className="text-gray-600">
-                      Join hundreds of companies already transforming their workplace culture.
+                      {t('home.benefits.card.subtitle')}
                     </p>
-                    
+
                     <div className="bg-gray-50 rounded-lg p-4">
-                      <div className="text-sm text-gray-600 mb-2">Starting at</div>
+                      <div className="text-sm text-gray-600 mb-2">{t('home.benefits.card.pricing')}</div>
                       <div className="text-2xl font-bold text-gray-900">
-                        $15<span className="text-lg font-normal">/employee/month</span>
+                        $15<span className="text-lg font-normal">{t('home.benefits.card.perEmployee')}</span>
                       </div>
                     </div>
                   </div>
@@ -284,10 +283,10 @@ export default function HomePage() {
           <div className="text-center space-y-4">
             <Logo variant="white" />
             <p className="text-gray-400">
-              Empowering workplaces with professional mental health support.
+              {t('home.footer.tagline')}
             </p>
             <p className="text-sm text-gray-500">
-              © 2024 MentalFit. All rights reserved.
+              {t('home.footer.copyright')}
             </p>
           </div>
         </div>
