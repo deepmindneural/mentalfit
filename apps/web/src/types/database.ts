@@ -2,6 +2,7 @@
  * TIPOS DE BASE DE DATOS - MENTALFIT
  *
  * IMPORTANTE: Estos tipos están generados manualmente desde el schema SQL en español.
+ * NOMENCLATURA: 100% en español (código backend)
  *
  * Una vez que el schema esté desplegado en Supabase, regenerar con:
  * ```bash
@@ -566,10 +567,10 @@ export interface VistaUsoPorDepartamento {
 }
 
 // ============================================
-// TIPOS DE FUNCIONES (Return Types)
+// TIPOS DE RESPUESTA DE FUNCIONES
 // ============================================
 
-export interface MetricasEmpresaResult {
+export interface ResultadoMetricasEmpresa {
   total_empleados: number
   empleados_activos: number
   sesiones_mes_actual: number
@@ -579,7 +580,7 @@ export interface MetricasEmpresaResult {
   promedio_bienestar: number
 }
 
-export interface DisponibilidadSlot {
+export interface SlotDisponibilidad {
   fecha: string
   hora_inicio: string
   hora_fin: string
@@ -587,7 +588,7 @@ export interface DisponibilidadSlot {
   profesional_id: string
 }
 
-export interface ReporteUso {
+export interface ResultadoReporteUso {
   periodo: string
   total_sesiones: number
   sesiones_por_tipo: Record<string, number>
@@ -596,72 +597,78 @@ export interface ReporteUso {
   horas_terapia_total: number
 }
 
+export interface ResultadoValidacionCredenciales {
+  usuario_id: string
+  rol: RolUsuario
+  empresa_id: string | null
+}
+
 // ============================================
 // TIPOS AUXILIARES
 // ============================================
 
-export interface DatabaseError {
-  message: string
-  code: string
-  details: string | null
-  hint: string | null
+export interface ErrorBaseDatos {
+  mensaje: string
+  codigo: string
+  detalles: string | null
+  sugerencia: string | null
 }
 
-export interface PaginatedResponse<T> {
-  data: T[]
-  count: number
-  page: number
-  pageSize: number
-  totalPages: number
+export interface RespuestaPaginada<T> {
+  datos: T[]
+  total: number
+  pagina: number
+  tamanoPagina: number
+  totalPaginas: number
 }
 
-export interface FilterOptions {
-  page?: number
-  pageSize?: number
-  sortBy?: string
-  sortOrder?: 'asc' | 'desc'
-  search?: string
+export interface OpcionesFiltro {
+  pagina?: number
+  tamanoPagina?: number
+  ordenarPor?: string
+  ordenDireccion?: 'asc' | 'desc'
+  busqueda?: string
 }
 
 // ============================================
-// TIPOS PARA INSERT/UPDATE
+// TIPOS PARA INSERTAR/ACTUALIZAR
 // ============================================
 
-export type InsertEmpresa = Omit<Empresa, 'id' | 'fecha_creacion' | 'fecha_actualizacion'>
-export type UpdateEmpresa = Partial<InsertEmpresa>
+export type DatosNuevaEmpresa = Omit<Empresa, 'id' | 'fecha_creacion' | 'fecha_actualizacion'>
+export type DatosActualizarEmpresa = Partial<DatosNuevaEmpresa>
 
-export type InsertUsuario = Omit<Usuario, 'id' | 'fecha_creacion' | 'fecha_actualizacion'>
-export type UpdateUsuario = Partial<InsertUsuario>
+export type DatosNuevoUsuario = Omit<Usuario, 'id' | 'fecha_creacion' | 'fecha_actualizacion'>
+export type DatosActualizarUsuario = Partial<DatosNuevoUsuario>
 
-export type InsertProfesional = Omit<Profesional, 'id' | 'fecha_creacion' | 'fecha_actualizacion' | 'calificacion_promedio' | 'total_sesiones' | 'total_resenas'>
-export type UpdateProfesional = Partial<InsertProfesional>
+export type DatosNuevoProfesional = Omit<Profesional, 'id' | 'fecha_creacion' | 'fecha_actualizacion' | 'calificacion_promedio' | 'total_sesiones' | 'total_resenas'>
+export type DatosActualizarProfesional = Partial<DatosNuevoProfesional>
 
-export type InsertEmpleado = Omit<Empleado, 'id' | 'fecha_creacion' | 'fecha_actualizacion'>
-export type UpdateEmpleado = Partial<InsertEmpleado>
+export type DatosNuevoEmpleado = Omit<Empleado, 'id' | 'fecha_creacion' | 'fecha_actualizacion'>
+export type DatosActualizarEmpleado = Partial<DatosNuevoEmpleado>
 
-export type InsertSesionTerapia = Omit<SesionTerapia, 'id' | 'fecha_creacion' | 'fecha_actualizacion'>
-export type UpdateSesionTerapia = Partial<InsertSesionTerapia>
+export type DatosNuevaSesion = Omit<SesionTerapia, 'id' | 'fecha_creacion' | 'fecha_actualizacion'>
+export type DatosActualizarSesion = Partial<DatosNuevaSesion>
 
-export type InsertCita = Omit<Cita, 'id' | 'fecha_creacion' | 'fecha_actualizacion'>
-export type UpdateCita = Partial<InsertCita>
+export type DatosNuevaCita = Omit<Cita, 'id' | 'fecha_creacion' | 'fecha_actualizacion'>
+export type DatosActualizarCita = Partial<DatosNuevaCita>
 
-export type InsertEvaluacion = Omit<Evaluacion, 'id' | 'fecha_creacion'>
-export type UpdateEvaluacion = Partial<InsertEvaluacion>
+export type DatosNuevaEvaluacion = Omit<Evaluacion, 'id' | 'fecha_creacion'>
+export type DatosActualizarEvaluacion = Partial<DatosNuevaEvaluacion>
 
-export type InsertMensaje = Omit<Mensaje, 'id' | 'fecha_creacion'>
-export type UpdateMensaje = Partial<InsertMensaje>
+export type DatosNuevoMensaje = Omit<Mensaje, 'id' | 'fecha_creacion'>
+export type DatosActualizarMensaje = Partial<DatosNuevoMensaje>
 
-export type InsertNotificacion = Omit<Notificacion, 'id' | 'fecha_creacion'>
-export type UpdateNotificacion = Partial<InsertNotificacion>
+export type DatosNuevaNotificacion = Omit<Notificacion, 'id' | 'fecha_creacion'>
+export type DatosActualizarNotificacion = Partial<DatosNuevaNotificacion>
 
-export type InsertPago = Omit<Pago, 'id' | 'fecha_creacion'>
-export type UpdatePago = Partial<InsertPago>
+export type DatosNuevoPago = Omit<Pago, 'id' | 'fecha_creacion'>
+export type DatosActualizarPago = Partial<DatosNuevoPago>
 
-export type InsertRecurso = Omit<Recurso, 'id' | 'fecha_creacion' | 'fecha_actualizacion' | 'vistas' | 'likes'>
-export type UpdateRecurso = Partial<InsertRecurso>
+export type DatosNuevoRecurso = Omit<Recurso, 'id' | 'fecha_creacion' | 'fecha_actualizacion' | 'vistas' | 'likes'>
+export type DatosActualizarRecurso = Partial<DatosNuevoRecurso>
 
 // ============================================
-// TIPOS DE RELACIONES (Joins comunes)
+// TIPOS CON RELACIONES (Joins comunes)
 // ============================================
 
 export interface SesionConRelaciones extends SesionTerapia {
@@ -692,47 +699,56 @@ export interface EmpleadoConDetalles extends Empleado {
   profesional_asignado: Pick<Profesional, 'id' | 'usuario_id'> | null
 }
 
+export interface RecursoConAutor extends Recurso {
+  autor: Pick<Usuario, 'id' | 'nombre_completo' | 'avatar_url'> | null
+}
+
+export interface ConversacionConUltimoMensaje extends Conversacion {
+  ultimo_mensaje: Mensaje | null
+  participantes_datos: Pick<Usuario, 'id' | 'nombre_completo' | 'avatar_url'>[]
+}
+
 // ============================================
-// TIPOS DE SUPABASE (Helpers)
+// TIPO DE BASE DE DATOS (para Supabase)
 // ============================================
 
-export interface Database {
+export interface BaseDatos {
   public: {
     Tables: {
       empresas: {
         Row: Empresa
-        Insert: InsertEmpresa
-        Update: UpdateEmpresa
+        Insert: DatosNuevaEmpresa
+        Update: DatosActualizarEmpresa
       }
       usuarios: {
         Row: Usuario
-        Insert: InsertUsuario
-        Update: UpdateUsuario
+        Insert: DatosNuevoUsuario
+        Update: DatosActualizarUsuario
       }
       profesionales: {
         Row: Profesional
-        Insert: InsertProfesional
-        Update: UpdateProfesional
+        Insert: DatosNuevoProfesional
+        Update: DatosActualizarProfesional
       }
       empleados: {
         Row: Empleado
-        Insert: InsertEmpleado
-        Update: UpdateEmpleado
+        Insert: DatosNuevoEmpleado
+        Update: DatosActualizarEmpleado
       }
       sesiones_terapia: {
         Row: SesionTerapia
-        Insert: InsertSesionTerapia
-        Update: UpdateSesionTerapia
+        Insert: DatosNuevaSesion
+        Update: DatosActualizarSesion
       }
       citas: {
         Row: Cita
-        Insert: InsertCita
-        Update: UpdateCita
+        Insert: DatosNuevaCita
+        Update: DatosActualizarCita
       }
       evaluaciones: {
         Row: Evaluacion
-        Insert: InsertEvaluacion
-        Update: UpdateEvaluacion
+        Insert: DatosNuevaEvaluacion
+        Update: DatosActualizarEvaluacion
       }
       resultados_evaluaciones: {
         Row: ResultadoEvaluacion
@@ -742,18 +758,18 @@ export interface Database {
       }
       mensajes: {
         Row: Mensaje
-        Insert: InsertMensaje
-        Update: UpdateMensaje
+        Insert: DatosNuevoMensaje
+        Update: DatosActualizarMensaje
       }
       notificaciones: {
         Row: Notificacion
-        Insert: InsertNotificacion
-        Update: UpdateNotificacion
+        Insert: DatosNuevaNotificacion
+        Update: DatosActualizarNotificacion
       }
       pagos: {
         Row: Pago
-        Insert: InsertPago
-        Update: UpdatePago
+        Insert: DatosNuevoPago
+        Update: DatosActualizarPago
       }
       suscripciones: {
         Row: Suscripcion
@@ -766,8 +782,8 @@ export interface Database {
       }
       recursos: {
         Row: Recurso
-        Insert: InsertRecurso
-        Update: UpdateRecurso
+        Insert: DatosNuevoRecurso
+        Update: DatosActualizarRecurso
       }
       favoritos: {
         Row: Favorito
@@ -837,11 +853,7 @@ export interface Database {
           p_email: string
           p_password: string
         }
-        Returns: {
-          usuario_id: string
-          rol: RolUsuario
-          empresa_id: string | null
-        } | null
+        Returns: ResultadoValidacionCredenciales | null
       }
       calcular_disponibilidad: {
         Args: {
@@ -849,13 +861,13 @@ export interface Database {
           p_fecha_inicio: string
           p_fecha_fin: string
         }
-        Returns: DisponibilidadSlot[]
+        Returns: SlotDisponibilidad[]
       }
       calcular_metricas_empresa: {
         Args: {
           p_empresa_id: string
         }
-        Returns: MetricasEmpresaResult
+        Returns: ResultadoMetricasEmpresa
       }
       generar_reporte_uso: {
         Args: {
@@ -863,11 +875,11 @@ export interface Database {
           p_fecha_inicio: string
           p_fecha_fin: string
         }
-        Returns: ReporteUso
+        Returns: ResultadoReporteUso
       }
     }
   }
 }
 
-// Export tipo para el cliente de Supabase
-export type SupabaseClient = any // Reemplazar con el tipo real de @supabase/supabase-js cuando esté instalado
+// Exportar tipo para uso con cliente de Supabase
+export type ClienteSupabase = any // Reemplazar con tipo real de @supabase/supabase-js
