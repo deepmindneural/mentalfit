@@ -36,7 +36,7 @@ const esquemaContrasena = z.string()
 export const esquemaLogin = z.object({
   email: esquemaEmail,
   contrasena: z.string().min(1, 'auth.errors.passwordRequired'),
-  recordarme: z.boolean().optional().default(false),
+  recordarme: z.boolean().optional(),
 });
 
 export type DatosLogin = z.infer<typeof esquemaLogin>;

@@ -64,6 +64,37 @@ Este archivo registra el trabajo realizado por cada agente para evitar duplicaci
 
 ---
 
+#### 🤖 backend-database-specialist
+**Hora:** 13:00 - 14:30
+**Tarea:** Crear 20 funciones SQL de lógica de negocio
+**Archivos Creados:**
+- `/apps/web/scripts/funciones-negocio.sql` (1,800+ líneas)
+
+**Trabajo Realizado:**
+- ✅ 4 funciones de gestión de usuarios (crear, actualizar, validar, asignar rol)
+- ✅ 2 funciones de gestión de empresas (crear, agregar empleado)
+- ✅ 4 funciones de sesiones/citas (crear, cancelar, reprogramar, verificar conflictos)
+- ✅ 1 función de disponibilidad (calcular slots)
+- ✅ 3 funciones de pagos (procesar, actualizar suscripción, generar factura)
+- ✅ 2 funciones de métricas (empresa, rating profesional)
+- ✅ 3 funciones de mantenimiento (limpiar sesiones, backup, anonimizar)
+- ✅ 1 función de reportes (generar reporte de uso)
+
+**Decisiones Tomadas:**
+- Uso de `crypt()` con bcrypt para hash de passwords
+- Política de cancelación de 24 horas obligatoria
+- Slots de disponibilidad de 30 minutos
+- Formato de factura: YYYYMM-NNNN
+- GDPR compliance con anonimización (mantiene datos agregados)
+- SECURITY DEFINER en funciones que acceden a auth.users
+- Auditoría automática en operaciones críticas
+
+**Archivos Modificados:** Ninguno
+**Conflictos:** Ninguno
+**Próximo Paso:** Ejecutar funciones en Supabase y crear tests unitarios
+
+---
+
 ## 🔄 EN PROGRESO
 
 *No hay tareas en progreso actualmente*
@@ -111,11 +142,11 @@ Este archivo registra el trabajo realizado por cada agente para evitar duplicaci
 | Métrica | Valor |
 |---------|-------|
 | **Agentes activos** | 2 |
-| **Tareas completadas** | 2 |
-| **Archivos creados** | 4 |
+| **Tareas completadas** | 3 |
+| **Archivos creados** | 5 |
 | **Archivos modificados** | 0 |
 | **Conflictos** | 0 |
-| **Líneas de código** | 1,625 (SQL) |
+| **Líneas de código** | 3,425+ (SQL) |
 
 ---
 
@@ -124,15 +155,23 @@ Este archivo registra el trabajo realizado por cada agente para evitar duplicaci
 ```
 Schema SQL Completo (✅)
     ↓
+├─→ Funciones de Negocio (✅)
+│       ↓
+│   └─→ Tests Unitarios (pendiente)
+│
 ├─→ Tipos TypeScript (pendiente)
 │       ↓
 │   ├─→ Zustand Stores (pendiente)
 │   └─→ API Routes (pendiente)
+│           ↓
+│       └─→ Llamar Funciones SQL (pendiente)
 │
 ├─→ Migration Script (pendiente)
 │       ↓
 │   └─→ Ejecutar en Supabase (pendiente)
 │           ↓
+│       ├─→ Schema (pendiente)
+│       ├─→ Funciones (pendiente)
 │       └─→ Supabase Auth (pendiente)
 │
 └─→ i18n Setup (pendiente)
@@ -183,4 +222,4 @@ Schema SQL Completo (✅)
 
 ---
 
-**Última actualización:** 2025-01-21 12:00 por project-coordinator
+**Última actualización:** 2025-01-21 14:30 por backend-database-specialist

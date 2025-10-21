@@ -14,12 +14,16 @@ export function esIdiomaValido(idioma: string): idioma is Idioma {
 }
 
 export default getRequestConfig(async ({ locale }) => {
+  // Usar idioma por defecto si no se proporciona
+  const idiomaActual = locale || idiomaDefault;
+
   // Validar que el idioma sea soportado
-  if (!esIdiomaValido(locale)) {
+  if (!esIdiomaValido(idiomaActual)) {
     notFound();
   }
 
   return {
-    messages: (await import(`./messages/${locale}.json`)).default
+    locale: idiomaActual,
+    messages: (await import(`./messages/${idiomaActual}.json`)).default
   };
 });

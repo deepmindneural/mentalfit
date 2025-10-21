@@ -2,8 +2,8 @@
 
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
-import { useTranslations } from 'next/intl';
-import { OTPInput } from 'input-otp';
+import { useTranslations } from 'next-intl';
+import InputOTP from './InputOTP';
 import { Shield, Loader2, ArrowLeft, AlertCircle } from 'lucide-react';
 import toast from 'react-hot-toast';
 import { createClient } from '@/lib/supabase';
