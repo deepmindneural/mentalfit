@@ -35,7 +35,7 @@ export default function Logo({ className = '', showText = true, variant = 'defau
             MentalFit
           </span>
           <span className={`text-xs font-medium ${variant === 'white' ? 'text-gray-200' : 'text-gray-500'} -mt-1`}>
-            Corporate Wellness
+            Tu bienestar importa
           </span>
         </div>
       )}
