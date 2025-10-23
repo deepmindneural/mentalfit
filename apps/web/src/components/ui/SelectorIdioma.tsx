@@ -45,7 +45,7 @@ export default function SelectorIdioma({ className = '', showLabels = true }: Se
         className={`
           inline-flex items-center justify-center gap-2 rounded-lg px-4 py-2
           text-sm font-medium text-gray-700 bg-white border border-gray-300
-          hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2
+          hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2
           transition-colors duration-200
           ${isPending ? 'opacity-50 cursor-not-allowed' : 'cursor-pointer'}
         `}
@@ -87,7 +87,7 @@ export default function SelectorIdioma({ className = '', showLabels = true }: Se
                     flex w-full items-center gap-3 px-4 py-2 text-sm
                     transition-colors duration-150
                     ${idioma.code === locale
-                      ? 'bg-green-50 text-green-700 font-medium'
+                      ? 'bg-primary-50 text-primary-700 font-medium'
                       : 'text-gray-700 hover:bg-gray-100'
                     }
                     ${isPending ? 'opacity-50 cursor-not-allowed' : 'cursor-pointer'}
@@ -98,7 +98,7 @@ export default function SelectorIdioma({ className = '', showLabels = true }: Se
                   <span>{idioma.nombre}</span>
                   {idioma.code === locale && (
                     <svg
-                      className="ml-auto h-5 w-5 text-green-600"
+                      className="ml-auto h-5 w-5 text-primary-600"
                       xmlns="http://www.w3.org/2000/svg"
                       viewBox="0 0 20 20"
                       fill="currentColor"

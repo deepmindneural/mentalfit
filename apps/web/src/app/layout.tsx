@@ -18,22 +18,22 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  title: 'MentalFit - Corporate Mental Health Platform',
-  description: 'Professional mental health services for modern workplaces. Connect your team with licensed therapists and wellness resources.',
-  keywords: 'mental health, corporate wellness, therapy, employee wellbeing, professional counseling',
+  title: 'MentalFit - Tu Bienestar Mental Importa',
+  description: 'Plataforma integral de salud mental para empresas modernas. Conecta tu equipo con psicólogos certificados y recursos de bienestar.',
+  keywords: 'salud mental, bienestar corporativo, terapia online, psicología, bienestar emocional, terapia empresarial',
   authors: [{ name: 'MentalFit Team' }],
   viewport: 'width=device-width, initial-scale=1',
   robots: 'index, follow',
   openGraph: {
-    title: 'MentalFit - Corporate Mental Health Platform',
-    description: 'Professional mental health services for modern workplaces',
+    title: 'MentalFit - Tu Bienestar Mental Importa',
+    description: 'Cuida la salud mental de tu equipo con profesionales certificados',
     type: 'website',
-    locale: 'en_US',
+    locale: 'es_ES',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'MentalFit - Corporate Mental Health Platform',
-    description: 'Professional mental health services for modern workplaces',
+    title: 'MentalFit - Tu Bienestar Mental Importa',
+    description: 'Cuida la salud mental de tu equipo con profesionales certificados',
   },
 };
 
@@ -52,7 +52,7 @@ export default async function RootLayout({
       <head>
         <link rel="icon" href="/favicon.ico" />
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-        <meta name="theme-color" content="#22c55e" />
+        <meta name="theme-color" content="#a855f7" />
       </head>
       <body className="font-sans antialiased bg-gray-50">
         <NextIntlClientProvider messages={messages}>
