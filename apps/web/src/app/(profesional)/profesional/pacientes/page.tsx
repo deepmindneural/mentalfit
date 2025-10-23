@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Search, Filter, Plus, MoreVertical, Mail, Phone, Calendar } from 'lucide-react';
 import TablaDatos, { Columna } from '@/components/ui/TablaDatos';
 import Boton from '@/components/ui/Boton';
@@ -11,75 +11,87 @@ import Avatar from '@/components/ui/Avatar';
 import Insignia from '@/components/ui/Insignia';
 import MenuDesplegable from '@/components/ui/MenuDesplegable';
 import Paginacion from '@/components/ui/Paginacion';
+import Esqueleto from '@/components/ui/Esqueleto';
+import { useUsuarioActual } from '@/hooks/useSupabase';
 
 interface Paciente {
-  id: number;
+  id: string;
   nombre: string;
   email: string;
   telefono: string;
   estado: 'activo' | 'inactivo' | 'pendiente';
-  proximaSesion: string;
+  proximaSesion: string | null;
   totalSesiones: number;
-  ultimaSesion: string;
+  ultimaSesion: string | null;
 }
 
-const datosPacientes: Paciente[] = [
-  {
-    id: 1,
-    nombre: 'María González',
-    email: 'maria.gonzalez@email.com',
-    telefono: '+34 612 345 678',
-    estado: 'activo',
-    proximaSesion: '2025-01-25 10:00',
-    totalSesiones: 12,
-    ultimaSesion: '2025-01-18',
-  },
-  {
-    id: 2,
-    nombre: 'Carlos Rodríguez',
-    email: 'carlos.rodriguez@email.com',
-    telefono: '+34 623 456 789',
-    estado: 'activo',
-    proximaSesion: '2025-01-24 15:30',
-    totalSesiones: 8,
-    ultimaSesion: '2025-01-17',
-  },
-  {
-    id: 3,
-    nombre: 'Ana Martínez',
-    email: 'ana.martinez@email.com',
-    telefono: '+34 634 567 890',
-    estado: 'pendiente',
-    proximaSesion: '2025-01-26 11:00',
-    totalSesiones: 1,
-    ultimaSesion: '2025-01-10',
-  },
-  {
-    id: 4,
-    nombre: 'Juan Pérez',
-    email: 'juan.perez@email.com',
-    telefono: '+34 645 678 901',
-    estado: 'activo',
-    proximaSesion: '2025-01-27 09:00',
-    totalSesiones: 15,
-    ultimaSesion: '2025-01-19',
-  },
-  {
-    id: 5,
-    nombre: 'Laura Sánchez',
-    email: 'laura.sanchez@email.com',
-    telefono: '+34 656 789 012',
-    estado: 'inactivo',
-    proximaSesion: '-',
-    totalSesiones: 5,
-    ultimaSesion: '2024-12-20',
-  },
-];
-
 export default function PaginaPacientes() {
+  const { usuario, cargando: cargandoUsuario } = useUsuarioActual();
+  const [pacientes, setPacientes] = useState<Paciente[]>([]);
+  const [pacientesFiltrados, setPacientesFiltrados] = useState<Paciente[]>([]);
   const [busqueda, setBusqueda] = useState('');
   const [filtroEstado, setFiltroEstado] = useState('');
   const [paginaActual, setPaginaActual] = useState(1);
+  const [cargando, setCargando] = useState(true);
+  const [profesionalId, setProfesionalId] = useState<string | null>(null);
+
+  // Obtener el ID del profesional
+  useEffect(() => {
+    async function obtenerProfesionalId() {
+      if (!usuario) return;
+
+      try {
+        const response = await fetch(`/api/profesionales?usuario_id=${usuario.id}`);
+        if (response.ok) {
+          const data = await response.json();
+          if (data.length > 0) {
+            setProfesionalId(data[0].id);
+          }
+        }
+      } catch (error) {
+        console.error('Error al obtener profesional:', error);
+      }
+    }
+
+    if (usuario) {
+      obtenerProfesionalId();
+    }
+  }, [usuario]);
+
+  // Cargar pacientes
+  useEffect(() => {
+    async function cargarPacientes() {
+      if (!profesionalId) return;
+
+      try {
+        setCargando(true);
+        const params = new URLSearchParams({
+          profesional_id: profesionalId,
+        });
+
+        if (filtroEstado) {
+          params.append('estado', filtroEstado);
+        }
+
+        if (busqueda) {
+          params.append('busqueda', busqueda);
+        }
+
+        const response = await fetch(`/api/pacientes?${params}`);
+        if (response.ok) {
+          const data = await response.json();
+          setPacientes(data);
+          setPacientesFiltrados(data);
+        }
+      } catch (error) {
+        console.error('Error al cargar pacientes:', error);
+      } finally {
+        setCargando(false);
+      }
+    }
+
+    cargarPacientes();
+  }, [profesionalId, filtroEstado, busqueda]);
 
   const columnas: Columna<Paciente>[] = [
     {
@@ -140,7 +152,7 @@ export default function PaginaPacientes() {
       etiqueta: 'Próxima Sesión',
       renderizar: (paciente) => (
         <span className="text-gray-600 dark:text-gray-300">
-          {paciente.proximaSesion !== '-'
+          {paciente.proximaSesion
             ? new Date(paciente.proximaSesion).toLocaleDateString('es-ES', {
                 day: '2-digit',
                 month: 'short',
@@ -174,6 +186,16 @@ export default function PaginaPacientes() {
       ),
     },
   ];
+
+  if (cargandoUsuario || cargando) {
+    return (
+      <div className="space-y-6">
+        <Esqueleto alto="80px" />
+        <Esqueleto alto="80px" />
+        <Esqueleto alto="400px" />
+      </div>
+    );
+  }
 
   return (
     <div className="space-y-6">
@@ -223,16 +245,16 @@ export default function PaginaPacientes() {
       {/* Tabla */}
       <Tarjeta padding="none">
         <TablaDatos
-          datos={datosPacientes}
+          datos={pacientesFiltrados}
           columnas={columnas}
           alClickFila={(paciente) => console.log('Ver paciente:', paciente)}
         />
 
         <Paginacion
           paginaActual={paginaActual}
-          totalPaginas={5}
+          totalPaginas={Math.ceil(pacientesFiltrados.length / 10)}
           alCambiarPagina={setPaginaActual}
-          totalElementos={42}
+          totalElementos={pacientesFiltrados.length}
           elementosPorPagina={10}
         />
       </Tarjeta>

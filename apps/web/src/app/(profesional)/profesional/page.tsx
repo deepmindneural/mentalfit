@@ -1,5 +1,6 @@
 'use client';
 
+import { useEffect, useState } from 'react';
 import { Users, Calendar, DollarSign, TrendingUp, Clock, CheckCircle } from 'lucide-react';
 import Tarjeta from '@/components/ui/Tarjeta';
 import ContenedorEstadisticas from '@/components/ui/ContenedorEstadisticas';
@@ -7,49 +8,118 @@ import GraficoLinea from '@/components/ui/GraficoLinea';
 import GraficoBarra from '@/components/ui/GraficoBarra';
 import Insignia from '@/components/ui/Insignia';
 import Avatar from '@/components/ui/Avatar';
+import Esqueleto from '@/components/ui/Esqueleto';
+import { useUsuarioActual } from '@/hooks/useSupabase';
 
-// Datos de ejemplo
-const datosSemana = [
-  { nombre: 'Lun', sesiones: 4, ingresos: 480 },
-  { nombre: 'Mar', sesiones: 6, ingresos: 720 },
-  { nombre: 'Mié', sesiones: 5, ingresos: 600 },
-  { nombre: 'Jue', sesiones: 7, ingresos: 840 },
-  { nombre: 'Vie', sesiones: 6, ingresos: 720 },
-  { nombre: 'Sáb', sesiones: 3, ingresos: 360 },
-  { nombre: 'Dom', sesiones: 2, ingresos: 240 },
-];
+interface EstadisticasProfesional {
+  totalPacientes: number;
+  sesionesEsteMes: number;
+  ingresosEsteMes: number;
+  tasaAsistencia: number;
+}
 
-const proximasSesiones = [
-  {
-    id: 1,
-    paciente: 'María González',
-    hora: '10:00 AM',
-    tipo: 'Individual',
-    modalidad: 'Video',
-  },
-  {
-    id: 2,
-    paciente: 'Carlos Rodríguez',
-    hora: '11:30 AM',
-    tipo: 'Seguimiento',
-    modalidad: 'Video',
-  },
-  {
-    id: 3,
-    paciente: 'Ana Martínez',
-    hora: '02:00 PM',
-    tipo: 'Primera sesión',
-    modalidad: 'Video',
-  },
-];
+interface DatosSemana {
+  nombre: string;
+  sesiones: number;
+  ingresos: number;
+}
+
+interface SesionProxima {
+  id: string;
+  paciente: string;
+  fechaHoraInicio: string;
+  tipo: string;
+  modalidad: string;
+}
 
 export default function PaginaDashboardProfesional() {
+  const { usuario, cargando: cargandoUsuario } = useUsuarioActual();
+  const [estadisticas, setEstadisticas] = useState<EstadisticasProfesional | null>(null);
+  const [datosSemana, setDatosSemana] = useState<DatosSemana[]>([]);
+  const [proximasSesiones, setProximasSesiones] = useState<SesionProxima[]>([]);
+  const [cargando, setCargando] = useState(true);
+  const [profesionalId, setProfesionalId] = useState<string | null>(null);
+
+  // Obtener el ID del profesional del usuario actual
+  useEffect(() => {
+    async function obtenerProfesionalId() {
+      if (!usuario) return;
+
+      try {
+        const response = await fetch(`/api/profesionales?usuario_id=${usuario.id}`);
+        if (response.ok) {
+          const data = await response.json();
+          if (data.length > 0) {
+            setProfesionalId(data[0].id);
+          }
+        }
+      } catch (error) {
+        console.error('Error al obtener profesional:', error);
+      }
+    }
+
+    if (usuario) {
+      obtenerProfesionalId();
+    }
+  }, [usuario]);
+
+  // Cargar datos del dashboard
+  useEffect(() => {
+    async function cargarDatos() {
+      if (!profesionalId) return;
+
+      try {
+        setCargando(true);
+
+        // Cargar estadísticas
+        const resEstadisticas = await fetch(`/api/profesionales/${profesionalId}/estadisticas`);
+        if (resEstadisticas.ok) {
+          const data = await resEstadisticas.json();
+          setEstadisticas(data);
+        }
+
+        // Cargar datos semanales
+        const resDatosSemana = await fetch(`/api/profesionales/${profesionalId}/datos-semanales`);
+        if (resDatosSemana.ok) {
+          const data = await resDatosSemana.json();
+          setDatosSemana(data);
+        }
+
+        // Cargar próximas sesiones
+        const resSesiones = await fetch(`/api/profesionales/${profesionalId}/sesiones-proximas`);
+        if (resSesiones.ok) {
+          const data = await resSesiones.json();
+          setProximasSesiones(data.slice(0, 3)); // Solo las primeras 3
+        }
+      } catch (error) {
+        console.error('Error al cargar datos:', error);
+      } finally {
+        setCargando(false);
+      }
+    }
+
+    cargarDatos();
+  }, [profesionalId]);
+
+  if (cargandoUsuario || cargando) {
+    return (
+      <div className="space-y-6">
+        <Esqueleto alto="60px" />
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          {[1, 2, 3, 4].map((i) => (
+            <Esqueleto key={i} alto="120px" />
+          ))}
+        </div>
+        <Esqueleto alto="300px" />
+      </div>
+    );
+  }
   return (
     <div className="space-y-6">
       {/* Header */}
       <div>
         <h1 className="text-3xl font-bold text-gray-900 dark:text-white">
-          Bienvenido, Dr. Profesional
+          Bienvenido, {usuario?.nombre_completo || 'Profesional'}
         </h1>
         <p className="text-gray-600 dark:text-gray-400 mt-1">
           Aquí está el resumen de tu actividad profesional
@@ -60,37 +130,33 @@ export default function PaginaDashboardProfesional() {
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
         <ContenedorEstadisticas
           titulo="Pacientes Activos"
-          valor="42"
+          valor={estadisticas?.totalPacientes.toString() || '0'}
           icono={Users}
-          cambio={{ valor: 12, tipo: 'aumento' }}
-          descripcion="vs. mes anterior"
+          descripcion="total de pacientes"
           color="primario"
         />
 
         <ContenedorEstadisticas
           titulo="Sesiones Este Mes"
-          valor="89"
+          valor={estadisticas?.sesionesEsteMes.toString() || '0'}
           icono={Calendar}
-          cambio={{ valor: 8, tipo: 'aumento' }}
-          descripcion="vs. mes anterior"
+          descripcion="sesiones programadas"
           color="secundario"
         />
 
         <ContenedorEstadisticas
           titulo="Ingresos del Mes"
-          valor="$10,680"
+          valor={`$${estadisticas?.ingresosEsteMes.toLocaleString() || '0'}`}
           icono={DollarSign}
-          cambio={{ valor: 15, tipo: 'aumento' }}
-          descripcion="vs. mes anterior"
+          descripcion="ingresos confirmados"
           color="exito"
         />
 
         <ContenedorEstadisticas
           titulo="Tasa de Asistencia"
-          valor="94%"
+          valor={`${estadisticas?.tasaAsistencia || 0}%`}
           icono={TrendingUp}
-          cambio={{ valor: 3, tipo: 'aumento' }}
-          descripcion="vs. mes anterior"
+          descripcion="sesiones completadas"
           color="informacion"
         />
       </div>
@@ -119,40 +185,51 @@ export default function PaginaDashboardProfesional() {
       </div>
 
       {/* Próximas Sesiones */}
-      <Tarjeta titulo="Próximas Sesiones Hoy" descripcion="3 sesiones programadas">
+      <Tarjeta titulo="Próximas Sesiones Hoy" descripcion={`${proximasSesiones.length} sesiones programadas`}>
         <div className="space-y-4 mt-4">
-          {proximasSesiones.map((sesion) => (
-            <div
-              key={sesion.id}
-              className="flex items-center justify-between p-4 bg-gray-50 dark:bg-gray-700/50 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors"
-            >
-              <div className="flex items-center gap-4">
-                <Avatar iniciales={sesion.paciente.split(' ').map(n => n[0]).join('')} tamano="md" />
+          {proximasSesiones.length === 0 ? (
+            <p className="text-center text-gray-500 dark:text-gray-400 py-8">
+              No hay sesiones programadas para hoy
+            </p>
+          ) : (
+            proximasSesiones.map((sesion) => {
+              const fecha = new Date(sesion.fechaHoraInicio);
+              const hora = fecha.toLocaleTimeString('es-ES', { hour: '2-digit', minute: '2-digit' });
 
-                <div>
-                  <p className="font-medium text-gray-900 dark:text-white">
-                    {sesion.paciente}
-                  </p>
-                  <div className="flex items-center gap-2 mt-1">
-                    <Clock className="h-4 w-4 text-gray-400" />
-                    <span className="text-sm text-gray-600 dark:text-gray-400">
-                      {sesion.hora}
-                    </span>
-                    <Insignia variante="primario" tamano="sm">
-                      {sesion.tipo}
-                    </Insignia>
+              return (
+                <div
+                  key={sesion.id}
+                  className="flex items-center justify-between p-4 bg-gray-50 dark:bg-gray-700/50 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors"
+                >
+                  <div className="flex items-center gap-4">
+                    <Avatar iniciales={sesion.paciente.split(' ').map(n => n[0]).join('')} tamano="md" />
+
+                    <div>
+                      <p className="font-medium text-gray-900 dark:text-white">
+                        {sesion.paciente}
+                      </p>
+                      <div className="flex items-center gap-2 mt-1">
+                        <Clock className="h-4 w-4 text-gray-400" />
+                        <span className="text-sm text-gray-600 dark:text-gray-400">
+                          {hora}
+                        </span>
+                        <Insignia variante="primario" tamano="sm">
+                          {sesion.tipo}
+                        </Insignia>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="flex items-center gap-3">
+                    <Insignia variante="informacion">{sesion.modalidad}</Insignia>
+                    <button className="px-4 py-2 bg-primary-600 text-white rounded-lg hover:bg-primary-700 transition-colors text-sm font-medium">
+                      Iniciar Sesión
+                    </button>
                   </div>
                 </div>
-              </div>
-
-              <div className="flex items-center gap-3">
-                <Insignia variante="informacion">{sesion.modalidad}</Insignia>
-                <button className="px-4 py-2 bg-primary-600 text-white rounded-lg hover:bg-primary-700 transition-colors text-sm font-medium">
-                  Iniciar Sesión
-                </button>
-              </div>
-            </div>
-          ))}
+              );
+            })
+          )}
         </div>
       </Tarjeta>
 
