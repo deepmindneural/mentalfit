@@ -3,7 +3,7 @@
 import { useState, useEffect } from 'react';
 import Image from 'next/image';
 import { obtenerImagenAleatoria, obtenerImagenPlaceholder, IMAGENES_PREDEFINIDAS } from '@/lib/unsplash';
-import { Esqueleto } from './Esqueleto';
+import Esqueleto from './Esqueleto';
 
 interface PropiedadesImagenUnsplash {
   consulta: string;

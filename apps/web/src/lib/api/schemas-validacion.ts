@@ -36,10 +36,10 @@ export const schemaCrearUsuario = z.object({
   nombre: z.string().min(2, 'El nombre debe tener al menos 2 caracteres'),
   apellidos: z.string().min(2, 'Los apellidos deben tener al menos 2 caracteres'),
   tipoUsuario: z.enum(['empleado', 'empresa', 'profesional'], {
-    errorMap: () => ({ message: 'Tipo de usuario inválido' })
+    message: 'Tipo de usuario inválido'
   }),
   telefono: schemaTelefono.optional(),
-  perfilEspecifico: z.record(z.any()).optional()
+  perfilEspecifico: z.record(z.string(), z.any()).optional()
 })
 
 export const schemaActualizarUsuario = z.object({
@@ -57,7 +57,7 @@ export const schemaActualizarPreferencias = z.object({
   notificacionesSMS: z.boolean().optional(),
   recordatoriosCitas: z.boolean().optional(),
   horasAntesCitaRecordatorio: z.number().min(1).max(72).optional(),
-  configuracionPrivacidad: z.record(z.any()).optional()
+  configuracionPrivacidad: z.record(z.string(), z.any()).optional()
 })
 
 export const schemaCambiarPassword = z.object({
@@ -78,7 +78,7 @@ export const schemaCrearEmpresa = z.object({
   nif: z.string().regex(/^[A-Z0-9]{9,}$/, 'NIF inválido'),
   sector: z.string().min(2),
   tamano: z.enum(['pequena', 'mediana', 'grande'], {
-    errorMap: () => ({ message: 'Tamaño de empresa inválido' })
+    message: 'Tamaño de empresa inválido'
   }),
   direccion: z.string().min(5),
   ciudad: z.string().min(2),
@@ -279,7 +279,7 @@ export const schemaCrearNotificacion = z.object({
   ]),
   titulo: z.string().min(3),
   mensaje: z.string().min(5),
-  datosAdicionales: z.record(z.any()).optional(),
+  datosAdicionales: z.record(z.string(), z.any()).optional(),
   linkAccion: z.string().url().optional()
 })
 
@@ -304,7 +304,7 @@ export const schemaCrearIntencionPago = z.object({
   monto: z.number().min(0.5),
   moneda: z.string().default('EUR'),
   descripcion: z.string(),
-  metadatos: z.record(z.any()).optional()
+  metadatos: z.record(z.string(), z.any()).optional()
 })
 
 export const schemaGenerarFactura = z.object({

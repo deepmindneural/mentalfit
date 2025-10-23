@@ -46,7 +46,7 @@ export async function GET(request: NextRequest) {
     }
 
     // Extraer IDs únicos
-    const pacienteIds = [...new Set(sesiones?.map(s => s.paciente_id) || [])];
+    const pacienteIds = Array.from(new Set(sesiones?.map(s => s.paciente_id) || []));
 
     if (pacienteIds.length === 0) {
       return NextResponse.json([]);

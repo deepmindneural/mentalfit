@@ -2,14 +2,14 @@
 
 import { useState, useEffect } from 'react';
 import Image from 'next/image';
-import { getRandomImage, getPlaceholderImage, PRESET_IMAGES } from '@/lib/unsplash';
-import { Skeleton } from './Skeleton';
+import { obtenerImagenAleatoria, obtenerImagenPlaceholder, IMAGENES_PREDEFINIDAS } from '@/lib/unsplash';
+import Esqueleto from './Esqueleto';
 
 interface UnsplashImageProps {
   query: string;
   alt: string;
   className?: string;
-  preset?: keyof typeof PRESET_IMAGES;
+  preset?: keyof typeof IMAGENES_PREDEFINIDAS;
   width?: number;
   height?: number;
   priority?: boolean;
@@ -25,7 +25,7 @@ export default function UnsplashImage({
   priority = false,
 }: UnsplashImageProps) {
   const [imageUrl, setImageUrl] = useState<string>(
-    preset ? PRESET_IMAGES[preset] : getPlaceholderImage(query)
+    preset ? IMAGENES_PREDEFINIDAS[preset] : obtenerImagenPlaceholder(query)
   );
   const [loading, setLoading] = useState(!preset);
   const [error, setError] = useState(false);
@@ -33,13 +33,13 @@ export default function UnsplashImage({
   useEffect(() => {
     if (preset) {
       // Si hay preset, usar esa imagen directamente
-      setImageUrl(PRESET_IMAGES[preset]);
+      setImageUrl(IMAGENES_PREDEFINIDAS[preset]);
       setLoading(false);
       return;
     }
 
     // Obtener imagen de Unsplash
-    getRandomImage(query)
+    obtenerImagenAleatoria(query)
       .then((url) => {
         setImageUrl(url);
         setLoading(false);
@@ -48,12 +48,12 @@ export default function UnsplashImage({
         console.error('Error loading Unsplash image:', err);
         setError(true);
         setLoading(false);
-        setImageUrl(getPlaceholderImage(query));
+        setImageUrl(obtenerImagenPlaceholder(query));
       });
   }, [query, preset]);
 
   if (loading) {
-    return <Skeleton className={className} />;
+    return <Esqueleto className={className} />;
   }
 
   return (
@@ -67,7 +67,7 @@ export default function UnsplashImage({
         className="object-cover w-full h-full"
         onError={() => {
           setError(true);
-          setImageUrl(getPlaceholderImage(query));
+          setImageUrl(obtenerImagenPlaceholder(query));
         }}
       />
       {error && (

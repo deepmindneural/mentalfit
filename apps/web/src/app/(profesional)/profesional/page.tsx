@@ -22,6 +22,7 @@ interface DatosSemana {
   nombre: string;
   sesiones: number;
   ingresos: number;
+  [key: string]: string | number;
 }
 
 interface SesionProxima {

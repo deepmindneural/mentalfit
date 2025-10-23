@@ -116,7 +116,7 @@ export async function GET(
       .eq('paciente_id', pacienteId);
 
     // Obtener progreso semanal (últimas 6 semanas)
-    const datosProgreso = [];
+    const datosProgreso: { nombre: string; bienestar: number }[] = [];
     for (let i = 5; i >= 0; i--) {
       const fechaSemana = new Date();
       fechaSemana.setDate(fechaSemana.getDate() - (i * 7));

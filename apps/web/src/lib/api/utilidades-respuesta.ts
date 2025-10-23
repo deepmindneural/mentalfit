@@ -56,7 +56,7 @@ export function respuestaError(
  * Maneja errores de Zod y retorna respuesta formateada
  */
 export function manejarErrorZod(error: ZodError): NextResponse<RespuestaError> {
-  const erroresFormateados = error.errors.map(err => ({
+  const erroresFormateados = error.issues.map(err => ({
     campo: err.path.join('.'),
     mensaje: err.message
   }))

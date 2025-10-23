@@ -114,7 +114,7 @@ export const IMAGENES_PREDEFINIDAS = {
 /**
  * Hook para usar en componentes client-side
  */
-export function usarImagenUnsplash(consulta: string) {
+export function useImagenUnsplash(consulta: string) {
   const [urlImagen, setUrlImagen] = React.useState<string>(obtenerImagenPlaceholder(consulta));
   const [cargando, setCargando] = React.useState(true);
 
