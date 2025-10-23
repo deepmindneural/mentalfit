@@ -1,10 +1,15 @@
 'use client';
 
+export const dynamic = 'force-dynamic';
+
 import Link from 'next/link';
 import { Shield, Eye, Lock, FileText } from 'lucide-react';
 import Logo from '@/components/ui/Logo';
+import { useTranslations } from 'next-intl';
 
 export default function PrivacyPage() {
+  const t = useTranslations();
+
   return (
     <div className="min-h-screen bg-white">
       {/* Header */}
@@ -17,13 +22,13 @@ export default function PrivacyPage() {
                 href="/auth/login"
                 className="text-gray-600 hover:text-gray-900 font-medium transition-colors"
               >
-                Sign In
+                {t('nav.signIn')}
               </Link>
               <Link
                 href="/auth/register"
                 className="btn-primary"
               >
-                Get Started
+                {t('nav.getStarted')}
               </Link>
             </div>
           </div>
@@ -36,31 +41,29 @@ export default function PrivacyPage() {
           <div className="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-6">
             <Shield className="h-8 w-8 text-primary-600" />
           </div>
-          <h1 className="text-4xl font-bold text-gray-900 mb-4">Privacy Policy</h1>
+          <h1 className="text-4xl font-bold text-gray-900 mb-4">{t('privacy.title')}</h1>
           <p className="text-xl text-gray-600">
             Your privacy and data security are our top priorities
           </p>
           <p className="text-sm text-gray-500 mt-4">
-            Last updated: July 31, 2024
+            {t('privacy.lastUpdated')}: {t('privacy.effectiveDate')}
           </p>
         </div>
 
         {/* Content */}
         <div className="prose prose-lg max-w-none">
           <section className="mb-8">
-            <h2 className="text-2xl font-bold text-gray-900 mb-4">Introduction</h2>
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">{t('privacy.sections.introduction.title')}</h2>
             <p className="text-gray-700 leading-relaxed">
-              MentalFit ("we," "our," or "us") is committed to protecting your privacy and ensuring the security 
-              of your personal information. This Privacy Policy explains how we collect, use, disclose, and 
-              safeguard your information when you use our mental health platform and services.
+              {t('privacy.sections.introduction.content')}
             </p>
           </section>
 
           <section className="mb-8">
-            <h2 className="text-2xl font-bold text-gray-900 mb-4">Information We Collect</h2>
-            
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">{t('privacy.sections.dataCollection.title')}</h2>
+
             <h3 className="text-xl font-semibold text-gray-900 mb-3">Personal Information</h3>
-            <p className="text-gray-700 mb-4">We may collect the following types of personal information:</p>
+            <p className="text-gray-700 mb-4">{t('privacy.sections.dataCollection.content')}</p>
             <ul className="list-disc pl-6 text-gray-700 space-y-2 mb-6">
               <li>Contact information (name, email address, phone number)</li>
               <li>Employment information (company, job title, department)</li>
@@ -91,8 +94,8 @@ export default function PrivacyPage() {
           </section>
 
           <section className="mb-8">
-            <h2 className="text-2xl font-bold text-gray-900 mb-4">How We Use Your Information</h2>
-            <p className="text-gray-700 mb-4">We use your information to:</p>
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">{t('privacy.sections.dataUse.title')}</h2>
+            <p className="text-gray-700 mb-4">{t('privacy.sections.dataUse.content')}</p>
             <ul className="list-disc pl-6 text-gray-700 space-y-2">
               <li>Provide mental health services and support</li>
               <li>Connect you with licensed therapists and professionals</li>
@@ -105,31 +108,29 @@ export default function PrivacyPage() {
           </section>
 
           <section className="mb-8">
-            <h2 className="text-2xl font-bold text-gray-900 mb-4">HIPAA Compliance</h2>
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">{t('privacy.sections.hipaaCompliance.title')}</h2>
             <div className="bg-blue-50 border border-blue-200 rounded-lg p-6 mb-6">
               <div className="flex items-start">
                 <Lock className="h-6 w-6 text-blue-600 mr-3 mt-1" />
                 <div>
                   <h3 className="text-lg font-semibold text-blue-900 mb-2">Protected Health Information</h3>
                   <p className="text-blue-800">
-                    MentalFit is fully HIPAA compliant. We implement administrative, physical, and technical 
-                    safeguards to protect your Protected Health Information (PHI) in accordance with HIPAA 
-                    regulations.
+                    {t('privacy.sections.hipaaCompliance.content')}
                   </p>
                 </div>
               </div>
             </div>
             <p className="text-gray-700">
-              Your health information will only be used for treatment, payment, and healthcare operations 
-              as permitted under HIPAA. We will not sell, rent, or share your PHI with third parties 
+              Your health information will only be used for treatment, payment, and healthcare operations
+              as permitted under HIPAA. We will not sell, rent, or share your PHI with third parties
               without your explicit authorization, except as required by law.
             </p>
           </section>
 
           <section className="mb-8">
-            <h2 className="text-2xl font-bold text-gray-900 mb-4">Information Sharing and Disclosure</h2>
-            <p className="text-gray-700 mb-4">We may share your information in the following circumstances:</p>
-            
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">{t('privacy.sections.dataSharing.title')}</h2>
+            <p className="text-gray-700 mb-4">{t('privacy.sections.dataSharing.content')}</p>
+
             <h3 className="text-xl font-semibold text-gray-900 mb-3">With Your Consent</h3>
             <p className="text-gray-700 mb-4">
               We will share your information with third parties only when you have given us explicit consent to do so.
@@ -137,50 +138,51 @@ export default function PrivacyPage() {
 
             <h3 className="text-xl font-semibold text-gray-900 mb-3">Service Providers</h3>
             <p className="text-gray-700 mb-4">
-              We may share information with trusted service providers who assist us in operating our platform, 
+              We may share information with trusted service providers who assist us in operating our platform,
               subject to strict confidentiality agreements.
             </p>
 
             <h3 className="text-xl font-semibold text-gray-900 mb-3">Legal Requirements</h3>
             <p className="text-gray-700 mb-4">
-              We may disclose information when required by law, court order, or to protect the safety of 
+              We may disclose information when required by law, court order, or to protect the safety of
               individuals or the public.
             </p>
 
             <h3 className="text-xl font-semibold text-gray-900 mb-3">Emergency Situations</h3>
             <p className="text-gray-700">
-              In cases of imminent danger to yourself or others, we may share necessary information with 
+              In cases of imminent danger to yourself or others, we may share necessary information with
               emergency services or designated emergency contacts.
             </p>
           </section>
 
           <section className="mb-8">
-            <h2 className="text-2xl font-bold text-gray-900 mb-4">Data Security</h2>
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">{t('privacy.sections.dataSecurity.title')}</h2>
+            <p className="text-gray-700 mb-4">{t('privacy.sections.dataSecurity.content')}</p>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
               <div className="bg-gray-50 rounded-lg p-6">
                 <h3 className="text-lg font-semibold text-gray-900 mb-3">Technical Safeguards</h3>
                 <ul className="text-sm text-gray-700 space-y-2">
-                  <li>• End-to-end encryption for all data transmission</li>
-                  <li>• Encrypted data storage with AES-256</li>
-                  <li>• Regular security audits and penetration testing</li>
-                  <li>• Multi-factor authentication</li>
+                  <li>End-to-end encryption for all data transmission</li>
+                  <li>Encrypted data storage with AES-256</li>
+                  <li>Regular security audits and penetration testing</li>
+                  <li>Multi-factor authentication</li>
                 </ul>
               </div>
               <div className="bg-gray-50 rounded-lg p-6">
                 <h3 className="text-lg font-semibold text-gray-900 mb-3">Administrative Safeguards</h3>
                 <ul className="text-sm text-gray-700 space-y-2">
-                  <li>• Role-based access controls</li>
-                  <li>• Regular staff training on privacy practices</li>
-                  <li>• Incident response procedures</li>
-                  <li>• Business associate agreements</li>
+                  <li>Role-based access controls</li>
+                  <li>Regular staff training on privacy practices</li>
+                  <li>Incident response procedures</li>
+                  <li>Business associate agreements</li>
                 </ul>
               </div>
             </div>
           </section>
 
           <section className="mb-8">
-            <h2 className="text-2xl font-bold text-gray-900 mb-4">Your Rights</h2>
-            <p className="text-gray-700 mb-4">You have the right to:</p>
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">{t('privacy.sections.userRights.title')}</h2>
+            <p className="text-gray-700 mb-4">{t('privacy.sections.userRights.content')}</p>
             <ul className="list-disc pl-6 text-gray-700 space-y-2">
               <li>Access your personal information and health records</li>
               <li>Request corrections to inaccurate information</li>
@@ -192,43 +194,37 @@ export default function PrivacyPage() {
           </section>
 
           <section className="mb-8">
-            <h2 className="text-2xl font-bold text-gray-900 mb-4">Data Retention</h2>
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">{t('privacy.sections.dataRetention.title')}</h2>
             <p className="text-gray-700">
-              We retain your personal information for as long as necessary to provide our services and 
-              comply with legal obligations. Health information is retained according to applicable 
-              healthcare regulations and professional standards. You may request deletion of your 
-              account and associated data at any time.
+              {t('privacy.sections.dataRetention.content')}
             </p>
           </section>
 
           <section className="mb-8">
             <h2 className="text-2xl font-bold text-gray-900 mb-4">Children's Privacy</h2>
             <p className="text-gray-700">
-              Our services are not intended for individuals under the age of 18. We do not knowingly 
-              collect personal information from children under 18. If we become aware that we have 
+              Our services are not intended for individuals under the age of 18. We do not knowingly
+              collect personal information from children under 18. If we become aware that we have
               collected such information, we will take steps to delete it promptly.
             </p>
           </section>
 
           <section className="mb-8">
-            <h2 className="text-2xl font-bold text-gray-900 mb-4">Changes to This Policy</h2>
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">{t('privacy.sections.changes.title')}</h2>
             <p className="text-gray-700">
-              We may update this Privacy Policy from time to time to reflect changes in our practices 
-              or legal requirements. We will notify you of any material changes by posting the updated 
-              policy on our website and sending you an email notification.
+              {t('privacy.sections.changes.content')}
             </p>
           </section>
 
           <section className="mb-8">
-            <h2 className="text-2xl font-bold text-gray-900 mb-4">Contact Us</h2>
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">{t('privacy.sections.contact.title')}</h2>
             <p className="text-gray-700 mb-4">
-              If you have any questions or concerns about this Privacy Policy or our privacy practices, 
-              please contact us:
+              {t('privacy.sections.contact.content')}
             </p>
             <div className="bg-primary-50 rounded-lg p-6">
               <h3 className="font-semibold text-gray-900 mb-3">Privacy Officer</h3>
               <div className="text-gray-700 space-y-1">
-                <p>Email: privacy@mentalfit.com</p>
+                <p>{t('privacy.contact')}</p>
                 <p>Phone: 1-800-MENTAL-FIT</p>
                 <p>Address: 123 Wellness Ave, Suite 456, San Francisco, CA 94105</p>
               </div>

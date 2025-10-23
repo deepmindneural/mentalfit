@@ -1,11 +1,14 @@
 'use client';
 
+export const dynamic = 'force-dynamic';
+
 import { useState } from 'react';
 import Link from 'next/link';
-import { 
-  Calendar, 
-  Clock, 
-  Users, 
+import { useTranslations } from 'next-intl';
+import {
+  Calendar,
+  Clock,
+  Users,
   CheckCircle,
   ArrowRight,
   Play,
@@ -21,29 +24,6 @@ import {
 } from 'lucide-react';
 import Logo from '@/components/ui/Logo';
 
-const demoFeatures = [
-  {
-    icon: Video,
-    title: 'Live Therapy Sessions',
-    description: 'See how easy it is to connect with licensed therapists'
-  },
-  {
-    icon: BarChart3,
-    title: 'Analytics Dashboard',
-    description: 'Explore comprehensive mental health metrics and insights'
-  },
-  {
-    icon: MessageSquare,
-    title: 'Crisis Support',
-    description: 'Experience our 24/7 emergency support system'
-  },
-  {
-    icon: Users,
-    title: 'Team Management',
-    description: 'Learn how to monitor and support your team\'s wellbeing'
-  }
-];
-
 const timeSlots = [
   '9:00 AM - 9:30 AM',
   '10:00 AM - 10:30 AM',
@@ -54,6 +34,31 @@ const timeSlots = [
 ];
 
 export default function DemoPage() {
+  const t = useTranslations();
+
+  const demoFeatures = [
+    {
+      icon: Video,
+      title: 'Live Therapy Sessions',
+      description: 'See how easy it is to connect with licensed therapists'
+    },
+    {
+      icon: BarChart3,
+      title: 'Analytics Dashboard',
+      description: 'Explore comprehensive mental health metrics and insights'
+    },
+    {
+      icon: MessageSquare,
+      title: 'Crisis Support',
+      description: 'Experience our 24/7 emergency support system'
+    },
+    {
+      icon: Users,
+      title: 'Team Management',
+      description: 'Learn how to monitor and support your team\'s wellbeing'
+    }
+  ];
+
   const [selectedDate, setSelectedDate] = useState('');
   const [selectedTime, setSelectedTime] = useState('');
   const [formData, setFormData] = useState({
@@ -122,7 +127,7 @@ export default function DemoPage() {
             </div>
             <div className="space-y-3">
               <Link href="/auth/register" className="w-full btn-primary">
-                Get Started Now
+                {t('nav.getStarted')}
               </Link>
               <Link href="/" className="w-full btn-secondary">
                 Back to Home
@@ -141,38 +146,38 @@ export default function DemoPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center py-6">
             <Logo />
-            
+
             {/* Navigation Menu */}
             <nav className="hidden md:flex items-center space-x-8">
               <Link href="/" className="text-gray-600 hover:text-gray-900 font-medium transition-colors">
-                Home
+                {t('nav.home')}
               </Link>
               <Link href="/about" className="text-gray-600 hover:text-gray-900 font-medium transition-colors">
-                About
+                {t('nav.about')}
               </Link>
               <Link href="/pricing" className="text-gray-600 hover:text-gray-900 font-medium transition-colors">
-                Pricing
+                {t('nav.pricing')}
               </Link>
               <Link href="/demo" className="text-primary-600 font-medium">
-                Demo
+                {t('nav.demo')}
               </Link>
               <Link href="/contact" className="text-gray-600 hover:text-gray-900 font-medium transition-colors">
-                Contact
+                {t('nav.contact')}
               </Link>
             </nav>
-            
+
             <div className="flex items-center space-x-4">
               <Link
                 href="/auth/login"
                 className="text-gray-600 hover:text-gray-900 font-medium transition-colors"
               >
-                Sign In
+                {t('nav.signIn')}
               </Link>
               <Link
                 href="/auth/register"
                 className="btn-primary"
               >
-                Get Started
+                {t('nav.getStarted')}
               </Link>
             </div>
           </div>
@@ -186,13 +191,12 @@ export default function DemoPage() {
             {/* Hero */}
             <div>
               <h1 className="text-4xl font-bold text-gray-900 mb-4">
-                See MentalFit in Action
+                {t('demo.hero.title')}
               </h1>
               <p className="text-xl text-gray-600 mb-6">
-                Schedule a personalized demo to discover how MentalFit can transform 
-                your workplace mental health program.
+                {t('demo.hero.subtitle')}
               </p>
-              
+
               <div className="flex items-center space-x-4 text-sm text-gray-600">
                 <div className="flex items-center">
                   <Clock className="h-4 w-4 mr-1" />
@@ -211,7 +215,7 @@ export default function DemoPage() {
 
             {/* What You'll See */}
             <div>
-              <h2 className="text-2xl font-bold text-gray-900 mb-6">What You'll See</h2>
+              <h2 className="text-2xl font-bold text-gray-900 mb-6">{t('demo.benefits.title')}</h2>
               <div className="space-y-4">
                 {demoFeatures.map((feature, index) => (
                   <div key={index} className="flex items-start space-x-4">
@@ -260,7 +264,7 @@ export default function DemoPage() {
                 </div>
               </div>
               <blockquote className="text-gray-700 mb-4">
-                "The demo showed us exactly how MentalFit would integrate with our existing systems. 
+                "The demo showed us exactly how MentalFit would integrate with our existing systems.
                 The ROI was immediately clear, and implementation was seamless."
               </blockquote>
               <div className="flex items-center">
@@ -276,7 +280,7 @@ export default function DemoPage() {
           {/* Right Column - Demo Form */}
           <div className="bg-white border border-gray-200 rounded-2xl p-8 h-fit">
             <div className="text-center mb-8">
-              <h2 className="text-2xl font-bold text-gray-900 mb-2">Schedule Your Demo</h2>
+              <h2 className="text-2xl font-bold text-gray-900 mb-2">{t('demo.form.title')}</h2>
               <p className="text-gray-600">Choose a time that works for you</p>
             </div>
 
@@ -285,7 +289,7 @@ export default function DemoPage() {
               <div className="grid grid-cols-2 gap-4">
                 <div>
                   <label className="block text-sm font-medium text-gray-700 mb-1">
-                    First Name *
+                    {t('demo.form.firstName')} *
                   </label>
                   <input
                     type="text"
@@ -294,12 +298,12 @@ export default function DemoPage() {
                     value={formData.firstName}
                     onChange={handleInputChange}
                     className="input-field"
-                    placeholder="John"
+                    placeholder={t('demo.form.firstNamePlaceholder')}
                   />
                 </div>
                 <div>
                   <label className="block text-sm font-medium text-gray-700 mb-1">
-                    Last Name *
+                    {t('demo.form.lastName')} *
                   </label>
                   <input
                     type="text"
@@ -308,14 +312,14 @@ export default function DemoPage() {
                     value={formData.lastName}
                     onChange={handleInputChange}
                     className="input-field"
-                    placeholder="Doe"
+                    placeholder={t('demo.form.lastNamePlaceholder')}
                   />
                 </div>
               </div>
 
               <div>
                 <label className="block text-sm font-medium text-gray-700 mb-1">
-                  Work Email *
+                  {t('demo.form.email')} *
                 </label>
                 <input
                   type="email"
@@ -324,14 +328,14 @@ export default function DemoPage() {
                   value={formData.email}
                   onChange={handleInputChange}
                   className="input-field"
-                  placeholder="john@company.com"
+                  placeholder={t('demo.form.emailPlaceholder')}
                 />
               </div>
 
               <div className="grid grid-cols-2 gap-4">
                 <div>
                   <label className="block text-sm font-medium text-gray-700 mb-1">
-                    Company *
+                    {t('demo.form.company')} *
                   </label>
                   <input
                     type="text"
@@ -340,12 +344,12 @@ export default function DemoPage() {
                     value={formData.company}
                     onChange={handleInputChange}
                     className="input-field"
-                    placeholder="Acme Corp"
+                    placeholder={t('demo.form.companyPlaceholder')}
                   />
                 </div>
                 <div>
                   <label className="block text-sm font-medium text-gray-700 mb-1">
-                    Job Title *
+                    {t('demo.form.jobTitle')} *
                   </label>
                   <input
                     type="text"
@@ -354,14 +358,14 @@ export default function DemoPage() {
                     value={formData.jobTitle}
                     onChange={handleInputChange}
                     className="input-field"
-                    placeholder="HR Manager"
+                    placeholder={t('demo.form.jobTitlePlaceholder')}
                   />
                 </div>
               </div>
 
               <div>
                 <label className="block text-sm font-medium text-gray-700 mb-1">
-                  Company Size *
+                  {t('demo.form.companySize')} *
                 </label>
                 <select
                   name="companySize"
@@ -370,7 +374,7 @@ export default function DemoPage() {
                   onChange={handleInputChange}
                   className="input-field"
                 >
-                  <option value="">Select company size</option>
+                  <option value="">{t('demo.form.companySizePlaceholder')}</option>
                   <option value="1-10">1-10 employees</option>
                   <option value="11-50">11-50 employees</option>
                   <option value="51-200">51-200 employees</option>
@@ -381,7 +385,7 @@ export default function DemoPage() {
 
               <div>
                 <label className="block text-sm font-medium text-gray-700 mb-1">
-                  Phone Number
+                  {t('demo.form.phone')}
                 </label>
                 <input
                   type="tel"
@@ -389,7 +393,7 @@ export default function DemoPage() {
                   value={formData.phone}
                   onChange={handleInputChange}
                   className="input-field"
-                  placeholder="+1 (555) 123-4567"
+                  placeholder={t('demo.form.phonePlaceholder')}
                 />
               </div>
 
@@ -477,7 +481,7 @@ export default function DemoPage() {
                 disabled={!selectedDate || !selectedTime || !formData.firstName || !formData.lastName || !formData.email || !formData.company}
                 className="w-full btn-primary py-3 disabled:opacity-50 disabled:cursor-not-allowed"
               >
-                Schedule Demo
+                {t('demo.form.submit')}
                 <ArrowRight className="h-4 w-4 ml-2" />
               </button>
 

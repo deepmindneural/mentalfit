@@ -37,13 +37,14 @@ export async function middleware(request: NextRequest) {
     return NextResponse.redirect(nuevaUrl);
   }
 
-  // Primero ejecutar middleware de i18n
+  // Ejecutar middleware de i18n - si retorna una respuesta (redirección), la retornamos
   const intlResponse = intlMiddleware(request);
-  if (intlResponse) {
-    request = new NextRequest(intlResponse.url, {
-      headers: request.headers
-    });
+  if (intlResponse && intlResponse.headers.get('location')) {
+    // Si el middleware de i18n quiere redirigir, retornamos su respuesta
+    return intlResponse;
   }
+
+  // Continuar con el flujo normal
   let response = NextResponse.next({
     request: {
       headers: request.headers,

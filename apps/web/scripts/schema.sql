@@ -503,8 +503,8 @@ CREATE TABLE sesiones_activas (
 );
 
 COMMENT ON TABLE sesiones_activas IS 'Gestión de sesiones activas de usuarios';
-CREATE INDEX idx_sesiones_usuario ON sesiones_activas(usuario_id);
-CREATE INDEX idx_sesiones_expiracion ON sesiones_activas(fecha_expiracion);
+CREATE INDEX idx_sesiones_activas_usuario ON sesiones_activas(usuario_id);
+CREATE INDEX idx_sesiones_activas_expiracion ON sesiones_activas(fecha_expiracion);
 
 -- ==================================================
 -- 20. TABLA: archivos
@@ -662,9 +662,9 @@ CREATE INDEX idx_profesionales_especialidades ON profesionales USING GIN(especia
 CREATE INDEX idx_profesionales_calificacion ON profesionales(calificacion_promedio DESC);
 
 -- Índices para sesiones_terapia
-CREATE INDEX idx_sesiones_usuario ON sesiones_terapia(usuario_id);
-CREATE INDEX idx_sesiones_profesional ON sesiones_terapia(profesional_id);
-CREATE INDEX idx_sesiones_fecha ON sesiones_terapia(fecha_programada DESC);
+CREATE INDEX idx_sesiones_terapia_usuario ON sesiones_terapia(usuario_id);
+CREATE INDEX idx_sesiones_terapia_profesional ON sesiones_terapia(profesional_id);
+CREATE INDEX idx_sesiones_terapia_fecha ON sesiones_terapia(fecha_programada DESC);
 CREATE INDEX idx_sesiones_estado ON sesiones_terapia(estado);
 CREATE INDEX idx_sesiones_tipo ON sesiones_terapia(tipo);
 

@@ -278,12 +278,174 @@
     "hero": {
       "title": "About MentalFit",
       "subtitle": "Leaders in corporate mental health solutions"
+    },
+    "mission": {
+      "title": "Our Mission",
+      "description": "To transform organizational well-being through accessible, professional, and effective mental health solutions that empower teams and companies to thrive."
+    },
+    "vision": {
+      "title": "Our Vision",
+      "description": "A world where every organization prioritizes employee mental health, creating healthier, more productive, and more human work environments."
+    },
+    "values": {
+      "title": "Our Values",
+      "accessibility": {
+        "title": "Accessibility",
+        "description": "We make mental health care accessible to everyone"
+      },
+      "professionalism": {
+        "title": "Professionalism",
+        "description": "We only work with licensed, high-quality therapists"
+      },
+      "privacy": {
+        "title": "Privacy",
+        "description": "Your information is protected with the highest standards"
+      },
+      "innovation": {
+        "title": "Innovation",
+        "description": "We constantly improve our technology and services"
+      }
+    },
+    "story": {
+      "title": "Our Story",
+      "content": "MentalFit was born from the vision of creating a healthier work world. Founded by mental health and technology professionals, our platform combines the best of both worlds to offer innovative and effective solutions."
+    },
+    "team": {
+      "title": "Our Team",
+      "description": "We have a diverse team of psychologists, therapists, developers, and wellness specialists dedicated to your success."
+    },
+    "stats": {
+      "companies": {
+        "number": "500+",
+        "label": "Companies Trust Us"
+      },
+      "therapists": {
+        "number": "1,000+",
+        "label": "Licensed Professionals"
+      },
+      "sessions": {
+        "number": "50,000+",
+        "label": "Sessions Completed"
+      },
+      "satisfaction": {
+        "number": "95%",
+        "label": "Customer Satisfaction"
+      }
     }
   },
   "pricing": {
     "hero": {
       "title": "Plans & Pricing",
       "subtitle": "Choose the perfect plan for your organization"
+    },
+    "billing": {
+      "monthly": "Monthly",
+      "annual": "Annual",
+      "saveUpTo": "Save up to 20%"
+    },
+    "plans": {
+      "starter": {
+        "name": "Starter",
+        "description": "Ideal for small businesses getting started",
+        "price": "$15",
+        "period": "/employee/month",
+        "features": {
+          "users": "Up to 50 employees",
+          "sessions": "3 sessions per employee/month",
+          "support": "Email support",
+          "resources": "Basic resource library",
+          "analytics": "Basic analytics",
+          "onboarding": "Standard onboarding"
+        },
+        "cta": "Start Trial"
+      },
+      "professional": {
+        "name": "Professional",
+        "description": "For growing companies",
+        "price": "$25",
+        "period": "/employee/month",
+        "popular": "Most Popular",
+        "features": {
+          "users": "Up to 200 employees",
+          "sessions": "5 sessions per employee/month",
+          "support": "Priority 24/7 support",
+          "resources": "Full resource library",
+          "analytics": "Advanced analytics",
+          "onboarding": "Personalized onboarding",
+          "training": "Manager training",
+          "customization": "Brand customization"
+        },
+        "cta": "Start Trial"
+      },
+      "enterprise": {
+        "name": "Enterprise",
+        "description": "Custom solutions for large organizations",
+        "price": "Custom",
+        "period": "",
+        "features": {
+          "users": "Unlimited employees",
+          "sessions": "Unlimited sessions",
+          "support": "Dedicated 24/7 support",
+          "resources": "Custom resources",
+          "analytics": "Full enterprise analytics",
+          "onboarding": "Dedicated VIP onboarding",
+          "training": "Custom training programs",
+          "customization": "Full customization",
+          "integration": "Custom integrations",
+          "compliance": "Regulatory compliance",
+          "sla": "Guaranteed SLA"
+        },
+        "cta": "Contact Sales"
+      }
+    },
+    "features": {
+      "title": "All Features",
+      "core": {
+        "title": "Core Features",
+        "therapy": "Licensed professional therapy",
+        "crisis": "24/7 crisis support",
+        "privacy": "HIPAA compliance",
+        "mobile": "Mobile apps",
+        "scheduling": "Flexible scheduling system"
+      },
+      "wellness": {
+        "title": "Wellness Resources",
+        "library": "Content library",
+        "workshops": "Workshops and webinars",
+        "meditation": "Guided meditation",
+        "exercises": "Mindfulness exercises"
+      },
+      "admin": {
+        "title": "Admin Tools",
+        "dashboard": "Intuitive dashboard",
+        "reports": "Detailed reports",
+        "billing": "Billing management",
+        "users": "User administration"
+      }
+    },
+    "faq": {
+      "title": "Frequently Asked Questions",
+      "trial": {
+        "question": "Do you offer a trial period?",
+        "answer": "Yes, we offer a 30-day free trial for all our plans. No credit card required."
+      },
+      "cancel": {
+        "question": "Can I cancel anytime?",
+        "answer": "Absolutely. You can cancel your subscription at any time without penalty. You only pay for the time you use."
+      },
+      "implementation": {
+        "question": "How long does it take to implement MentalFit?",
+        "answer": "Most organizations are up and running in 1-2 weeks. Enterprise plans may take longer depending on customizations."
+      },
+      "privacy": {
+        "question": "How do you protect employee privacy?",
+        "answer": "We comply with HIPAA and all sessions are completely confidential. Employers only see aggregated, anonymous metrics."
+      }
+    },
+    "cta": {
+      "title": "Ready to get started?",
+      "subtitle": "Join hundreds of companies transforming their workplace culture",
+      "button": "Start Free Trial"
     }
   },
   "contact": {
@@ -291,13 +453,39 @@
       "title": "Contact Us",
       "subtitle": "We're here to help"
     },
+    "options": {
+      "generalSupport": {
+        "title": "General Support",
+        "description": "Questions about our services or platform",
+        "hours": "Mon-Fri 9AM-6PM PST"
+      },
+      "crisisSupport": {
+        "title": "Crisis Support",
+        "description": "24/7 emergency mental health assistance",
+        "hours": "24/7 Available"
+      },
+      "billing": {
+        "title": "Billing & Accounts",
+        "description": "Payment issues and account management",
+        "hours": "Mon-Fri 8AM-5PM PST"
+      },
+      "sales": {
+        "title": "Enterprise Sales",
+        "description": "Large organization solutions and demos",
+        "hours": "Mon-Fri 9AM-5PM PST"
+      }
+    },
     "form": {
-      "name": "Name",
-      "email": "Email",
-      "workEmail": "Work Email *",
-      "emailAddress": "Email Address *",
+      "title": "Send us a Message",
+      "name": "Full Name",
+      "namePlaceholder": "John Doe",
+      "email": "Email Address",
+      "emailPlaceholder": "you@company.com",
+      "subject": "Subject",
+      "subjectPlaceholder": "How can we help?",
       "message": "Message",
-      "submit": "Submit",
+      "messagePlaceholder": "Tell us more...",
+      "submit": "Send Message",
       "sending": "Sending..."
     }
   },
@@ -305,17 +493,167 @@
     "hero": {
       "title": "Request a Demo",
       "subtitle": "Discover how MentalFit can transform your organization"
+    },
+    "form": {
+      "title": "Schedule Your Personalized Demo",
+      "firstName": "First Name",
+      "firstNamePlaceholder": "Your first name",
+      "lastName": "Last Name",
+      "lastNamePlaceholder": "Your last name",
+      "email": "Work Email Address",
+      "emailPlaceholder": "you@company.com",
+      "company": "Company Name",
+      "companyPlaceholder": "Your company name",
+      "companySize": "Company Size",
+      "companySizePlaceholder": "Select a range",
+      "jobTitle": "Job Title",
+      "jobTitlePlaceholder": "E.g: HR Director",
+      "phone": "Phone",
+      "phonePlaceholder": "+1 555 123 4567",
+      "industry": "Industry",
+      "industryPlaceholder": "Select your industry",
+      "industries": {
+        "technology": "Technology",
+        "healthcare": "Healthcare",
+        "finance": "Finance",
+        "education": "Education",
+        "retail": "Retail",
+        "manufacturing": "Manufacturing",
+        "consulting": "Consulting",
+        "other": "Other"
+      },
+      "message": "What would you like to know?",
+      "messagePlaceholder": "Tell us about your specific needs...",
+      "preferredDate": "Preferred Date",
+      "preferredTime": "Preferred Time",
+      "timeSlots": {
+        "morning": "Morning (9AM-12PM)",
+        "afternoon": "Afternoon (12PM-5PM)",
+        "evening": "Evening (5PM-8PM)"
+      },
+      "consent": "I agree to receive communications from MentalFit",
+      "submit": "Request Demo",
+      "sending": "Sending request..."
+    },
+    "benefits": {
+      "title": "What's included in the demo?",
+      "platform": {
+        "title": "Platform Tour",
+        "description": "Explore all features and functionalities"
+      },
+      "customization": {
+        "title": "Customization Options",
+        "description": "Discover how to adapt MentalFit to your needs"
+      },
+      "pricing": {
+        "title": "Plans & Pricing",
+        "description": "Find the perfect solution for your budget"
+      },
+      "qa": {
+        "title": "Q&A Session",
+        "description": "Get all your questions answered by our experts"
+      }
     }
   },
   "terms": {
     "title": "Terms & Conditions",
     "lastUpdated": "Last updated",
-    "contact": "Email: legal@mentalfit.com"
+    "effectiveDate": "October 15, 2024",
+    "contact": "Email: legal@mentalfit.com",
+    "sections": {
+      "acceptance": {
+        "title": "1. Acceptance of Terms",
+        "content": "By accessing and using MentalFit, you agree to be bound by these Terms and Conditions. If you do not agree, do not use our services."
+      },
+      "services": {
+        "title": "2. Description of Services",
+        "content": "MentalFit provides an enterprise mental health platform that connects employees with licensed mental health professionals."
+      },
+      "userAccounts": {
+        "title": "3. User Accounts",
+        "content": "You are responsible for maintaining the confidentiality of your account and password. You must notify us immediately of any unauthorized use."
+      },
+      "privacy": {
+        "title": "4. Privacy and Data Protection",
+        "content": "We comply with HIPAA and all applicable data protection laws. See our Privacy Policy for more information."
+      },
+      "professionalServices": {
+        "title": "5. Professional Services",
+        "content": "All therapists on our platform are licensed and certified. Services do not substitute for emergency medical care."
+      },
+      "payment": {
+        "title": "6. Payment and Billing",
+        "content": "Prices are subject to change with prior notice. Subscriptions renew automatically until cancelled."
+      },
+      "termination": {
+        "title": "7. Termination",
+        "content": "You can cancel your account at any time. We reserve the right to suspend or terminate accounts that violate these terms."
+      },
+      "liability": {
+        "title": "8. Limitation of Liability",
+        "content": "MentalFit is not responsible for indirect, incidental, or consequential damages arising from the use of our services."
+      },
+      "changes": {
+        "title": "9. Changes to Terms",
+        "content": "We reserve the right to modify these terms at any time. You will be notified of significant changes."
+      },
+      "governing": {
+        "title": "10. Governing Law",
+        "content": "These terms are governed by the laws of the country where MentalFit operates."
+      }
+    }
   },
   "privacy": {
     "title": "Privacy Policy",
     "lastUpdated": "Last updated",
-    "contact": "Email: privacy@mentalfit.com"
+    "effectiveDate": "October 15, 2024",
+    "contact": "Email: privacy@mentalfit.com",
+    "sections": {
+      "introduction": {
+        "title": "1. Introduction",
+        "content": "At MentalFit, the privacy of your data is our top priority. This policy describes how we collect, use, and protect your personal information."
+      },
+      "dataCollection": {
+        "title": "2. Information We Collect",
+        "content": "We collect information you provide directly to us, such as name, email, company information, and data related to therapy sessions."
+      },
+      "dataUse": {
+        "title": "3. How We Use Your Information",
+        "content": "We use your information to provide services, improve our platform, communicate with you, and comply with legal obligations."
+      },
+      "hipaaCompliance": {
+        "title": "4. HIPAA Compliance",
+        "content": "We fully comply with HIPAA. All protected health information (PHI) is handled with the highest security and confidentiality standards."
+      },
+      "dataSharing": {
+        "title": "5. Data Sharing",
+        "content": "We do not sell or share your personal information with third parties except when necessary to provide services or when required by law."
+      },
+      "dataSecurity": {
+        "title": "6. Data Security",
+        "content": "We implement robust technical, administrative, and physical security measures to protect your information from unauthorized access."
+      },
+      "userRights": {
+        "title": "7. Your Rights",
+        "content": "You have the right to access, correct, delete, or export your personal data. Contact privacy@mentalfit.com to exercise these rights."
+      },
+      "cookies": {
+        "title": "8. Cookies and Tracking Technologies",
+        "content": "We use cookies and similar technologies to enhance your experience, analyze usage, and personalize content."
+      },
+      "dataRetention": {
+        "title": "9. Data Retention",
+        "content": "We retain your personal data only for as long as necessary to fulfill the purposes described or as required by law."
+      },
+      "changes": {
+        "title": "10. Changes to This Policy",
+        "content": "We may update this policy occasionally. We will notify you of significant changes through the platform or by email."
+      },
+      "contact": {
+        "title": "11. Contact",
+        "content": "If you have questions about this privacy policy, contact privacy@mentalfit.com"
+      }
+    }
   },
   "dashboard": {
     "title": "Dashboard",

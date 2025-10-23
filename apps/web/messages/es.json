@@ -278,12 +278,174 @@
     "hero": {
       "title": "Sobre MentalFit",
       "subtitle": "Líderes en soluciones de salud mental corporativa"
+    },
+    "mission": {
+      "title": "Nuestra Misión",
+      "description": "Transformar el bienestar organizacional a través de soluciones accesibles, profesionales y efectivas de salud mental que empoderan a equipos y empresas a prosperar."
+    },
+    "vision": {
+      "title": "Nuestra Visión",
+      "description": "Un mundo donde cada organización prioriza la salud mental de sus empleados, creando entornos de trabajo más saludables, productivos y humanos."
+    },
+    "values": {
+      "title": "Nuestros Valores",
+      "accessibility": {
+        "title": "Accesibilidad",
+        "description": "Hacemos que la atención en salud mental sea accesible para todos"
+      },
+      "professionalism": {
+        "title": "Profesionalismo",
+        "description": "Solo trabajamos con terapeutas certificados y de alta calidad"
+      },
+      "privacy": {
+        "title": "Privacidad",
+        "description": "Tu información está protegida con los más altos estándares"
+      },
+      "innovation": {
+        "title": "Innovación",
+        "description": "Mejoramos constantemente nuestra tecnología y servicios"
+      }
+    },
+    "story": {
+      "title": "Nuestra Historia",
+      "content": "MentalFit nació de la visión de crear un mundo laboral más saludable. Fundada por profesionales de la salud mental y tecnología, nuestra plataforma combina lo mejor de ambos mundos para ofrecer soluciones innovadoras y efectivas."
+    },
+    "team": {
+      "title": "Nuestro Equipo",
+      "description": "Contamos con un equipo diverso de psicólogos, terapeutas, desarrolladores y especialistas en bienestar dedicados a tu éxito."
+    },
+    "stats": {
+      "companies": {
+        "number": "500+",
+        "label": "Empresas Confían en Nosotros"
+      },
+      "therapists": {
+        "number": "1,000+",
+        "label": "Profesionales Certificados"
+      },
+      "sessions": {
+        "number": "50,000+",
+        "label": "Sesiones Completadas"
+      },
+      "satisfaction": {
+        "number": "95%",
+        "label": "Satisfacción del Cliente"
+      }
     }
   },
   "pricing": {
     "hero": {
       "title": "Planes y Precios",
       "subtitle": "Elige el plan perfecto para tu organización"
+    },
+    "billing": {
+      "monthly": "Mensual",
+      "annual": "Anual",
+      "saveUpTo": "Ahorra hasta 20%"
+    },
+    "plans": {
+      "starter": {
+        "name": "Starter",
+        "description": "Ideal para pequeñas empresas que empiezan",
+        "price": "$15",
+        "period": "/empleado/mes",
+        "features": {
+          "users": "Hasta 50 empleados",
+          "sessions": "3 sesiones por empleado/mes",
+          "support": "Soporte por email",
+          "resources": "Biblioteca de recursos básica",
+          "analytics": "Análisis básicos",
+          "onboarding": "Onboarding estándar"
+        },
+        "cta": "Comenzar Prueba"
+      },
+      "professional": {
+        "name": "Professional",
+        "description": "Para empresas en crecimiento",
+        "price": "$25",
+        "period": "/empleado/mes",
+        "popular": "Más Popular",
+        "features": {
+          "users": "Hasta 200 empleados",
+          "sessions": "5 sesiones por empleado/mes",
+          "support": "Soporte prioritario 24/7",
+          "resources": "Biblioteca completa de recursos",
+          "analytics": "Análisis avanzados",
+          "onboarding": "Onboarding personalizado",
+          "training": "Capacitación para managers",
+          "customization": "Personalización de marca"
+        },
+        "cta": "Comenzar Prueba"
+      },
+      "enterprise": {
+        "name": "Enterprise",
+        "description": "Soluciones a medida para grandes organizaciones",
+        "price": "Personalizado",
+        "period": "",
+        "features": {
+          "users": "Empleados ilimitados",
+          "sessions": "Sesiones ilimitadas",
+          "support": "Soporte dedicado 24/7",
+          "resources": "Recursos personalizados",
+          "analytics": "Análisis empresariales completos",
+          "onboarding": "Onboarding VIP dedicado",
+          "training": "Programas de capacitación a medida",
+          "customization": "Personalización completa",
+          "integration": "Integraciones personalizadas",
+          "compliance": "Cumplimiento regulatorio",
+          "sla": "SLA garantizado"
+        },
+        "cta": "Contactar Ventas"
+      }
+    },
+    "features": {
+      "title": "Todas las Características",
+      "core": {
+        "title": "Características Principales",
+        "therapy": "Terapia profesional certificada",
+        "crisis": "Soporte de crisis 24/7",
+        "privacy": "Cumplimiento HIPAA",
+        "mobile": "Aplicaciones móviles",
+        "scheduling": "Sistema de citas flexible"
+      },
+      "wellness": {
+        "title": "Recursos de Bienestar",
+        "library": "Biblioteca de contenido",
+        "workshops": "Talleres y webinars",
+        "meditation": "Meditación guiada",
+        "exercises": "Ejercicios de mindfulness"
+      },
+      "admin": {
+        "title": "Herramientas de Administración",
+        "dashboard": "Panel de control intuitivo",
+        "reports": "Reportes detallados",
+        "billing": "Gestión de facturación",
+        "users": "Administración de usuarios"
+      }
+    },
+    "faq": {
+      "title": "Preguntas Frecuentes",
+      "trial": {
+        "question": "¿Ofrecen período de prueba?",
+        "answer": "Sí, ofrecemos 30 días de prueba gratuita para todos nuestros planes. No se requiere tarjeta de crédito."
+      },
+      "cancel": {
+        "question": "¿Puedo cancelar en cualquier momento?",
+        "answer": "Absolutamente. Puedes cancelar tu suscripción en cualquier momento sin penalización. Solo pagas por el tiempo que uses."
+      },
+      "implementation": {
+        "question": "¿Cuánto tiempo toma implementar MentalFit?",
+        "answer": "La mayoría de las organizaciones están operativas en 1-2 semanas. Planes Enterprise pueden tomar más tiempo dependiendo de las personalizaciones."
+      },
+      "privacy": {
+        "question": "¿Cómo protegen la privacidad de los empleados?",
+        "answer": "Cumplimos con HIPAA y todas las sesiones son completamente confidenciales. Los empleadores solo ven métricas agregadas y anónimas."
+      }
+    },
+    "cta": {
+      "title": "¿Listo para comenzar?",
+      "subtitle": "Únete a cientos de empresas transformando su cultura organizacional",
+      "button": "Comenzar Prueba Gratuita"
     }
   },
   "contact": {
@@ -291,13 +453,39 @@
       "title": "Contáctanos",
       "subtitle": "Estamos aquí para ayudarte"
     },
+    "options": {
+      "generalSupport": {
+        "title": "Soporte General",
+        "description": "Preguntas sobre nuestros servicios o plataforma",
+        "hours": "Lun-Vie 9AM-6PM PST"
+      },
+      "crisisSupport": {
+        "title": "Soporte de Crisis",
+        "description": "Asistencia de emergencia en salud mental 24/7",
+        "hours": "Disponible 24/7"
+      },
+      "billing": {
+        "title": "Facturación y Cuentas",
+        "description": "Problemas de pago y gestión de cuenta",
+        "hours": "Lun-Vie 8AM-5PM PST"
+      },
+      "sales": {
+        "title": "Ventas Empresariales",
+        "description": "Soluciones para grandes organizaciones y demos",
+        "hours": "Lun-Vie 9AM-5PM PST"
+      }
+    },
     "form": {
-      "name": "Nombre",
+      "title": "Envíanos un Mensaje",
+      "name": "Nombre Completo",
+      "namePlaceholder": "Juan Pérez",
       "email": "Correo Electrónico",
-      "workEmail": "Correo Corporativo *",
-      "emailAddress": "Dirección de Correo *",
+      "emailPlaceholder": "tu@empresa.com",
+      "subject": "Asunto",
+      "subjectPlaceholder": "¿Cómo podemos ayudarte?",
       "message": "Mensaje",
-      "submit": "Enviar",
+      "messagePlaceholder": "Cuéntanos más...",
+      "submit": "Enviar Mensaje",
       "sending": "Enviando..."
     }
   },
@@ -305,17 +493,167 @@
     "hero": {
       "title": "Solicitar Demo",
       "subtitle": "Descubre cómo MentalFit puede transformar tu organización"
+    },
+    "form": {
+      "title": "Agenda tu Demo Personalizada",
+      "firstName": "Nombre",
+      "firstNamePlaceholder": "Tu nombre",
+      "lastName": "Apellido",
+      "lastNamePlaceholder": "Tu apellido",
+      "email": "Correo Electrónico Corporativo",
+      "emailPlaceholder": "tu@empresa.com",
+      "company": "Nombre de la Empresa",
+      "companyPlaceholder": "Nombre de tu empresa",
+      "companySize": "Tamaño de la Empresa",
+      "companySizePlaceholder": "Selecciona un rango",
+      "jobTitle": "Cargo",
+      "jobTitlePlaceholder": "Ej: Director de RRHH",
+      "phone": "Teléfono",
+      "phonePlaceholder": "+52 55 1234 5678",
+      "industry": "Industria",
+      "industryPlaceholder": "Selecciona tu industria",
+      "industries": {
+        "technology": "Tecnología",
+        "healthcare": "Salud",
+        "finance": "Finanzas",
+        "education": "Educación",
+        "retail": "Retail",
+        "manufacturing": "Manufactura",
+        "consulting": "Consultoría",
+        "other": "Otra"
+      },
+      "message": "¿Qué te gustaría saber?",
+      "messagePlaceholder": "Cuéntanos sobre tus necesidades específicas...",
+      "preferredDate": "Fecha Preferida",
+      "preferredTime": "Hora Preferida",
+      "timeSlots": {
+        "morning": "Mañana (9AM-12PM)",
+        "afternoon": "Tarde (12PM-5PM)",
+        "evening": "Noche (5PM-8PM)"
+      },
+      "consent": "Acepto recibir comunicaciones de MentalFit",
+      "submit": "Solicitar Demo",
+      "sending": "Enviando solicitud..."
+    },
+    "benefits": {
+      "title": "¿Qué incluye la demo?",
+      "platform": {
+        "title": "Tour de la Plataforma",
+        "description": "Explora todas las características y funcionalidades"
+      },
+      "customization": {
+        "title": "Opciones de Personalización",
+        "description": "Descubre cómo adaptar MentalFit a tus necesidades"
+      },
+      "pricing": {
+        "title": "Planes y Precios",
+        "description": "Encuentra la solución perfecta para tu presupuesto"
+      },
+      "qa": {
+        "title": "Sesión de Preguntas",
+        "description": "Resuelve todas tus dudas con nuestros expertos"
+      }
     }
   },
   "terms": {
     "title": "Términos y Condiciones",
     "lastUpdated": "Última actualización",
-    "contact": "Correo: legal@mentalfit.com"
+    "effectiveDate": "15 de octubre de 2024",
+    "contact": "Correo: legal@mentalfit.com",
+    "sections": {
+      "acceptance": {
+        "title": "1. Aceptación de los Términos",
+        "content": "Al acceder y usar MentalFit, aceptas estar sujeto a estos Términos y Condiciones. Si no estás de acuerdo, no uses nuestros servicios."
+      },
+      "services": {
+        "title": "2. Descripción de Servicios",
+        "content": "MentalFit proporciona una plataforma de salud mental empresarial que conecta a empleados con profesionales certificados de salud mental."
+      },
+      "userAccounts": {
+        "title": "3. Cuentas de Usuario",
+        "content": "Eres responsable de mantener la confidencialidad de tu cuenta y contraseña. Debes notificarnos inmediatamente de cualquier uso no autorizado."
+      },
+      "privacy": {
+        "title": "4. Privacidad y Protección de Datos",
+        "content": "Cumplimos con HIPAA y todas las leyes aplicables de protección de datos. Consulta nuestra Política de Privacidad para más información."
+      },
+      "professionalServices": {
+        "title": "5. Servicios Profesionales",
+        "content": "Todos los terapeutas en nuestra plataforma están certificados y autorizados. Los servicios no sustituyen atención médica de emergencia."
+      },
+      "payment": {
+        "title": "6. Pago y Facturación",
+        "content": "Los precios están sujetos a cambios con aviso previo. Las suscripciones se renuevan automáticamente hasta que sean canceladas."
+      },
+      "termination": {
+        "title": "7. Terminación",
+        "content": "Puedes cancelar tu cuenta en cualquier momento. Nos reservamos el derecho de suspender o terminar cuentas que violen estos términos."
+      },
+      "liability": {
+        "title": "8. Limitación de Responsabilidad",
+        "content": "MentalFit no es responsable de daños indirectos, incidentales o consecuentes que surjan del uso de nuestros servicios."
+      },
+      "changes": {
+        "title": "9. Cambios a los Términos",
+        "content": "Nos reservamos el derecho de modificar estos términos en cualquier momento. Se te notificará de cambios importantes."
+      },
+      "governing": {
+        "title": "10. Ley Aplicable",
+        "content": "Estos términos se rigen por las leyes del país donde opera MentalFit."
+      }
+    }
   },
   "privacy": {
     "title": "Política de Privacidad",
     "lastUpdated": "Última actualización",
-    "contact": "Correo: privacy@mentalfit.com"
+    "effectiveDate": "15 de octubre de 2024",
+    "contact": "Correo: privacy@mentalfit.com",
+    "sections": {
+      "introduction": {
+        "title": "1. Introducción",
+        "content": "En MentalFit, la privacidad de tus datos es nuestra máxima prioridad. Esta política describe cómo recopilamos, usamos y protegemos tu información personal."
+      },
+      "dataCollection": {
+        "title": "2. Información que Recopilamos",
+        "content": "Recopilamos información que nos proporcionas directamente, como nombre, correo electrónico, información de empresa, y datos relacionados con sesiones de terapia."
+      },
+      "dataUse": {
+        "title": "3. Cómo Usamos tu Información",
+        "content": "Usamos tu información para proporcionar servicios, mejorar nuestra plataforma, comunicarnos contigo y cumplir con obligaciones legales."
+      },
+      "hipaaCompliance": {
+        "title": "4. Cumplimiento HIPAA",
+        "content": "Cumplimos completamente con HIPAA. Toda la información de salud protegida (PHI) se maneja con los más altos estándares de seguridad y confidencialidad."
+      },
+      "dataSharing": {
+        "title": "5. Compartición de Datos",
+        "content": "No vendemos ni compartimos tu información personal con terceros excepto cuando sea necesario para proporcionar servicios o cuando lo requiera la ley."
+      },
+      "dataSecurity": {
+        "title": "6. Seguridad de Datos",
+        "content": "Implementamos medidas de seguridad técnicas, administrativas y físicas robustas para proteger tu información contra acceso no autorizado."
+      },
+      "userRights": {
+        "title": "7. Tus Derechos",
+        "content": "Tienes derecho a acceder, corregir, eliminar o exportar tus datos personales. Contacta a privacy@mentalfit.com para ejercer estos derechos."
+      },
+      "cookies": {
+        "title": "8. Cookies y Tecnologías de Seguimiento",
+        "content": "Usamos cookies y tecnologías similares para mejorar tu experiencia, analizar uso y personalizar contenido."
+      },
+      "dataRetention": {
+        "title": "9. Retención de Datos",
+        "content": "Conservamos tus datos personales solo durante el tiempo necesario para cumplir con los propósitos descritos o según lo requiera la ley."
+      },
+      "changes": {
+        "title": "10. Cambios a esta Política",
+        "content": "Podemos actualizar esta política ocasionalmente. Te notificaremos de cambios significativos a través de la plataforma o por correo electrónico."
+      },
+      "contact": {
+        "title": "11. Contacto",
+        "content": "Si tienes preguntas sobre esta política de privacidad, contacta a privacy@mentalfit.com"
+      }
+    }
   },
   "dashboard": {
     "title": "Panel de Control",

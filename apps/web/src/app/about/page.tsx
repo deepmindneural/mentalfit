@@ -1,11 +1,14 @@
 'use client';
 
+export const dynamic = 'force-dynamic';
+
 import Link from 'next/link';
-import { 
-  Heart, 
-  Users, 
-  Award, 
-  Shield, 
+import { useTranslations } from 'next-intl';
+import {
+  Heart,
+  Users,
+  Award,
+  Shield,
   ArrowRight,
   Brain,
   Target,
@@ -17,84 +20,86 @@ import {
 } from 'lucide-react';
 import Logo from '@/components/ui/Logo';
 
-const teamMembers = [
-  {
-    name: 'Dr. Sarah Martinez',
-    role: 'CEO & Co-Founder',
-    bio: 'Licensed clinical psychologist with 15+ years of experience in corporate mental health.',
-    avatar: null,
-    credentials: 'Ph.D. Clinical Psychology, Harvard University'
-  },
-  {
-    name: 'Michael Chen',
-    role: 'CTO & Co-Founder',
-    bio: 'Former Google engineer passionate about using technology to improve mental health outcomes.',
-    avatar: null,
-    credentials: 'M.S. Computer Science, Stanford University'
-  },
-  {
-    name: 'Dr. Emily Rodriguez',
-    role: 'Chief Clinical Officer',
-    bio: 'Board-certified psychiatrist specializing in workplace mental health and crisis intervention.',
-    avatar: null,
-    credentials: 'M.D. Psychiatry, Johns Hopkins University'
-  },
-  {
-    name: 'David Kim',
-    role: 'VP of Product',
-    bio: 'Product leader with expertise in healthcare technology and user experience design.',
-    avatar: null,
-    credentials: 'MBA, Wharton School'
-  }
-];
-
-const values = [
-  {
-    icon: Heart,
-    title: 'Compassionate Care',
-    description: 'We believe every individual deserves access to compassionate, professional mental health support.'
-  },
-  {
-    icon: Shield,
-    title: 'Privacy First',
-    description: 'Your privacy and confidentiality are paramount. We maintain the highest security standards.'
-  },
-  {
-    icon: Users,
-    title: 'Inclusive Approach',
-    description: 'Mental health affects everyone. We create inclusive solutions for diverse workplaces.'
-  },
-  {
-    icon: Target,
-    title: 'Evidence-Based',
-    description: 'All our treatments and interventions are grounded in scientific research and best practices.'
-  }
-];
-
-const achievements = [
-  {
-    metric: '10,000+',
-    label: 'Companies Served',
-    description: 'Organizations trust us with their employees\' mental health'
-  },
-  {
-    metric: '500K+',
-    label: 'Lives Impacted',
-    description: 'Employees have received support through our platform'
-  },
-  {
-    metric: '98%',
-    label: 'Satisfaction Rate',
-    description: 'Of users report improved mental health outcomes'
-  },
-  {
-    metric: '24/7',
-    label: 'Crisis Support',
-    description: 'Round-the-clock emergency mental health assistance'
-  }
-];
-
 export default function AboutPage() {
+  const t = useTranslations();
+
+  const teamMembers = [
+    {
+      name: 'Dr. Sarah Martinez',
+      role: 'CEO & Co-Founder',
+      bio: 'Licensed clinical psychologist with 15+ years of experience in corporate mental health.',
+      avatar: null,
+      credentials: 'Ph.D. Clinical Psychology, Harvard University'
+    },
+    {
+      name: 'Michael Chen',
+      role: 'CTO & Co-Founder',
+      bio: 'Former Google engineer passionate about using technology to improve mental health outcomes.',
+      avatar: null,
+      credentials: 'M.S. Computer Science, Stanford University'
+    },
+    {
+      name: 'Dr. Emily Rodriguez',
+      role: 'Chief Clinical Officer',
+      bio: 'Board-certified psychiatrist specializing in workplace mental health and crisis intervention.',
+      avatar: null,
+      credentials: 'M.D. Psychiatry, Johns Hopkins University'
+    },
+    {
+      name: 'David Kim',
+      role: 'VP of Product',
+      bio: 'Product leader with expertise in healthcare technology and user experience design.',
+      avatar: null,
+      credentials: 'MBA, Wharton School'
+    }
+  ];
+
+  const values = [
+    {
+      icon: Heart,
+      title: 'Compassionate Care',
+      description: 'We believe every individual deserves access to compassionate, professional mental health support.'
+    },
+    {
+      icon: Shield,
+      title: 'Privacy First',
+      description: 'Your privacy and confidentiality are paramount. We maintain the highest security standards.'
+    },
+    {
+      icon: Users,
+      title: 'Inclusive Approach',
+      description: 'Mental health affects everyone. We create inclusive solutions for diverse workplaces.'
+    },
+    {
+      icon: Target,
+      title: 'Evidence-Based',
+      description: 'All our treatments and interventions are grounded in scientific research and best practices.'
+    }
+  ];
+
+  const achievements = [
+    {
+      metric: t('about.stats.companies.number'),
+      label: t('about.stats.companies.label'),
+      description: 'Organizations trust us with their employees\' mental health'
+    },
+    {
+      metric: t('about.stats.therapists.number'),
+      label: t('about.stats.therapists.label'),
+      description: 'Employees have received support through our platform'
+    },
+    {
+      metric: t('about.stats.satisfaction.number'),
+      label: t('about.stats.satisfaction.label'),
+      description: 'Of users report improved mental health outcomes'
+    },
+    {
+      metric: '24/7',
+      label: 'Crisis Support',
+      description: 'Round-the-clock emergency mental health assistance'
+    }
+  ];
+
   return (
     <div className="min-h-screen bg-white">
       {/* Header */}
@@ -102,38 +107,38 @@ export default function AboutPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center py-6">
             <Logo />
-            
+
             {/* Navigation Menu */}
             <nav className="hidden md:flex items-center space-x-8">
               <Link href="/" className="text-gray-600 hover:text-gray-900 font-medium transition-colors">
-                Home
+                {t('nav.home')}
               </Link>
               <Link href="/about" className="text-primary-600 font-medium">
-                About
+                {t('nav.about')}
               </Link>
               <Link href="/pricing" className="text-gray-600 hover:text-gray-900 font-medium transition-colors">
-                Pricing
+                {t('nav.pricing')}
               </Link>
               <Link href="/demo" className="text-gray-600 hover:text-gray-900 font-medium transition-colors">
-                Demo
+                {t('nav.demo')}
               </Link>
               <Link href="/contact" className="text-gray-600 hover:text-gray-900 font-medium transition-colors">
-                Contact
+                {t('nav.contact')}
               </Link>
             </nav>
-            
+
             <div className="flex items-center space-x-4">
               <Link
                 href="/auth/login"
                 className="text-gray-600 hover:text-gray-900 font-medium transition-colors"
               >
-                Sign In
+                {t('nav.signIn')}
               </Link>
               <Link
                 href="/auth/register"
                 className="btn-primary"
               >
-                Get Started
+                {t('nav.getStarted')}
               </Link>
             </div>
           </div>
@@ -149,33 +154,32 @@ export default function AboutPage() {
               <span className="text-primary-600"> Mental Health</span>
             </h1>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-              We're on a mission to make professional mental health support accessible, 
-              affordable, and effective for every workplace around the world.
+              {t('about.mission.description')}
             </p>
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="space-y-6">
-              <h2 className="text-3xl font-bold text-gray-900">Our Story</h2>
+              <h2 className="text-3xl font-bold text-gray-900">{t('about.story.title')}</h2>
               <div className="space-y-4 text-gray-700 leading-relaxed">
                 <p>
-                  MentalFit was founded in 2020 when our co-founders, Dr. Sarah Martinez and Michael Chen, 
-                  witnessed firsthand the mental health crisis affecting workplaces worldwide. As a clinical 
-                  psychologist and software engineer respectively, they combined their expertise to create 
+                  MentalFit was founded in 2020 when our co-founders, Dr. Sarah Martinez and Michael Chen,
+                  witnessed firsthand the mental health crisis affecting workplaces worldwide. As a clinical
+                  psychologist and software engineer respectively, they combined their expertise to create
                   a solution that bridges the gap between mental health needs and accessibility.
                 </p>
                 <p>
-                  What started as a simple idea to connect employees with licensed therapists has evolved 
-                  into a comprehensive platform that serves thousands of companies and has positively 
+                  What started as a simple idea to connect employees with licensed therapists has evolved
+                  into a comprehensive platform that serves thousands of companies and has positively
                   impacted over 500,000 lives.
                 </p>
                 <p>
-                  Today, we continue to innovate and expand our services, always keeping our core mission 
+                  Today, we continue to innovate and expand our services, always keeping our core mission
                   at heart: making mental health support as accessible as possible for everyone in the workplace.
                 </p>
               </div>
             </div>
-            
+
             <div className="relative">
               <div className="bg-white rounded-2xl shadow-2xl p-8">
                 <div className="grid grid-cols-2 gap-6 text-center">
@@ -222,10 +226,9 @@ export default function AboutPage() {
               <div className="w-16 h-16 bg-primary-600 rounded-full flex items-center justify-center mb-6">
                 <Target className="h-8 w-8 text-white" />
               </div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">Our Mission</h3>
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">{t('about.mission.title')}</h3>
               <p className="text-gray-700 leading-relaxed">
-                To eliminate barriers to mental health support in the workplace by providing accessible, 
-                professional, and evidence-based care that empowers individuals and transforms organizational cultures.
+                {t('about.mission.description')}
               </p>
             </div>
 
@@ -233,10 +236,9 @@ export default function AboutPage() {
               <div className="w-16 h-16 bg-secondary-600 rounded-full flex items-center justify-center mb-6">
                 <Zap className="h-8 w-8 text-white" />
               </div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">Our Vision</h3>
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">{t('about.vision.title')}</h3>
               <p className="text-gray-700 leading-relaxed">
-                A world where every workplace prioritizes mental health, where seeking support is normalized, 
-                and where every employee has the tools and resources they need to thrive both personally and professionally.
+                {t('about.vision.description')}
               </p>
             </div>
           </div>
@@ -247,7 +249,7 @@ export default function AboutPage() {
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">Our Values</h2>
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">{t('about.values.title')}</h2>
             <p className="text-xl text-gray-600">
               The principles that guide everything we do
             </p>
@@ -271,9 +273,9 @@ export default function AboutPage() {
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">Meet Our Leadership Team</h2>
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">{t('about.team.title')}</h2>
             <p className="text-xl text-gray-600">
-              Passionate experts dedicated to transforming workplace mental health
+              {t('about.team.description')}
             </p>
           </div>
 
@@ -370,11 +372,11 @@ export default function AboutPage() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="/auth/register" className="btn-primary text-lg px-8 py-3">
-              Get Started Today
+              {t('nav.getStarted')}
               <ArrowRight className="h-5 w-5 ml-2" />
             </Link>
             <Link href="/demo" className="btn-secondary text-lg px-8 py-3">
-              Schedule a Demo
+              {t('nav.demo')}
             </Link>
           </div>
         </div>
@@ -386,7 +388,7 @@ export default function AboutPage() {
           <div className="text-center space-y-4">
             <Logo variant="white" />
             <p className="text-gray-400">
-              Empowering workplaces with professional mental health support.
+              {t('home.footer.tagline')}
             </p>
             <div className="flex justify-center space-x-6 text-sm">
               <Link href="/privacy" className="text-gray-400 hover:text-white">Privacy Policy</Link>
@@ -394,7 +396,7 @@ export default function AboutPage() {
               <Link href="/contact" className="text-gray-400 hover:text-white">Contact</Link>
             </div>
             <p className="text-sm text-gray-500">
-              © 2024 MentalFit. All rights reserved.
+              {t('home.footer.copyright')}
             </p>
           </div>
         </div>

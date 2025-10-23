@@ -43,7 +43,8 @@
       "Bash(\"/Volumes/StarkT7/Proyectos/CLIENETS/proyectos/ESCUCHODROMO/Mentalfit 2/mentalfit/ejecutar-schema.sh\")",
       "Bash(ping:*)",
       "Bash(python3:*)",
-      "Bash(git reset:*)"
+      "Bash(git reset:*)",
+      "Bash(git log:*)"
     ],
     "deny": []
   }
