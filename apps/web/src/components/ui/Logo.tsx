@@ -1,6 +1,6 @@
 'use client';
 
-import { Brain, Heart } from 'lucide-react';
+import { HeartPulse, Sparkles } from 'lucide-react';
 
 interface LogoProps {
   className?: string;
@@ -24,9 +24,9 @@ export default function Logo({ className = '', showText = true, variant = 'defau
   return (
     <div className={`flex items-center space-x-2 ${className}`}>
       <div className="relative">
-        {/* Brain icon with heart overlay */}
-        <Brain className={`h-8 w-8 ${colorClasses[variant]}`} />
-        <Heart className={`h-3 w-3 ${colorClasses[variant]} absolute -top-1 -right-1 fill-current`} />
+        {/* HeartPulse icon representing mental health and wellbeing */}
+        <HeartPulse className={`h-8 w-8 ${colorClasses[variant]} stroke-[2.5]`} />
+        <Sparkles className={`h-3 w-3 ${colorClasses[variant]} absolute -top-1 -right-1 fill-current`} />
       </div>
       
       {showText && (
