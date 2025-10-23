@@ -129,14 +129,14 @@ export default function PruebaGratisPage() {
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div>
                     <Input
-                      label={t('form.firstName')}
+                      etiqueta={t('form.firstName')}
                       error={errors.firstName?.message}
                       {...register('firstName')}
                     />
                   </div>
                   <div>
                     <Input
-                      label={t('form.lastName')}
+                      etiqueta={t('form.lastName')}
                       error={errors.lastName?.message}
                       {...register('lastName')}
                     />
@@ -144,41 +144,42 @@ export default function PruebaGratisPage() {
                 </div>
 
                 <Input
-                  label={t('form.email')}
+                  etiqueta={t('form.email')}
                   type="email"
                   error={errors.email?.message}
                   {...register('email')}
                 />
 
                 <Input
-                  label={t('form.companyName')}
+                  etiqueta={t('form.companyName')}
                   error={errors.companyName?.message}
                   {...register('companyName')}
                 />
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <Select
-                    label={t('form.companySize')}
+                    etiqueta={t('form.companySize')}
                     error={errors.companySize?.message}
+                    placeholder="Selecciona"
+                    opciones={[
+                      { valor: '1-10', etiqueta: '1-10' },
+                      { valor: '11-50', etiqueta: '11-50' },
+                      { valor: '51-200', etiqueta: '51-200' },
+                      { valor: '201-500', etiqueta: '201-500' },
+                      { valor: '501+', etiqueta: '501+' }
+                    ]}
                     {...register('companySize')}
-                  >
-                    <option value="">Selecciona</option>
-                    <option value="1-10">1-10</option>
-                    <option value="11-50">11-50</option>
-                    <option value="51-200">51-200</option>
-                    <option value="201-500">201-500</option>
-                    <option value="501+">501+</option>
-                  </Select>
+                  />
 
                   <Input
-                    label={t('form.jobTitle')}
+                    etiqueta={t('form.jobTitle')}
                     error={errors.jobTitle?.message}
                     {...register('jobTitle')}
                   />
                 </div>
 
                 <Input
-                  label={t('form.phone')}
+                  etiqueta={t('form.phone')}
                   type="tel"
                   error={errors.phone?.message}
                   {...register('phone')}
@@ -186,7 +187,7 @@ export default function PruebaGratisPage() {
 
                 <div className="space-y-4">
                   <Checkbox
-                    label={t('form.acceptTerms')}
+                    etiqueta={t('form.acceptTerms')}
                     error={errors.acceptTerms?.message}
                     {...register('acceptTerms')}
                   />
