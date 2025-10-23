@@ -24,7 +24,7 @@ const mockBillingData = {
     name: 'Professional',
     price: 25,
     billingCycle: 'monthly',
-    nextBillingDate: '2024-08-31',
+    nextBillingDate: '2025-08-31',
     employees: 247,
     totalCost: 6175
   },
@@ -45,47 +45,47 @@ const mockBillingData = {
     {
       description: 'Professional Plan - 247 employees',
       amount: 6175,
-      date: '2024-08-31'
+      date: '2025-08-31'
     },
     {
       description: 'Additional Sessions (0)',
       amount: 0,
-      date: '2024-08-31'
+      date: '2025-08-31'
     }
   ]
 };
 
 const mockInvoices = [
   {
-    id: 'INV-2024-07-001',
-    date: '2024-07-01',
+    id: 'INV-2025-07-001',
+    date: '2025-07-01',
     amount: 6175,
     status: 'paid',
-    description: 'Professional Plan - July 2024',
+    description: 'Professional Plan - July 2025',
     downloadUrl: '#'
   },
   {
-    id: 'INV-2024-06-001',
-    date: '2024-06-01',
+    id: 'INV-2025-06-001',
+    date: '2025-06-01',
     amount: 5950,
     status: 'paid',
-    description: 'Professional Plan - June 2024',
+    description: 'Professional Plan - June 2025',
     downloadUrl: '#'
   },
   {
-    id: 'INV-2024-05-001',
-    date: '2024-05-01',
+    id: 'INV-2025-05-001',
+    date: '2025-05-01',
     amount: 5725,
     status: 'paid',
-    description: 'Professional Plan - May 2024',
+    description: 'Professional Plan - May 2025',
     downloadUrl: '#'
   },
   {
-    id: 'INV-2024-04-001',
-    date: '2024-04-01',
+    id: 'INV-2025-04-001',
+    date: '2025-04-01',
     amount: 5500,
     status: 'paid',
-    description: 'Professional Plan - April 2024',
+    description: 'Professional Plan - April 2025',
     downloadUrl: '#'
   }
 ];

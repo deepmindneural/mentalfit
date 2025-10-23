@@ -310,7 +310,7 @@ export const schemaCrearIntencionPago = z.object({
 export const schemaGenerarFactura = z.object({
   empresaId: schemaUUID,
   mes: z.number().min(1).max(12),
-  anio: z.number().min(2024).max(2100),
+  anio: z.number().min(2025).max(2100),
   conceptos: z.array(
     z.object({
       descripcion: z.string(),

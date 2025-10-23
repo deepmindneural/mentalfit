@@ -37,7 +37,7 @@ const mockResources = [
     rating: 4.8,
     views: 1247,
     author: 'Dr. Sarah Wilson',
-    publishedDate: '2024-07-15',
+    publishedDate: '2025-07-15',
     tags: ['mindfulness', 'meditation', 'stress relief'],
     thumbnail: null,
     featured: true
@@ -52,7 +52,7 @@ const mockResources = [
     rating: 4.9,
     views: 892,
     author: 'Michael Chen',
-    publishedDate: '2024-07-20',
+    publishedDate: '2025-07-20',
     tags: ['breathing', 'relaxation', 'guided meditation'],
     thumbnail: null,
     featured: false
@@ -67,7 +67,7 @@ const mockResources = [
     rating: 4.7,
     views: 1653,
     author: 'Dr. Emily Brown',
-    publishedDate: '2024-07-10',
+    publishedDate: '2025-07-10',
     tags: ['work stress', 'professional development', 'coping strategies'],
     thumbnail: null,
     featured: true
@@ -82,7 +82,7 @@ const mockResources = [
     rating: 4.6,
     views: 743,
     author: 'Sleep Wellness Team',
-    publishedDate: '2024-07-25',
+    publishedDate: '2025-07-25',
     tags: ['sleep', 'wellness', 'habits'],
     thumbnail: null,
     featured: false
@@ -97,7 +97,7 @@ const mockResources = [
     rating: 4.8,
     views: 2104,
     author: 'Dr. Michael Chen',
-    publishedDate: '2024-07-05',
+    publishedDate: '2025-07-05',
     tags: ['anxiety', 'education', 'mental health'],
     thumbnail: null,
     featured: true
@@ -112,7 +112,7 @@ const mockResources = [
     rating: 4.7,
     views: 567,
     author: 'Wellness Audio Team',
-    publishedDate: '2024-07-18',
+    publishedDate: '2025-07-18',
     tags: ['relaxation', 'muscle tension', 'stress relief'],
     thumbnail: null,
     featured: false

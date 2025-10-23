@@ -61,26 +61,26 @@ const mockUserData = {
     streakDays: 45,
     totalHours: 20,
     improvementScore: 78,
-    lastSession: '2024-07-29T14:00:00',
+    lastSession: '2025-07-29T14:00:00',
   },
   recentActivity: [
     {
       type: 'session',
       title: 'Therapy Session with Dr. Sarah Wilson',
-      date: '2024-07-29T14:00:00',
+      date: '2025-07-29T14:00:00',
       duration: 50,
       rating: 5,
     },
     {
       type: 'assessment',
       title: 'Weekly Wellness Check-in',
-      date: '2024-07-26T09:00:00',
+      date: '2025-07-26T09:00:00',
       score: 7.2,
     },
     {
       type: 'goal',
       title: 'Completed meditation goal',
-      date: '2024-07-25T18:30:00',
+      date: '2025-07-25T18:30:00',
       achievement: 'Meditated for 7 days straight',
     },
   ],
@@ -304,7 +304,7 @@ export default function ProfilePage() {
                     </div>
                     <div>
                       <span className="text-sm font-medium text-gray-500">Employee ID:</span>
-                      <p className="text-gray-900">EMP-2024-001</p>
+                      <p className="text-gray-900">EMP-2025-001</p>
                     </div>
                   </div>
                 </div>

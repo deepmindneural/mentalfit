@@ -593,9 +593,9 @@ export default function SettingsPage() {
                       <div className="border border-gray-200 rounded-lg overflow-hidden">
                         <div className="divide-y divide-gray-200">
                           {[
-                            { date: '2024-07-01', amount: '$15,000', status: 'Paid' },
-                            { date: '2024-06-01', amount: '$15,000', status: 'Paid' },
-                            { date: '2024-05-01', amount: '$15,000', status: 'Paid' },
+                            { date: '2025-07-01', amount: '$15,000', status: 'Paid' },
+                            { date: '2025-06-01', amount: '$15,000', status: 'Paid' },
+                            { date: '2025-05-01', amount: '$15,000', status: 'Paid' },
                           ].map((invoice, index) => (
                             <div key={index} className="px-4 py-3 flex items-center justify-between">
                               <div className="flex items-center space-x-3">

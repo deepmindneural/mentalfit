@@ -1,9 +1,9 @@
 'use client';
 
 import { useState } from 'react';
-import { 
-  Bell, 
-  Search, 
+import {
+  Bell,
+  Search,
   Menu,
   MessageSquare,
   Calendar,
@@ -11,6 +11,7 @@ import {
   User,
   ChevronDown
 } from 'lucide-react';
+import SelectorIdioma from '@/components/ui/SelectorIdioma';
 
 interface HeaderProps {
   title?: string;
@@ -135,6 +136,9 @@ export default function Header({ title = 'Dashboard', onMenuClick }: HeaderProps
               </div>
             )}
           </div>
+
+          {/* Language Selector */}
+          <SelectorIdioma showLabels={false} />
 
           {/* Profile dropdown */}
           <div className="relative">
