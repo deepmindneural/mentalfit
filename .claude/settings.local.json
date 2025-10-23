@@ -44,7 +44,16 @@
       "Bash(ping:*)",
       "Bash(python3:*)",
       "Bash(git reset:*)",
-      "Bash(git log:*)"
+      "Bash(git log:*)",
+      "Read(//Users/leob/Library/**)",
+      "Bash(claude mcp list:*)",
+      "Bash(claude mcp status:*)",
+      "mcp__supabase__get_project_url",
+      "mcp__supabase__list_tables",
+      "mcp__supabase__list_migrations",
+      "mcp__supabase__list_extensions",
+      "mcp__supabase__execute_sql",
+      "mcp__supabase__apply_migration"
     ],
     "deny": []
   }

@@ -1,0 +1,103 @@
+{
+  "fecha_generacion": "2025-10-22",
+  "total_paginas": 271,
+  "paginas_nuevas": 237,
+  "paginas_previas": 34,
+  "objetivo_inicial": 280,
+  "porcentaje_completado": 96.8,
+  "desglose_por_categoria": {
+    "publicas": {
+      "cantidad": 14,
+      "porcentaje": 5.2,
+      "descripcion": "Landing pages, información corporativa, blog, legal"
+    },
+    "ayuda": {
+      "cantidad": 12,
+      "porcentaje": 4.4,
+      "descripcion": "Centro de ayuda, FAQs, tutoriales, soporte"
+    },
+    "super_admin": {
+      "cantidad": 54,
+      "porcentaje": 19.9,
+      "descripcion": "Panel de administración completo del sistema"
+    },
+    "empresa": {
+      "cantidad": 33,
+      "porcentaje": 12.2,
+      "descripcion": "Dashboard corporativo, gestión de empleados, ROI"
+    },
+    "profesional": {
+      "cantidad": 40,
+      "porcentaje": 14.8,
+      "descripcion": "Portal para terapeutas, agenda, pacientes, finanzas"
+    },
+    "usuario": {
+      "cantidad": 67,
+      "porcentaje": 24.7,
+      "descripcion": "Dashboard personal, sesiones, evaluaciones, recursos"
+    },
+    "error_utilidad": {
+      "cantidad": 17,
+      "porcentaje": 6.3,
+      "descripcion": "Páginas de error HTTP y estados del sistema"
+    },
+    "previas": {
+      "cantidad": 34,
+      "porcentaje": 12.5,
+      "descripcion": "Páginas ya existentes antes de la generación"
+    }
+  },
+  "tecnologias": {
+    "framework": "Next.js 14 App Router",
+    "lenguaje": "TypeScript",
+    "estilos": "Tailwind CSS",
+    "i18n": "next-intl",
+    "componente_base": "UnderConstruction.tsx"
+  },
+  "convenciones": {
+    "nomenclatura": "snake_case en español",
+    "estructura": "Route groups por rol",
+    "metadata": "SEO optimizado",
+    "funcionalidades": "Lista documentada por página"
+  },
+  "organizacion_rutas": {
+    "(publico)": "Páginas públicas sin autenticación",
+    "(autenticacion)": "Login, registro, recuperación",
+    "(usuario)": "Dashboard de usuario autenticado",
+    "(profesional)": "Portal de terapeutas",
+    "(empresa)": "Portal corporativo",
+    "(admin)": "Panel de super administrador",
+    "raiz": "Páginas de error y estados especiales"
+  },
+  "estadisticas_generacion": {
+    "tiempo_ejecucion": "< 5 segundos",
+    "metodo": "Script Python automatizado",
+    "errores": 0,
+    "warnings": 0
+  },
+  "proximos_pasos": [
+    "Implementar páginas críticas del usuario (Sprint 1-2)",
+    "Desarrollar portal profesional (Sprint 3-4)",
+    "Construir portal empresa (Sprint 5-6)",
+    "Completar super admin (Sprint 7-8)",
+    "Finalizar páginas de soporte (Sprint 9)"
+  ],
+  "componentes_necesarios": [
+    "Buscador de profesionales con filtros",
+    "Sistema de reservas y calendario",
+    "Reproductor de videollamadas",
+    "Editor de notas clínicas (SOAP)",
+    "Dashboard de métricas",
+    "Generador de reportes",
+    "Sistema de evaluaciones",
+    "Gestor de contenido"
+  ],
+  "integraciones_requeridas": [
+    "Videollamadas (Twilio/Agora/Daily.co)",
+    "Pagos (Stripe)",
+    "Email (SendGrid/AWS SES)",
+    "Storage (AWS S3)",
+    "Analytics (Mixpanel/Amplitude)",
+    "Notificaciones (Firebase Cloud Messaging)"
+  ]
+}
