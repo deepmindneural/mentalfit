@@ -8,6 +8,9 @@ import {
   crearRespuestaPaginada
 } from '@/lib/api/utilidades-respuesta'
 
+// Forzar renderizado dinámico para evitar pre-renderizado estático
+export const dynamic = 'force-dynamic'
+
 /**
  * GET /api/profesionales
  * Busca profesionales con filtros opcionales
