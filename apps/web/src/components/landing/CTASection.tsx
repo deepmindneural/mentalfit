@@ -84,7 +84,7 @@ export default function CTASection({
           {/* Content */}
           <div className="relative z-10 space-y-8">
             {/* Badge */}
-            {t('badge', { defaultValue: undefined }) && (
+            {t('badge', { defaultValue: '' }) && (
               <div className="inline-flex items-center space-x-2 bg-white/10 text-white px-4 py-2 rounded-full text-sm font-medium">
                 <Sparkles className="w-4 h-4" />
                 <span>{t('badge')}</span>
@@ -122,7 +122,7 @@ export default function CTASection({
             </div>
 
             {/* Additional info */}
-            {t('note', { defaultValue: undefined }) && (
+            {t('note', { defaultValue: '' }) && (
               <p className="text-sm text-primary-200">
                 {t('note')}
               </p>

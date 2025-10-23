@@ -25,7 +25,7 @@ export default function TrustBadges({ translationKey, variant = 'default' }: Tru
       return {
         icon: iconMap[t(`badges.${index}.icon`)] || Shield,
         title: t(`badges.${index}.title`),
-        description: t(`badges.${index}.description`, { defaultValue: undefined })
+        description: t(`badges.${index}.description`, { defaultValue: '' })
       };
     } catch {
       return null;

@@ -44,14 +44,14 @@ export default function PricingTable({ translationKey, showAnnual = true }: Pric
         name: t(`plans.${index}.name`),
         description: t(`plans.${index}.description`),
         price: t(`plans.${index}.price`),
-        priceAnnual: t(`plans.${index}.priceAnnual`, { defaultValue: undefined }),
+        priceAnnual: t(`plans.${index}.priceAnnual`, { defaultValue: '' }),
         currency: t(`plans.${index}.currency`, { defaultValue: '$' }),
         period: t(`plans.${index}.period`),
         features,
         buttonText: t(`plans.${index}.buttonText`),
         buttonLink: t(`plans.${index}.buttonLink`),
         highlighted: t(`plans.${index}.highlighted`, { defaultValue: 'false' }) === 'true',
-        badge: t(`plans.${index}.badge`, { defaultValue: undefined })
+        badge: t(`plans.${index}.badge`, { defaultValue: '' })
       };
     } catch {
       return null;
@@ -157,14 +157,14 @@ export default function PricingTable({ translationKey, showAnnual = true }: Pric
         </div>
 
         {/* Additional note */}
-        {t('note', { defaultValue: undefined }) && (
+        {t('note', { defaultValue: '' }) && (
           <p className="text-center text-gray-600 mt-12 max-w-2xl mx-auto">
             {t('note')}
           </p>
         )}
 
         {/* Enterprise CTA */}
-        {t('enterprise.title', { defaultValue: undefined }) && (
+        {t('enterprise.title', { defaultValue: '' }) && (
           <div className="mt-16 text-center max-w-3xl mx-auto bg-gradient-to-r from-primary-50 to-primary-100 rounded-2xl p-8">
             <h3 className="text-2xl font-bold text-gray-900 mb-3">
               {t('enterprise.title')}

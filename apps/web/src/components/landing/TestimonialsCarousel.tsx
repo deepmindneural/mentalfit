@@ -36,7 +36,7 @@ export default function TestimonialsCarousel({
         company: t(`testimonials.${index}.company`),
         content: t(`testimonials.${index}.content`),
         rating: parseInt(t(`testimonials.${index}.rating`, { defaultValue: '5' })),
-        avatar: t(`testimonials.${index}.avatar`, { defaultValue: undefined })
+        avatar: t(`testimonials.${index}.avatar`, { defaultValue: '' })
       };
     } catch {
       return null;

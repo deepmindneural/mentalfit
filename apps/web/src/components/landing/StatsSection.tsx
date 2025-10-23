@@ -31,7 +31,7 @@ export default function StatsSection({ translationKey, variant = 'default' }: St
     icon: iconMap[t(`stats.${index}.icon`)] || Users,
     value: t(`stats.${index}.value`),
     label: t(`stats.${index}.label`),
-    trend: t(`stats.${index}.trend`, { defaultValue: undefined })
+    trend: t(`stats.${index}.trend`, { defaultValue: '' })
   }));
 
   const variantClasses = {
@@ -106,7 +106,7 @@ export default function StatsSection({ translationKey, variant = 'default' }: St
         </div>
 
         {/* Optional CTA */}
-        {t('cta.text', { defaultValue: undefined }) && (
+        {t('cta.text', { defaultValue: '' }) && (
           <div className="mt-12 text-center">
             <a
               href={t('cta.link')}

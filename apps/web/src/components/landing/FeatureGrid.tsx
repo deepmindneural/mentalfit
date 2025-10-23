@@ -57,7 +57,7 @@ export default function FeatureGrid({
         icon: iconMap[t(`features.${index}.icon`)] || Sparkles,
         title,
         description: t(`features.${index}.description`),
-        link: t(`features.${index}.link`, { defaultValue: undefined })
+        link: t(`features.${index}.link`, { defaultValue: '' })
       });
       index++;
     } catch {

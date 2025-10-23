@@ -83,7 +83,7 @@ export default function FAQAccordion({ translationKey }: FAQAccordionProps) {
         </div>
 
         {/* Contact CTA */}
-        {t('contactCTA.text', { defaultValue: undefined }) && (
+        {t('contactCTA.text', { defaultValue: '' }) && (
           <div className="mt-12 text-center">
             <p className="text-gray-600 mb-4">
               {t('contactCTA.text')}

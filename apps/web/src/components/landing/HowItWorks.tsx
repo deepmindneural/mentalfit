@@ -128,7 +128,7 @@ export default function HowItWorks({ translationKey, variant = 'horizontal' }: H
         )}
 
         {/* CTA */}
-        {t('cta.text', { defaultValue: undefined }) && (
+        {t('cta.text', { defaultValue: '' }) && (
           <div className="mt-16 text-center">
             <a
               href={t('cta.link')}
