@@ -3,19 +3,14 @@
 import { useTranslations } from 'next-intl';
 import Link from 'next/link';
 import Logo from '@/components/ui/Logo';
-import HeroSection from '@/components/landing/HeroSection';
-import StatsSection from '@/components/landing/StatsSection';
-import FeatureGrid from '@/components/landing/FeatureGrid';
-import BenefitsTabs from '@/components/landing/BenefitsTabs';
-import HowItWorks from '@/components/landing/HowItWorks';
-import TestimonialsCarousel from '@/components/landing/TestimonialsCarousel';
-import CTASection from '@/components/landing/CTASection';
-import TrustBadges from '@/components/landing/TrustBadges';
-import FAQAccordion from '@/components/landing/FAQAccordion';
 import { Menu, X } from 'lucide-react';
-import { useState } from 'react';
+import { useState, ReactNode } from 'react';
 
-export default function HomePage() {
+interface LandingLayoutProps {
+  children: ReactNode;
+}
+
+export default function LandingLayout({ children }: LandingLayoutProps) {
   const t = useTranslations();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
@@ -93,10 +88,7 @@ export default function HomePage() {
                 <Link href="/sobre-nosotros" className="text-gray-700 hover:text-primary-600 font-medium">
                   {t('nav.about')}
                 </Link>
-                <Link
-                  href="/auth/login"
-                  className="text-gray-700 hover:text-primary-600 font-medium"
-                >
+                <Link href="/auth/login" className="text-gray-700 hover:text-primary-600 font-medium">
                   {t('nav.signIn')}
                 </Link>
                 <Link
@@ -112,34 +104,7 @@ export default function HomePage() {
       </header>
 
       {/* Main Content */}
-      <main>
-        {/* Hero Section */}
-        <HeroSection translationKey="landing.hero" variant="gradient" />
-
-        {/* Trust Badges */}
-        <TrustBadges translationKey="landing.trustBadges" variant="compact" />
-
-        {/* Problem/Stats Section */}
-        <StatsSection translationKey="landing.problemStats" variant="default" />
-
-        {/* Features Grid */}
-        <FeatureGrid translationKey="landing.features" columns={3} variant="cards" />
-
-        {/* Benefits by Audience Tabs */}
-        <BenefitsTabs translationKey="landing.benefits" />
-
-        {/* How It Works */}
-        <HowItWorks translationKey="landing.howItWorks" variant="horizontal" />
-
-        {/* Testimonials */}
-        <TestimonialsCarousel translationKey="landing.testimonials" autoplay={true} />
-
-        {/* FAQ */}
-        <FAQAccordion translationKey="landing.faq" />
-
-        {/* Final CTA */}
-        <CTASection translationKey="landing.finalCTA" variant="gradient" showSecondary={true} />
-      </main>
+      <main>{children}</main>
 
       {/* Footer */}
       <footer className="bg-gray-900 text-white py-16">

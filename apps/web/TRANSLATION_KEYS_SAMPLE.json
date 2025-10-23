@@ -1,0 +1,503 @@
+{
+  "INSTRUCTIONS": "This is a SAMPLE showing the structure. Copy these patterns to messages/es.json and messages/en.json",
+
+  "nav": {
+    "forBusinesses": "Para Empresas",
+    "forEmployees": "Para Empleados",
+    "features": "Características",
+    "pricing": "Precios",
+    "about": "Acerca de",
+    "signIn": "Iniciar Sesión",
+    "getStarted": "Comenzar Gratis"
+  },
+
+  "footer": {
+    "tagline": "Bienestar mental para tu equipo",
+    "copyright": "© {year} MentalFit. Todos los derechos reservados.",
+    "product": {
+      "title": "Producto",
+      "aiChat": "Chat IA",
+      "therapy": "Terapia Online",
+      "dashboard": "Dashboard",
+      "pricing": "Precios"
+    },
+    "company": {
+      "title": "Empresa",
+      "about": "Sobre Nosotros",
+      "blog": "Blog",
+      "careers": "Carreras",
+      "press": "Prensa"
+    },
+    "resources": {
+      "title": "Recursos",
+      "help": "Ayuda",
+      "library": "Biblioteca",
+      "webinars": "Webinars",
+      "contact": "Contacto"
+    },
+    "legal": {
+      "privacy": "Privacidad",
+      "terms": "Términos",
+      "cookies": "Cookies",
+      "security": "Seguridad"
+    }
+  },
+
+  "landing": {
+    "hero": {
+      "badge": "Plataforma líder en bienestar mental",
+      "headline": "Tu Bienestar Mental Es Nuestra Prioridad",
+      "subheadline": "Cuida la salud mental de tu equipo con terapia profesional, IA 24/7 y herramientas de bienestar en una sola plataforma.",
+      "imageAlt": "Dashboard de MentalFit",
+      "primaryCTA": {
+        "text": "Comenzar Prueba Gratis",
+        "link": "/prueba-gratis"
+      },
+      "secondaryCTA": {
+        "text": "Ver Demo",
+        "link": "/demo"
+      },
+      "trustIndicator": {
+        "users": "10,000+ usuarios",
+        "subtitle": "confían en MentalFit"
+      }
+    },
+
+    "trustBadges": {
+      "badges": {
+        "0": {
+          "icon": "shield",
+          "title": "Certificado HIPAA",
+          "description": "Cumplimiento total"
+        },
+        "1": {
+          "icon": "lock",
+          "title": "Datos Encriptados",
+          "description": "Seguridad garantizada"
+        },
+        "2": {
+          "icon": "award",
+          "title": "ISO 27001",
+          "description": "Estándar internacional"
+        },
+        "3": {
+          "icon": "checkCircle",
+          "title": "100% Confidencial",
+          "description": "Tu privacidad primero"
+        }
+      }
+    },
+
+    "problemStats": {
+      "title": "El Problema de Salud Mental en el Trabajo",
+      "subtitle": "Las cifras hablan por sí solas",
+      "stats": {
+        "0": {
+          "icon": "trendingUp",
+          "value": "77%",
+          "label": "de empleados reportan burnout",
+          "trend": "+15%"
+        },
+        "1": {
+          "icon": "users",
+          "value": "$300B",
+          "label": "costo anual de salud mental",
+          "trend": ""
+        },
+        "2": {
+          "icon": "clock",
+          "value": "11.5",
+          "label": "días perdidos por año/empleado",
+          "trend": "+8%"
+        },
+        "3": {
+          "icon": "award",
+          "value": "4x",
+          "label": "mayor retención con programas de bienestar",
+          "trend": ""
+        }
+      },
+      "cta": {
+        "text": "Ver cómo podemos ayudar",
+        "link": "/para-empresas"
+      }
+    },
+
+    "features": {
+      "title": "Todo lo que Necesitas en Una Plataforma",
+      "subtitle": "Herramientas completas para el bienestar mental de tu organización",
+      "features": {
+        "0": {
+          "icon": "messageSquare",
+          "title": "Chat IA 24/7",
+          "description": "Soporte inmediato con inteligencia artificial entrenada en salud mental",
+          "link": "/caracteristicas/chat-ia"
+        },
+        "1": {
+          "icon": "users",
+          "title": "Terapeutas Certificados",
+          "description": "Acceso a profesionales licenciados por videollamada",
+          "link": "/caracteristicas/terapia-online"
+        },
+        "2": {
+          "icon": "barChart3",
+          "title": "Dashboard Empresarial",
+          "description": "Métricas y análisis del bienestar de tu equipo",
+          "link": "/caracteristicas/dashboard-empresarial"
+        },
+        "3": {
+          "icon": "heart",
+          "title": "Recursos de Bienestar",
+          "description": "Biblioteca de ejercicios, meditaciones y contenido educativo",
+          "link": "/caracteristicas/recursos-bienestar"
+        },
+        "4": {
+          "icon": "shield",
+          "title": "100% Confidencial",
+          "description": "Privacidad absoluta garantizada con encriptación de grado militar",
+          "link": "/seguridad"
+        },
+        "5": {
+          "icon": "zap",
+          "title": "Integración Sencilla",
+          "description": "Conecta con tu SSO y herramientas de RRHH existentes",
+          "link": "/integraciones"
+        }
+      }
+    },
+
+    "benefits": {
+      "title": "Beneficios por Audiencia",
+      "subtitle": "Soluciones diseñadas para cada miembro de tu organización",
+      "tabs": {
+        "0": {
+          "id": "empresas",
+          "icon": "building2",
+          "label": "Empresas",
+          "benefits": {
+            "0": "Reduce costos de ausentismo hasta en 30%",
+            "1": "Mejora la productividad del equipo en 25%",
+            "2": "Aumenta la retención de talento en 40%",
+            "3": "Cumple con regulaciones de salud laboral",
+            "4": "ROI medible y reportes ejecutivos"
+          }
+        },
+        "1": {
+          "id": "empleados",
+          "icon": "users",
+          "label": "Empleados",
+          "benefits": {
+            "0": "Acceso inmediato a apoyo profesional 24/7",
+            "1": "Sesiones ilimitadas con terapeutas certificados",
+            "2": "Herramientas de autocuidado y mindfulness",
+            "3": "100% confidencial y privado",
+            "4": "Desde cualquier dispositivo, en cualquier momento"
+          }
+        },
+        "2": {
+          "id": "rrhh",
+          "icon": "userCog",
+          "label": "Recursos Humanos",
+          "benefits": {
+            "0": "Dashboard con métricas de bienestar del equipo",
+            "1": "Reportes de uso y tendencias anónimos",
+            "2": "Implementación en menos de 1 semana",
+            "3": "Soporte dedicado para onboarding",
+            "4": "Integración con sistemas de RRHH existentes"
+          }
+        }
+      }
+    },
+
+    "howItWorks": {
+      "title": "Cómo Funciona",
+      "subtitle": "Implementación simple en 4 pasos",
+      "steps": {
+        "0": {
+          "icon": "userPlus",
+          "title": "Registro Rápido",
+          "description": "Crea tu cuenta empresarial en menos de 5 minutos. Sin tarjeta de crédito necesaria."
+        },
+        "1": {
+          "icon": "users",
+          "title": "Invita a tu Equipo",
+          "description": "Añade a tus empleados por email o integra con tu SSO. Proceso de onboarding guiado."
+        },
+        "2": {
+          "icon": "messageSquare",
+          "title": "Comienza a Usar",
+          "description": "Tu equipo accede al Chat IA inmediatamente y puede agendar sesiones con terapeutas."
+        },
+        "3": {
+          "icon": "trendingUp",
+          "title": "Monitorea el Impacto",
+          "description": "Visualiza métricas de bienestar y ROI en tu dashboard empresarial."
+        }
+      },
+      "cta": {
+        "text": "Comenzar Ahora",
+        "link": "/prueba-gratis"
+      }
+    },
+
+    "testimonials": {
+      "title": "Lo Que Dicen Nuestros Clientes",
+      "subtitle": "Miles de empresas confían en MentalFit",
+      "testimonials": {
+        "0": {
+          "name": "María González",
+          "role": "Directora de RRHH",
+          "company": "TechCorp",
+          "content": "MentalFit transformó completamente nuestra cultura de bienestar. Vimos una reducción del 40% en ausentismo en solo 6 meses.",
+          "rating": "5",
+          "avatar": ""
+        },
+        "1": {
+          "name": "Carlos Mendoza",
+          "role": "CEO",
+          "company": "StartupXYZ",
+          "content": "La inversión en MentalFit se pagó sola en 3 meses. Nuestro equipo está más feliz, más productivo y más comprometido.",
+          "rating": "5",
+          "avatar": ""
+        },
+        "2": {
+          "name": "Ana Martínez",
+          "role": "Gerente de Operaciones",
+          "company": "RetailPlus",
+          "content": "El Chat IA es increíble. Nuestros empleados lo usan a diario y las métricas de bienestar han mejorado notablemente.",
+          "rating": "5",
+          "avatar": ""
+        }
+      }
+    },
+
+    "faq": {
+      "title": "Preguntas Frecuentes",
+      "subtitle": "Todo lo que necesitas saber sobre MentalFit",
+      "faqs": {
+        "0": {
+          "question": "¿Cómo funciona la prueba gratuita?",
+          "answer": "La prueba gratuita dura 14 días y te da acceso completo a todas las funcionalidades de la plataforma sin necesidad de tarjeta de crédito. Puedes cancelar en cualquier momento."
+        },
+        "1": {
+          "question": "¿Es realmente confidencial?",
+          "answer": "Absolutamente. Todos los datos están encriptados con AES-256 y cumplimos con HIPAA, GDPR e ISO 27001. Los empleadores nunca tienen acceso a conversaciones individuales."
+        },
+        "2": {
+          "question": "¿Qué incluye cada plan?",
+          "answer": "Todos los planes incluyen Chat IA ilimitado, sesiones con terapeutas, recursos de bienestar y dashboard empresarial. Se diferencian en el número de empleados y nivel de soporte."
+        },
+        "3": {
+          "question": "¿Cómo se integra con nuestros sistemas?",
+          "answer": "MentalFit se integra vía API o SSO con la mayoría de sistemas de RRHH (Workday, BambooHR, etc.). Nuestro equipo técnico te ayuda con la implementación."
+        }
+      },
+      "contactCTA": {
+        "text": "¿No encuentras tu pregunta?",
+        "link": "/contacto",
+        "linkText": "Contáctanos"
+      }
+    },
+
+    "finalCTA": {
+      "badge": "Sin compromiso",
+      "title": "Comienza a Cuidar el Bienestar de tu Equipo Hoy",
+      "description": "Únete a más de 10,000 empresas que ya transformaron su cultura de bienestar",
+      "primaryButton": {
+        "text": "Comenzar Prueba Gratis",
+        "link": "/prueba-gratis"
+      },
+      "secondaryButton": {
+        "text": "Hablar con Ventas",
+        "link": "/contacto"
+      },
+      "note": "Sin tarjeta de crédito • Cancela cuando quieras"
+    }
+  },
+
+  "pricing": {
+    "hero": {
+      "title": "Precios Transparentes para Equipos de Todos los Tamaños",
+      "subtitle": "Planes flexibles que crecen con tu empresa",
+      "benefits": {
+        "noSetupFee": "Sin costo de implementación",
+        "freeTrial": "14 días de prueba gratis",
+        "cancelAnytime": "Cancela cuando quieras"
+      }
+    },
+    "plans": {
+      "title": "Elige tu Plan",
+      "subtitle": "Todos los planes incluyen acceso completo a la plataforma",
+      "plans": {
+        "0": {
+          "name": "Starter",
+          "description": "Para empresas pequeñas",
+          "price": "15",
+          "priceAnnual": "150",
+          "currency": "$",
+          "period": "empleado/mes",
+          "highlighted": "false",
+          "buttonText": "Comenzar",
+          "buttonLink": "/prueba-gratis",
+          "features": {
+            "0": { "text": "Chat IA 24/7 ilimitado", "included": "true" },
+            "1": { "text": "6 sesiones de terapia/año por empleado", "included": "true" },
+            "2": { "text": "Dashboard empresarial básico", "included": "true" },
+            "3": { "text": "Recursos de bienestar", "included": "true" },
+            "4": { "text": "Soporte por email", "included": "true" },
+            "5": { "text": "Integraciones avanzadas", "included": "false" },
+            "6": { "text": "Account manager dedicado", "included": "false" }
+          }
+        },
+        "1": {
+          "name": "Professional",
+          "description": "Para empresas en crecimiento",
+          "price": "25",
+          "priceAnnual": "250",
+          "currency": "$",
+          "period": "empleado/mes",
+          "highlighted": "true",
+          "badge": "Más Popular",
+          "buttonText": "Comenzar",
+          "buttonLink": "/prueba-gratis",
+          "features": {
+            "0": { "text": "Todo de Starter, más:", "included": "true" },
+            "1": { "text": "Sesiones de terapia ilimitadas", "included": "true" },
+            "2": { "text": "Dashboard avanzado con reportes", "included": "true" },
+            "3": { "text": "Integraciones SSO y API", "included": "true" },
+            "4": { "text": "Soporte prioritario", "included": "true" },
+            "5": { "text": "Onboarding personalizado", "included": "true" },
+            "6": { "text": "Account manager dedicado", "included": "false" }
+          }
+        },
+        "2": {
+          "name": "Enterprise",
+          "description": "Para grandes organizaciones",
+          "price": "Personalizado",
+          "currency": "",
+          "period": "",
+          "highlighted": "false",
+          "buttonText": "Contactar Ventas",
+          "buttonLink": "/contacto",
+          "features": {
+            "0": { "text": "Todo de Professional, más:", "included": "true" },
+            "1": { "text": "Account manager dedicado", "included": "true" },
+            "2": { "text": "SLA personalizado", "included": "true" },
+            "3": { "text": "Capacitación on-site", "included": "true" },
+            "4": { "text": "Reportes personalizados", "included": "true" },
+            "5": { "text": "Soporte 24/7", "included": "true" },
+            "6": { "text": "Cumplimiento regulatorio", "included": "true" }
+          }
+        }
+      },
+      "note": "Todos los precios en USD. Descuentos disponibles para contratos anuales.",
+      "enterprise": {
+        "title": "¿Necesitas un Plan Empresarial?",
+        "description": "Contacta a nuestro equipo de ventas para una propuesta personalizada con precios especiales para grandes volúmenes.",
+        "buttonText": "Hablar con Ventas",
+        "link": "/contacto"
+      }
+    }
+  },
+
+  "freeTrial": {
+    "hero": {
+      "title": "Comienza tu Prueba Gratuita de 14 Días",
+      "subtitle": "Acceso completo sin tarjeta de crédito"
+    },
+    "benefits": {
+      "0": {
+        "title": "Acceso Completo",
+        "description": "Todas las funcionalidades incluidas durante la prueba"
+      },
+      "1": {
+        "title": "Sin Tarjeta de Crédito",
+        "description": "No pedimos información de pago para comenzar"
+      },
+      "2": {
+        "title": "Soporte Dedicado",
+        "description": "Nuestro equipo te ayuda con el onboarding"
+      },
+      "3": {
+        "title": "Cancela Cuando Quieras",
+        "description": "Sin compromisos ni penalizaciones"
+      },
+      "4": {
+        "title": "Implementación Rápida",
+        "description": "Tu equipo accede en menos de 24 horas"
+      }
+    },
+    "form": {
+      "title": "Información de la Empresa",
+      "firstName": "Nombre",
+      "lastName": "Apellido",
+      "email": "Email Corporativo",
+      "companyName": "Nombre de la Empresa",
+      "companySize": "Tamaño de la Empresa",
+      "jobTitle": "Cargo",
+      "phone": "Teléfono (Opcional)",
+      "acceptTerms": "Acepto los términos y condiciones",
+      "submit": "Comenzar Prueba Gratis",
+      "submitting": "Procesando...",
+      "privacy": "Tus datos están protegidos y nunca serán compartidos"
+    },
+    "success": {
+      "title": "¡Bienvenido a MentalFit!",
+      "subtitle": "Tu cuenta ha sido creada exitosamente",
+      "nextSteps": {
+        "title": "Próximos Pasos:",
+        "step1": "Revisa tu email para verificar tu cuenta",
+        "step2": "Completa tu perfil y configuración",
+        "step3": "Invita a tu equipo a la plataforma"
+      }
+    }
+  },
+
+  "contact": {
+    "hero": {
+      "title": "Contáctanos",
+      "subtitle": "Estamos aquí para ayudarte"
+    },
+    "info": {
+      "email": {
+        "title": "Email",
+        "value": "hola@mentalfit.com"
+      },
+      "phone": {
+        "title": "Teléfono",
+        "value": "+1 (555) 123-4567"
+      },
+      "hours": {
+        "title": "Horario",
+        "value": "Lun-Vie 9:00-18:00"
+      }
+    },
+    "form": {
+      "title": "Envíanos un Mensaje",
+      "name": "Nombre Completo",
+      "email": "Email",
+      "phone": "Teléfono",
+      "company": "Empresa",
+      "department": "Departamento",
+      "departmentPlaceholder": "Selecciona un departamento",
+      "departments": {
+        "sales": "Ventas",
+        "support": "Soporte Técnico",
+        "billing": "Facturación",
+        "general": "Consulta General"
+      },
+      "subject": "Asunto",
+      "message": "Mensaje",
+      "submit": "Enviar Mensaje",
+      "submitting": "Enviando..."
+    },
+    "success": {
+      "title": "Mensaje Enviado",
+      "subtitle": "Nos pondremos en contacto contigo pronto"
+    },
+    "help": {
+      "title": "¿Buscas ayuda inmediata?",
+      "linkText": "Visita nuestro centro de ayuda"
+    }
+  }
+}
