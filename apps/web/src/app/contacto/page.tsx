@@ -118,13 +118,13 @@ export default function ContactoPage() {
             <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <Input
-                  label={t('form.name')}
+                  etiqueta={t('form.name')}
                   error={errors.name?.message}
                   {...register('name')}
                 />
 
                 <Input
-                  label={t('form.email')}
+                  etiqueta={t('form.email')}
                   type="email"
                   error={errors.email?.message}
                   {...register('email')}
@@ -133,14 +133,14 @@ export default function ContactoPage() {
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <Input
-                  label={t('form.phone')}
+                  etiqueta={t('form.phone')}
                   type="tel"
                   error={errors.phone?.message}
                   {...register('phone')}
                 />
 
                 <Input
-                  label={t('form.company')}
+                  etiqueta={t('form.company')}
                   error={errors.company?.message}
                   {...register('company')}
                 />
@@ -148,26 +148,27 @@ export default function ContactoPage() {
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <Select
-                  label={t('form.department')}
+                  etiqueta={t('form.department')}
                   error={errors.department?.message}
+                  placeholder={t('form.departmentPlaceholder')}
+                  opciones={[
+                    { valor: 'ventas', etiqueta: t('form.departments.sales') },
+                    { valor: 'soporte', etiqueta: t('form.departments.support') },
+                    { valor: 'facturacion', etiqueta: t('form.departments.billing') },
+                    { valor: 'general', etiqueta: t('form.departments.general') }
+                  ]}
                   {...register('department')}
-                >
-                  <option value="">{t('form.departmentPlaceholder')}</option>
-                  <option value="ventas">{t('form.departments.sales')}</option>
-                  <option value="soporte">{t('form.departments.support')}</option>
-                  <option value="facturacion">{t('form.departments.billing')}</option>
-                  <option value="general">{t('form.departments.general')}</option>
-                </Select>
+                />
 
                 <Input
-                  label={t('form.subject')}
+                  etiqueta={t('form.subject')}
                   error={errors.subject?.message}
                   {...register('subject')}
                 />
               </div>
 
               <AreaTexto
-                label={t('form.message')}
+                etiqueta={t('form.message')}
                 rows={6}
                 error={errors.message?.message}
                 {...register('message')}
